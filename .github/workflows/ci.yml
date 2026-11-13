@@ -20,8 +20,8 @@ jobs:
       run:
         working-directory: frontend
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: 24
           cache: npm
@@ -54,8 +54,8 @@ jobs:
       DJANGO_SECRET_KEY: ci-only-not-a-secret
       DATABASE_URL: postgres://krool:krool@localhost:5432/krool
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.13"
           cache: pip
@@ -73,9 +73,15 @@ jobs:
     name: Scan des secrets
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - uses: gitleaks/gitleaks-action@v2
+      # Binaire gitleaks (version figée) : analyse tout l'historique à chaque exécution.
+      - name: Installer gitleaks
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_VERSION: 8.24.3
+        run: |
+          url="https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz"
+          curl -sSfL "$url" | tar -xz gitleaks
+      - name: Rechercher des secrets dans l'historique Git
+        run: ./gitleaks git --redact --verbose --exit-code 1 .
