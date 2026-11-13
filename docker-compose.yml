@@ -18,6 +18,9 @@ x-backend: &backend
     DJANGO_SETTINGS_MODULE: ${DJANGO_SETTINGS_MODULE:-config.settings.dev}
     DATABASE_URL: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
     REDIS_URL: redis://redis:6379/0
+  volumes:
+    # Pièces jointes des devis : persistantes et jamais servies publiquement.
+    - privatedata:/app/private
   depends_on:
     db:
       condition: service_healthy
@@ -109,6 +112,7 @@ services:
 
 volumes:
   pgdata:
+  privatedata:
   redisdata:
   caddydata:
   caddyconfig:

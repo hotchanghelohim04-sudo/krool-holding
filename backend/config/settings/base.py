@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     # Applications du projet
     "apps.accounts",
     "apps.core",
+    "apps.leads",
 ]
 
 MIDDLEWARE = [
@@ -99,9 +100,14 @@ STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 MEDIA_URL = "media/"
 MEDIA_ROOT = BASE_DIR / "media"
+# Fichiers confidentiels (pièces jointes des devis) : jamais servis par une URL.
+PRIVATE_MEDIA_ROOT = env.path("PRIVATE_MEDIA_ROOT", default=BASE_DIR / "private")
 # Taille maximale des uploads (contrôle strict, cf. CLAUDE.md §11)
 DATA_UPLOAD_MAX_MEMORY_SIZE = 10 * 1024 * 1024
 FILE_UPLOAD_MAX_MEMORY_SIZE = 5 * 1024 * 1024
+# Pièces jointes des devis : 3 fichiers max, 5 Mo chacun.
+LEADS_MAX_ATTACHMENTS = 3
+LEADS_MAX_ATTACHMENT_SIZE = 5 * 1024 * 1024
 
 # --- Django REST Framework ---
 REST_FRAMEWORK = {
@@ -116,7 +122,15 @@ REST_FRAMEWORK = {
         "rest_framework.throttling.AnonRateThrottle",
         "rest_framework.throttling.UserRateThrottle",
     ],
-    "DEFAULT_THROTTLE_RATES": {"anon": "60/minute", "user": "240/minute"},
+    "DEFAULT_THROTTLE_RATES": {
+        "anon": "60/minute",
+        "user": "240/minute",
+        # Formulaires publics (devis, contact, RDV, newsletter…) : par adresse IP.
+        "leads": env("THROTTLE_LEADS", default="10/hour"),
+    },
+    # Nombre de proxys de confiance devant Django (Caddy en prod, Next.js en dev)
+    # pour lire la vraie IP du visiteur dans X-Forwarded-For.
+    "NUM_PROXIES": env.int("DRF_NUM_PROXIES", default=0) or None,
 }
 
 # --- CORS / CSRF : strict, origines listées explicitement ---
@@ -148,7 +162,20 @@ CELERY_TIMEZONE = TIME_ZONE
 
 # --- E-mails ---
 EMAIL_BACKEND = env("EMAIL_BACKEND", default="django.core.mail.backends.console.EmailBackend")
-DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL", default="no-reply@krool-holding.com")
+EMAIL_HOST = env("EMAIL_HOST", default="localhost")
+EMAIL_PORT = env.int("EMAIL_PORT", default=587)
+EMAIL_HOST_USER = env("EMAIL_HOST_USER", default="")
+EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD", default="")
+EMAIL_USE_TLS = env.bool("EMAIL_USE_TLS", default=True)
+DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL", default="Krool Holding <no-reply@krool-holding.com>")
+
+# Boîtes destinataires par fonction (CLAUDE.md §6).
+EMAIL_CONTACT = env("EMAIL_CONTACT", default="contact@krool-holding.com")
+EMAIL_SOLUTIONS = env("EMAIL_SOLUTIONS", default="solutions@krool-holding.com")
+EMAIL_SUPPORT = env("EMAIL_SUPPORT", default="support@krool-holding.com")
+
+# URL publique du site (liens dans les e-mails : confirmation newsletter…).
+SITE_URL = env("SITE_URL", default="http://localhost:3000").rstrip("/")
 
 LOGGING = {
     "version": 1,

@@ -13,4 +13,5 @@ ADMIN_URL = getattr(settings, "DJANGO_ADMIN_URL", "django-admin/")
 urlpatterns = [
     path(ADMIN_URL, admin.site.urls),
     path("api/", include("apps.core.urls")),
+    path("api/", include("apps.leads.urls")),
 ]

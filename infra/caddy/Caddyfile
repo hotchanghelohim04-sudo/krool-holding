@@ -4,8 +4,13 @@
 {$SITE_DOMAIN} {
 	encode zstd gzip
 
+	# Garde-fou : aucune requête au-delà de 20 Mo (3 pièces jointes de 5 Mo + formulaire).
+	request_body {
+		max_size 20MB
+	}
+
 	# API Django et admin de secours (adapter si DJANGO_ADMIN_URL change)
-	@api path /api/* /static/* /media/* /django-admin/*
+	@api path /api/* /static/* /django-admin/*
 	handle @api {
 		reverse_proxy backend:8000
 	}
