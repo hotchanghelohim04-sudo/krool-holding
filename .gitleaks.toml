@@ -1,0 +1,14 @@
+# Configuration du scan de secrets (gitleaks), lue automatiquement par la CI.
+title = "Krool Holding"
+
+# Toutes les règles par défaut restent actives.
+[extend]
+useDefault = true
+
+# Faux positif connu : les identifiants lisibles des contenus, ex. "key": "agrifood-iso45001"
+# (minuscules, chiffres et tirets uniquement), ressemblent à des clés d'API pour la règle
+# générique. Seules ces lignes précises sont ignorées.
+[allowlist]
+description = "Identifiants de contenu en kebab-case (pas des secrets)"
+regexTarget = "line"
+regexes = ['''"key":\s*"[a-z0-9]+(-[a-z0-9]+)*"''']
