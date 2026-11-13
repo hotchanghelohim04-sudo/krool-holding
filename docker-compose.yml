@@ -78,8 +78,12 @@ services:
   frontend:
     build:
       context: ./frontend
+      # content/ est hors du dossier frontend : fourni comme contexte de build nommé.
+      additional_contexts:
+        content: ./content
       args:
         NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-http://localhost:3000}
+        API_INTERNAL_URL: http://backend:8000
     environment:
       API_INTERNAL_URL: http://backend:8000
     ports:
