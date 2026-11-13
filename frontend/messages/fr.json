@@ -1,0 +1,32 @@
+{
+  "Metadata": {
+    "siteName": "Krool Holding",
+    "title": "Krool Holding — Sécurité industrielle, HSE et conseil",
+    "description": "Cabinet de sécurité industrielle, santé et sécurité au travail, études de dangers, EIES, qualité et formation aux risques industriels. Cameroun, CEMAC et international."
+  },
+  "Header": {
+    "brandName": "Krool Holding",
+    "homeLink": "Krool Holding, retour à l'accueil",
+    "skipToContent": "Aller au contenu principal"
+  },
+  "LocaleSwitcher": {
+    "label": "Langue",
+    "fr": "Français",
+    "en": "English"
+  },
+  "Home": {
+    "eyebrow": "Sécurité industrielle · HSE · Conseil",
+    "title": "Maîtriser les risques industriels, protéger les hommes et l'environnement.",
+    "lead": "Le site de Krool Holding et la plateforme Krool Academy sont en cours de construction.",
+    "status": "Lancement prochainement"
+  },
+  "Footer": {
+    "rights": "© {year} Krool Holding. Tous droits réservés.",
+    "location": "Cameroun · CEMAC · International"
+  },
+  "NotFound": {
+    "title": "Page introuvable",
+    "description": "La page demandée n'existe pas ou a été déplacée.",
+    "back": "Retour à l'accueil"
+  }
+}

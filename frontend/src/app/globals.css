@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   Design tokens Krool Holding (Tailwind v4 : déclarés dans @theme)
+   --------------------------------------------------------------------------
+   Palette PROVISOIRE (CLAUDE.md §3) : à recaler sur le SVG du logo
+   « concept 8 » dès que les fichiers seront dans public/brand/.
+   Contrastes vérifiés (WCAG AA, texte normal ≥ 4.5:1) :
+     gold-500 / ink-950 ......... 8.13   (or sur noir : OK)
+     paper / ink-950 ............ 18.06
+     slate-300 / ink-950 ........ 8.12   (texte secondaire sur sombre)
+     slate-600 / paper .......... 5.87   (texte secondaire sur clair)
+     gold-700 / paper ........... 5.61   (or lisible sur fond clair)
+   ⚠ gold-500 sur paper ne passe PAS l'AA : ne pas l'utiliser pour du texte.
+   ========================================================================== */
+
+@theme {
+  /* --- Couleurs : noir profond --- */
+  --color-ink-950: #0b0b0c; /* fond principal des sections sombres */
+  --color-ink-900: #16161a; /* cartes / surfaces sur fond sombre */
+  --color-ink-800: #222228; /* bordures et séparateurs sur sombre */
+  --color-ink-700: #33333b;
+
+  /* --- Couleurs : or (accent de marque) --- */
+  --color-gold-300: #e4c766;
+  --color-gold-400: #d8b546;
+  --color-gold-500: #c9a227; /* or de référence */
+  --color-gold-600: #a8861c;
+  --color-gold-700: #7a5e0e; /* or pour texte sur fond clair */
+
+  /* --- Couleurs : blanc cassé --- */
+  --color-paper: #f7f5f0; /* fond des sections claires */
+  --color-paper-200: #ece8de; /* surfaces / bordures sur clair */
+  --color-white: #ffffff;
+
+  /* --- Couleurs : gris ardoise (texte secondaire) --- */
+  --color-slate-300: #a1a7b0; /* texte secondaire sur sombre */
+  --color-slate-500: #6b7380;
+  --color-slate-600: #55606e; /* texte secondaire sur clair */
+
+  /* --- Couleurs : états (utiles aussi pour les matrices de risques) --- */
+  --color-success: #1f7a4d;
+  --color-warning: #9a5b00;
+  --color-danger: #b3261e;
+  --color-info: #1d5c96;
+
+  /* --- Typographies (variables injectées par next/font) --- */
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* --- Espacements de mise en page (en plus de l'échelle Tailwind) --- */
+  --spacing-gutter: 1rem; /* marge latérale mobile */
+  --spacing-gutter-lg: 2rem; /* marge latérale desktop */
+  --spacing-section: 5rem; /* espacement vertical des sections (mobile) */
+  --spacing-section-lg: 8rem; /* espacement vertical des sections (desktop) */
+  --container-site: 80rem; /* largeur maximale du contenu */
+  --container-prose: 42rem; /* largeur confortable pour la lecture */
+
+  /* --- Rayons : sobres, style cabinet --- */
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+
+  /* --- Ombres et animations discrètes --- */
+  --shadow-card: 0 1px 2px rgb(11 11 12 / 0.06), 0 8px 24px rgb(11 11 12 / 0.06);
+  --shadow-glow-gold: 0 0 0 1px rgb(201 162 39 / 0.35), 0 8px 32px rgb(201 162 39 / 0.12);
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --animate-fade-up: fade-up 0.6s var(--ease-out-soft) both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* --- Utilitaires de mise en page réutilisables --- */
+@utility container-site {
+  width: 100%;
+  max-width: var(--container-site);
+  margin-inline: auto;
+  padding-inline: var(--spacing-gutter);
+  @media (width >= 64rem) {
+    padding-inline: var(--spacing-gutter-lg);
+  }
+}
+
+@utility section-y {
+  padding-block: var(--spacing-section);
+  @media (width >= 64rem) {
+    padding-block: var(--spacing-section-lg);
+  }
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink-950);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.01em;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold-500);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
