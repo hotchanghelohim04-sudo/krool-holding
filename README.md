@@ -21,6 +21,13 @@ docker compose up --build
 - Site : http://localhost:3000 (redirige vers `/fr`)
 - API : http://localhost:8000/api/health/
 
+Sous Windows, le script suivant fait tout d'un coup (crée `.env` avec des secrets aléatoires,
+construit, démarre, attend les healthchecks et teste l'API et le site) :
+
+```powershell
+powershell -ExecutionPolicy Bypass -File infra\scripts\verifier-docker.ps1
+```
+
 En production : `DJANGO_SETTINGS_MODULE=config.settings.prod`, `SITE_DOMAIN` renseigné, puis
 `docker compose --profile prod up -d --build` (ajoute Caddy et le HTTPS automatique).
 
