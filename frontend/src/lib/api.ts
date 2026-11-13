@@ -9,6 +9,7 @@ export type ApiResult<T> =
   | { ok: true; data: T }
   | { ok: false; kind: "validation"; fields: FieldErrors }
   | { ok: false; kind: "conflict"; code?: string }
+  | { ok: false; kind: "captcha" }
   | { ok: false; kind: "rateLimited" }
   | { ok: false; kind: "network" }
   | { ok: false; kind: "server" };
@@ -27,6 +28,7 @@ async function request<T>(path: string, init: RequestInit, locale: string): Prom
 
   const body = await response.json().catch(() => ({}));
   if (response.ok) return { ok: true, data: body as T };
+  if (response.status === 400 && body?.code === "captcha_failed") return { ok: false, kind: "captcha" };
   if (response.status === 400) return { ok: false, kind: "validation", fields: normalizeErrors(body) };
   if (response.status === 409) return { ok: false, kind: "conflict", code: body?.code };
   if (response.status === 429) return { ok: false, kind: "rateLimited" };

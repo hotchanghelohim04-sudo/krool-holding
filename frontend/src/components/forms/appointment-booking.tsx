@@ -6,9 +6,10 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 
 import { buttonStyles } from "@/components/ui/button";
 import { EMAIL_RE, getJson, PHONE_RE, postJson } from "@/lib/api";
+import { getCaptchaToken, preloadRecaptcha } from "@/lib/recaptcha";
 import { cn } from "@/lib/utils";
 
-import { ConsentCheckbox, Field, FormAlert, FormSuccess, Honeypot, Select, SubmitButton, TextArea, TextInput } from "./fields";
+import { ConsentCheckbox, Field, FormAlert, FormSuccess, Honeypot, RecaptchaNotice, Select, SubmitButton, TextArea, TextInput } from "./fields";
 import type { Option } from "./quote-form";
 import { type Errors, hasErrors, useApiErrors, useForm } from "./use-form";
 
@@ -100,7 +101,8 @@ export function AppointmentBooking({ topics }: { topics: Option[] }) {
     if (hasErrors(found) || !selected) return;
 
     setPending(true);
-    const result = await postJson("appointments", { ...values, slot: selected.id, locale }, locale);
+    const captcha = await getCaptchaToken("appointment");
+    const result = await postJson("appointments", { ...values, slot: selected.id, locale, captcha }, locale);
     setPending(false);
     if (result.ok) return setConfirmedAt(selected.start);
     if (result.kind === "conflict") {
@@ -117,17 +119,17 @@ export function AppointmentBooking({ topics }: { topics: Option[] }) {
   }
 
   return (
-    <form noValidate onSubmit={onSubmit} className="relative space-y-10">
+    <form noValidate onSubmit={onSubmit} onFocusCapture={preloadRecaptcha} className="relative space-y-10">
       <Honeypot value={values.website} onChange={set("website")} />
 
       <section aria-labelledby="slots-title">
         <h2 id="slots-title" className="text-2xl">
           {t("slotsTitle")}
         </h2>
-        <p className="mt-1 text-sm text-slate-600">{t("timezoneNote")}</p>
+        <p className="mt-1 text-sm text-fg-muted">{t("timezoneNote")}</p>
 
         {slots === null && !loadError && (
-          <p role="status" className="mt-6 flex items-center gap-2 text-slate-600">
+          <p role="status" className="mt-6 flex items-center gap-2 text-fg-muted">
             <LoaderCircle aria-hidden className="size-4 animate-spin" />
             {t("loadingSlots")}
           </p>
@@ -140,7 +142,7 @@ export function AppointmentBooking({ topics }: { topics: Option[] }) {
             </button>
           </div>
         )}
-        {slots && slots.length === 0 && <p className="mt-6 rounded-sm border border-ink-950/10 bg-white p-4 text-slate-600">{t("noSlots")}</p>}
+        {slots && slots.length === 0 && <p className="mt-6 rounded-sm border border-fg/10 bg-surface-raised p-4 text-fg-muted">{t("noSlots")}</p>}
 
         {days.length > 0 && (
           <>
@@ -155,7 +157,7 @@ export function AppointmentBooking({ topics }: { topics: Option[] }) {
                   onClick={() => setDay(key)}
                   className={cn(
                     "shrink-0 rounded-sm border px-4 py-2.5 text-sm whitespace-nowrap capitalize transition-colors",
-                    key === activeDay ? "border-gold-600 bg-ink-950 text-gold-300" : "border-ink-950/15 bg-white hover:border-gold-600/50",
+                    key === activeDay ? "border-gold-600 bg-ink-950 text-gold-300" : "border-fg/15 bg-surface-raised hover:border-gold-600/50",
                   )}
                 >
                   {dayLabel.format(new Date(daySlots[0].start))}
@@ -179,7 +181,7 @@ export function AppointmentBooking({ topics }: { topics: Option[] }) {
                     }}
                     className={cn(
                       "rounded-sm border px-3 py-2.5 text-sm tabular-nums transition-colors",
-                      slot.id === slotId ? "border-gold-600 bg-gold-500 font-medium text-ink-950" : "border-ink-950/15 bg-white hover:border-gold-600/50",
+                      slot.id === slotId ? "border-gold-600 bg-gold-500 font-medium text-black" : "border-fg/15 bg-surface-raised hover:border-gold-600/50",
                     )}
                   >
                     {timeLabel.format(new Date(slot.start))}
@@ -189,12 +191,12 @@ export function AppointmentBooking({ topics }: { topics: Option[] }) {
           </>
         )}
         {errors.slot && (
-          <p id="slot-error" className="mt-3 text-sm text-danger">
+          <p id="slot-error" className="mt-3 text-sm text-danger-fg">
             {errors.slot}
           </p>
         )}
         {selected && (
-          <p className="mt-4 flex items-center gap-2 text-sm font-medium text-gold-700">
+          <p className="mt-4 flex items-center gap-2 text-sm font-medium text-accent">
             <CalendarDays aria-hidden className="size-4" strokeWidth={1.5} />
             {t("selectedSlot", { date: fullLabel.format(new Date(selected.start)) })}
           </p>
@@ -213,7 +215,7 @@ export function AppointmentBooking({ topics }: { topics: Option[] }) {
                 key={mode}
                 className={cn(
                   "flex cursor-pointer items-center gap-2 rounded-sm border px-3 py-2.5 text-sm transition-colors",
-                  values.mode === mode ? "border-gold-600 bg-gold-500/10" : "border-ink-950/15 bg-white hover:border-gold-600/50",
+                  values.mode === mode ? "border-gold-600 bg-gold-500/10" : "border-fg/15 bg-surface-raised hover:border-gold-600/50",
                 )}
               >
                 <input type="radio" name="mode" value={mode} checked={values.mode === mode} onChange={() => set("mode")(mode)} className="accent-gold-600" />
@@ -245,6 +247,7 @@ export function AppointmentBooking({ topics }: { topics: Option[] }) {
         <ConsentCheckbox id="rdv-consent" checked={values.consent} onChange={set("consent")} error={errors.consent} />
         <FormAlert message={errors.form} />
         <SubmitButton pending={pending} label={t("submit")} />
+        <RecaptchaNotice />
       </section>
     </form>
   );

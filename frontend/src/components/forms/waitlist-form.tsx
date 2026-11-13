@@ -4,9 +4,10 @@ import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 
 import { EMAIL_RE, postJson } from "@/lib/api";
+import { getCaptchaToken, preloadRecaptcha } from "@/lib/recaptcha";
 import { cn } from "@/lib/utils";
 
-import { ConsentCheckbox, Field, FormAlert, FormSuccess, Honeypot, SubmitButton, TextInput } from "./fields";
+import { ConsentCheckbox, Field, FormAlert, FormSuccess, Honeypot, RecaptchaNotice, SubmitButton, TextInput } from "./fields";
 import { type Errors, hasErrors, useApiErrors, useForm } from "./use-form";
 
 const PROFILES = ["student", "professional", "company"] as const;
@@ -35,7 +36,8 @@ export function WaitlistForm() {
     setErrors(found);
     if (hasErrors(found)) return;
     setPending(true);
-    const result = await postJson("academy/waitlist", { ...values, locale }, locale);
+    const captcha = await getCaptchaToken("waitlist");
+    const result = await postJson("academy/waitlist", { ...values, locale, captcha }, locale);
     setPending(false);
     if (result.ok) setDone(true);
     else setErrors(toErrors(result));
@@ -44,7 +46,7 @@ export function WaitlistForm() {
   if (done) return <FormSuccess tone="dark" title={t("successTitle")} text={t("success")} />;
 
   return (
-    <form noValidate onSubmit={onSubmit} className="relative space-y-5">
+    <form noValidate onSubmit={onSubmit} onFocusCapture={preloadRecaptcha} className="relative space-y-5">
       <Honeypot value={values.website} onChange={set("website")} />
       <fieldset>
         <legend className="mb-2 text-sm font-medium text-paper">{t("profileLabel")}</legend>
@@ -81,6 +83,7 @@ export function WaitlistForm() {
       <ConsentCheckbox id="waitlist-consent" tone="dark" checked={values.consent} onChange={set("consent")} error={errors.consent} />
       <FormAlert tone="dark" message={errors.form} />
       <SubmitButton pending={pending} label={t("submit")} />
+      <RecaptchaNotice tone="dark" />
     </form>
   );
 }

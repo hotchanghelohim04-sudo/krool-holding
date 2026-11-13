@@ -84,6 +84,7 @@ services:
       args:
         NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-http://localhost:3000}
         API_INTERNAL_URL: http://backend:8000
+        NEXT_PUBLIC_RECAPTCHA_SITE_KEY: ${NEXT_PUBLIC_RECAPTCHA_SITE_KEY:-}
     environment:
       API_INTERNAL_URL: http://backend:8000
     ports:

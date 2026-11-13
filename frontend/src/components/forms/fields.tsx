@@ -6,6 +6,7 @@ import type { InputHTMLAttributes, ReactNode, SelectHTMLAttributes, TextareaHTML
 
 import { buttonStyles } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
+import { recaptchaEnabled } from "@/lib/recaptcha";
 import { cn } from "@/lib/utils";
 
 type Tone = "light" | "dark";
@@ -15,7 +16,7 @@ const controlClass = (tone: Tone, invalid: boolean) =>
     "block w-full rounded-sm border px-3.5 py-2.5 text-base transition-colors focus-visible:outline-2 focus-visible:outline-offset-0",
     tone === "dark"
       ? "border-ink-700 bg-ink-900 text-paper placeholder:text-slate-500"
-      : "border-ink-950/20 bg-white text-ink-950 placeholder:text-slate-500",
+      : "border-fg/20 bg-surface-raised text-fg placeholder:text-slate-500",
     invalid && (tone === "dark" ? "border-red-400" : "border-danger"),
   );
 
@@ -41,23 +42,23 @@ export function Field({
   const t = useTranslations("Form");
   return (
     <div>
-      <label htmlFor={id} className={cn("mb-1.5 block text-sm font-medium", tone === "dark" ? "text-paper" : "text-ink-950")}>
+      <label htmlFor={id} className={cn("mb-1.5 block text-sm font-medium", tone === "dark" ? "text-paper" : "text-fg")}>
         {label}
         {required && <span aria-hidden className="ml-0.5 text-gold-600">*</span>}
         {optional && (
-          <span className={cn("ml-1.5 font-normal", tone === "dark" ? "text-slate-300" : "text-slate-600")}>
+          <span className={cn("ml-1.5 font-normal", tone === "dark" ? "text-slate-300" : "text-fg-muted")}>
             ({t("optional")})
           </span>
         )}
       </label>
       {children}
       {hint && !error && (
-        <p id={`${id}-hint`} className={cn("mt-1.5 text-sm", tone === "dark" ? "text-slate-300" : "text-slate-600")}>
+        <p id={`${id}-hint`} className={cn("mt-1.5 text-sm", tone === "dark" ? "text-slate-300" : "text-fg-muted")}>
           {hint}
         </p>
       )}
       {error && (
-        <p id={`${id}-error`} className={cn("mt-1.5 flex items-start gap-1.5 text-sm", tone === "dark" ? "text-red-300" : "text-danger")}>
+        <p id={`${id}-error`} className={cn("mt-1.5 flex items-start gap-1.5 text-sm", tone === "dark" ? "text-red-300" : "text-danger-fg")}>
           <CircleAlert aria-hidden className="mt-0.5 size-4 shrink-0" strokeWidth={1.5} />
           {error}
         </p>
@@ -173,10 +174,10 @@ export function ConsentCheckbox({
           aria-describedby={error ? `${id}-error` : undefined}
           className="mt-1 size-4 shrink-0 accent-gold-600"
         />
-        <label htmlFor={id} className={cn("text-sm", tone === "dark" ? "text-slate-300" : "text-slate-600")}>
+        <label htmlFor={id} className={cn("text-sm", tone === "dark" ? "text-slate-300" : "text-fg-muted")}>
           {t.rich("consent", {
             link: (chunks) => (
-              <Link href="/confidentialite" className={cn("underline underline-offset-2", tone === "dark" ? "text-gold-300" : "text-gold-700")}>
+              <Link href="/confidentialite" className={cn("underline underline-offset-2", tone === "dark" ? "text-gold-300" : "text-accent")}>
                 {chunks}
               </Link>
             ),
@@ -184,7 +185,7 @@ export function ConsentCheckbox({
         </label>
       </div>
       {error && (
-        <p id={`${id}-error`} className={cn("mt-1.5 text-sm", tone === "dark" ? "text-red-300" : "text-danger")}>
+        <p id={`${id}-error`} className={cn("mt-1.5 text-sm", tone === "dark" ? "text-red-300" : "text-danger-fg")}>
           {error}
         </p>
       )}
@@ -233,6 +234,32 @@ export function SubmitButton({
   );
 }
 
+/**
+ * Mention exigée par Google quand le badge reCAPTCHA est masqué.
+ * N'apparaît que si reCAPTCHA est actif (clé de site configurée).
+ */
+export function RecaptchaNotice({ tone = "light" }: { tone?: Tone }) {
+  const t = useTranslations("Form");
+  if (!recaptchaEnabled) return null;
+  const linkClass = cn("underline underline-offset-2", tone === "dark" ? "text-slate-300" : "text-fg-muted");
+  return (
+    <p className={cn("text-xs", tone === "dark" ? "text-slate-300" : "text-fg-muted")}>
+      {t.rich("recaptchaNotice", {
+        privacy: (chunks) => (
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className={linkClass}>
+            {chunks}
+          </a>
+        ),
+        terms: (chunks) => (
+          <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className={linkClass}>
+            {chunks}
+          </a>
+        ),
+      })}
+    </p>
+  );
+}
+
 /** Message global (erreur) annoncé aux lecteurs d'écran. */
 export function FormAlert({ message, tone = "light" }: { message?: string; tone?: Tone }) {
   if (!message) return null;
@@ -241,7 +268,7 @@ export function FormAlert({ message, tone = "light" }: { message?: string; tone?
       role="alert"
       className={cn(
         "flex items-start gap-2 rounded-sm border px-4 py-3 text-sm",
-        tone === "dark" ? "border-red-400/50 bg-red-950/40 text-red-200" : "border-danger/40 bg-danger/5 text-danger",
+        tone === "dark" ? "border-red-400/50 bg-red-950/40 text-red-200" : "border-danger/40 bg-danger/5 text-danger-fg",
       )}
     >
       <CircleAlert aria-hidden className="mt-0.5 size-4 shrink-0" strokeWidth={1.5} />
@@ -273,10 +300,10 @@ export function FormSuccess({
       )}
     >
       <p className="flex items-center gap-2 text-lg font-semibold">
-        <CircleCheck aria-hidden className={cn("size-5", tone === "dark" ? "text-gold-400" : "text-success")} strokeWidth={1.5} />
+        <CircleCheck aria-hidden className={cn("size-5", tone === "dark" ? "text-gold-400" : "text-success-fg")} strokeWidth={1.5} />
         {title}
       </p>
-      <p className={cn("mt-2", tone === "dark" ? "text-slate-300" : "text-slate-600")}>{text}</p>
+      <p className={cn("mt-2", tone === "dark" ? "text-slate-300" : "text-fg-muted")}>{text}</p>
       {children}
     </div>
   );

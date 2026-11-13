@@ -14,8 +14,11 @@ COPY --from=content . /content
 ARG NEXT_PUBLIC_SITE_URL=http://localhost:3000
 # Adresse de Django vue depuis le serveur Next.js (relais /api, figé au build).
 ARG API_INTERNAL_URL=http://backend:8000
+# Clé publique reCAPTCHA (figée au build ; vide = protection désactivée).
+ARG NEXT_PUBLIC_RECAPTCHA_SITE_KEY=
 ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL \
     API_INTERNAL_URL=$API_INTERNAL_URL \
+    NEXT_PUBLIC_RECAPTCHA_SITE_KEY=$NEXT_PUBLIC_RECAPTCHA_SITE_KEY \
     CONTENT_DIR=/content \
     NEXT_TELEMETRY_DISABLED=1
 RUN npm run build

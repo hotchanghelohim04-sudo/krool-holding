@@ -4,8 +4,9 @@ import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 
 import { EMAIL_RE, PHONE_RE, postJson } from "@/lib/api";
+import { getCaptchaToken, preloadRecaptcha } from "@/lib/recaptcha";
 
-import { ConsentCheckbox, Field, FormAlert, FormSuccess, Honeypot, SubmitButton, TextArea, TextInput } from "./fields";
+import { ConsentCheckbox, Field, FormAlert, FormSuccess, Honeypot, RecaptchaNotice, SubmitButton, TextArea, TextInput } from "./fields";
 import { type Errors, hasErrors, useApiErrors, useForm } from "./use-form";
 
 export function ContactForm() {
@@ -44,7 +45,8 @@ export function ContactForm() {
     setErrors(found);
     if (hasErrors(found)) return;
     setPending(true);
-    const result = await postJson("contact", { ...values, locale }, locale);
+    const captcha = await getCaptchaToken("contact");
+    const result = await postJson("contact", { ...values, locale, captcha }, locale);
     setPending(false);
     if (result.ok) setDone(true);
     else setErrors(toErrors(result));
@@ -53,8 +55,8 @@ export function ContactForm() {
   if (done) return <FormSuccess title={t("successTitle")} text={t("successText")} />;
 
   return (
-    <form noValidate onSubmit={onSubmit} className="relative space-y-5">
-      <p className="text-sm text-slate-600">{tForm("requiredHint")}</p>
+    <form noValidate onSubmit={onSubmit} onFocusCapture={preloadRecaptcha} className="relative space-y-5">
+      <p className="text-sm text-fg-muted">{tForm("requiredHint")}</p>
       <Honeypot value={values.website} onChange={set("website")} />
       <div className="grid gap-5 sm:grid-cols-2">
         <Field id="contact-name" label={tForm("fullName")} required error={errors.full_name}>
@@ -79,6 +81,7 @@ export function ContactForm() {
       <ConsentCheckbox id="contact-consent" checked={values.consent} onChange={set("consent")} error={errors.consent} />
       <FormAlert message={errors.form} />
       <SubmitButton pending={pending} label={t("submit")} />
+      <RecaptchaNotice />
     </form>
   );
 }

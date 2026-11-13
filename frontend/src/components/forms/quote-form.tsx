@@ -6,9 +6,10 @@ import { useEffect, useRef, useState } from "react";
 
 import { buttonStyles } from "@/components/ui/button";
 import { EMAIL_RE, PHONE_RE, postForm } from "@/lib/api";
+import { getCaptchaToken, preloadRecaptcha } from "@/lib/recaptcha";
 import { cn } from "@/lib/utils";
 
-import { ConsentCheckbox, Field, FormAlert, FormSuccess, Honeypot, Select, SubmitButton, TextArea, TextInput } from "./fields";
+import { ConsentCheckbox, Field, FormAlert, FormSuccess, Honeypot, RecaptchaNotice, Select, SubmitButton, TextArea, TextInput } from "./fields";
 import { type Errors, hasErrors, useApiErrors, useForm } from "./use-form";
 
 export interface Option {
@@ -121,6 +122,7 @@ export function QuoteForm({ services, sectors }: { services: Option[]; sectors: 
     for (const [key, value] of Object.entries(values)) data.append(key, String(value));
     data.append("locale", locale);
     for (const file of files) data.append("attachments", file);
+    data.append("captcha", await getCaptchaToken("quote"));
 
     setPending(true);
     const result = await postForm<{ reference: string }>("quotes", data, locale);
@@ -147,17 +149,17 @@ export function QuoteForm({ services, sectors }: { services: Option[]; sectors: 
   const current = STEPS[step];
 
   return (
-    <form noValidate onSubmit={onSubmit} className="relative">
+    <form noValidate onSubmit={onSubmit} onFocusCapture={preloadRecaptcha} className="relative">
       <Honeypot value={values.website} onChange={set("website")} />
 
       {/* Progression */}
-      <p className="text-sm text-slate-600">{t("progress", { current: step + 1, total: STEPS.length })}</p>
+      <p className="text-sm text-fg-muted">{t("progress", { current: step + 1, total: STEPS.length })}</p>
       <ol className="mt-3 grid grid-cols-4 gap-2">
         {STEPS.map((name, index) => (
           <li key={name} aria-current={index === step ? "step" : undefined}>
-            <span className={cn("block h-1 rounded-full", index <= step ? "bg-gold-600" : "bg-ink-950/10")} />
-            <span className={cn("mt-2 hidden text-xs sm:block", index === step ? "font-medium text-ink-950" : "text-slate-600")}>
-              {index < step && <Check aria-hidden className="mr-1 inline size-3 text-success" />}
+            <span className={cn("block h-1 rounded-full", index <= step ? "bg-gold-600" : "bg-fg/10")} />
+            <span className={cn("mt-2 hidden text-xs sm:block", index === step ? "font-medium text-fg" : "text-fg-muted")}>
+              {index < step && <Check aria-hidden className="mr-1 inline size-3 text-success-fg" />}
               {t(`steps.${name}`)}
             </span>
           </li>
@@ -181,7 +183,7 @@ export function QuoteForm({ services, sectors }: { services: Option[]; sectors: 
                   key={option.value}
                   className={cn(
                     "flex cursor-pointer items-center gap-3 rounded-sm border px-4 py-3 text-sm transition-colors",
-                    values.service === option.value ? "border-gold-600 bg-gold-500/10" : "border-ink-950/15 bg-white hover:border-gold-600/50",
+                    values.service === option.value ? "border-gold-600 bg-gold-500/10" : "border-fg/15 bg-surface-raised hover:border-gold-600/50",
                   )}
                 >
                   <input
@@ -197,7 +199,7 @@ export function QuoteForm({ services, sectors }: { services: Option[]; sectors: 
               ))}
             </div>
             {errors.service && (
-              <p id="quote-service-error" className="mt-2 text-sm text-danger">
+              <p id="quote-service-error" className="mt-2 text-sm text-danger-fg">
                 {errors.service}
               </p>
             )}
@@ -241,9 +243,9 @@ export function QuoteForm({ services, sectors }: { services: Option[]; sectors: 
             <Field id="quote-files" label={t("attachmentsLabel")} optional hint={t("attachmentsHelp")} error={errors.attachments}>
               <label
                 htmlFor="quote-files"
-                className="flex cursor-pointer items-center justify-center gap-2 rounded-sm border border-dashed border-ink-950/25 bg-white px-4 py-6 text-sm text-slate-600 transition-colors hover:border-gold-600"
+                className="flex cursor-pointer items-center justify-center gap-2 rounded-sm border border-dashed border-fg/25 bg-surface-raised px-4 py-6 text-sm text-fg-muted transition-colors hover:border-gold-600"
               >
-                <Paperclip aria-hidden className="size-4 text-gold-700" strokeWidth={1.5} />
+                <Paperclip aria-hidden className="size-4 text-accent" strokeWidth={1.5} />
                 {t("attachmentsLabel")}
               </label>
               <input
@@ -262,14 +264,14 @@ export function QuoteForm({ services, sectors }: { services: Option[]; sectors: 
             {files.length > 0 && (
               <ul className="space-y-2">
                 {files.map((file) => (
-                  <li key={file.name + file.size} className="flex items-center gap-3 rounded-sm border border-ink-950/10 bg-white px-3 py-2 text-sm">
-                    <FileText aria-hidden className="size-4 shrink-0 text-gold-700" strokeWidth={1.5} />
+                  <li key={file.name + file.size} className="flex items-center gap-3 rounded-sm border border-fg/10 bg-surface-raised px-3 py-2 text-sm">
+                    <FileText aria-hidden className="size-4 shrink-0 text-accent" strokeWidth={1.5} />
                     <span className="flex-1 truncate">{file.name}</span>
-                    <span className="text-slate-600">{(file.size / 1024 / 1024).toFixed(1)} Mo</span>
+                    <span className="text-fg-muted">{(file.size / 1024 / 1024).toFixed(1)} Mo</span>
                     <button
                       type="button"
                       onClick={() => setFiles(files.filter((f) => f !== file))}
-                      className="rounded-sm p-1 text-slate-600 hover:bg-ink-950/5 hover:text-danger"
+                      className="rounded-sm p-1 text-fg-muted hover:bg-fg/5 hover:text-danger-fg"
                     >
                       <X aria-hidden className="size-4" />
                       <span className="sr-only">{t("removeFile", { name: file.name })}</span>
@@ -321,6 +323,9 @@ export function QuoteForm({ services, sectors }: { services: Option[]; sectors: 
         ) : (
           <SubmitButton pending={pending} label={t("submit")} />
         )}
+      </div>
+      <div className="mt-4">
+        <RecaptchaNotice />
       </div>
     </form>
   );

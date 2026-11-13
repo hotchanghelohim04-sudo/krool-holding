@@ -8,12 +8,13 @@ const apiInternalUrl = (process.env.API_INTERNAL_URL ?? "http://localhost:8000")
 // En-têtes de sécurité (CLAUDE.md §11). La CSP sera durcie (nonces) à l'étape 7.
 const contentSecurityPolicy = [
   "default-src 'self'",
-  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
+  // reCAPTCHA v3 : script Google chargé à la demande sur les pages à formulaire.
+  `script-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com${isDev ? " 'unsafe-eval'" : ""}`,
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob:",
   "font-src 'self'",
-  `connect-src 'self'${isDev ? " ws:" : ""}`,
-  "frame-src https://www.youtube-nocookie.com https://player.vimeo.com",
+  `connect-src 'self' https://www.google.com${isDev ? " ws:" : ""}`,
+  "frame-src https://www.youtube-nocookie.com https://player.vimeo.com https://www.google.com https://recaptcha.google.com",
   "frame-ancestors 'none'",
   "base-uri 'self'",
   "form-action 'self'",

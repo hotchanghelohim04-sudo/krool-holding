@@ -5,49 +5,133 @@
   "fr": {
     "title": "Politique de confidentialité",
     "body": [
-      { "type": "p", "text": "Krool Holding attache une grande importance à la protection de vos données personnelles. Cette politique explique quelles données nous collectons via ce site, pourquoi, et quels sont vos droits." },
-      { "type": "h2", "text": "Données collectées" },
-      { "type": "ul", "items": [
-        "Demande de devis : nom, e-mail, téléphone, organisation, pays, description du besoin et pièces jointes éventuelles.",
-        "Prise de rendez-vous : nom, e-mail, téléphone, organisation, créneau choisi et sujet.",
-        "Formulaire de contact : nom, e-mail, téléphone, organisation et message.",
-        "Lettre d'information et liste d'attente de l'Académie : adresse e-mail (et profil pour l'Académie)."
-      ] },
-      { "type": "p", "text": "Nous ne collectons que les données nécessaires pour répondre à votre demande. Aucune adresse IP n'est conservée avec vos demandes." },
-      { "type": "h2", "text": "Finalités et base légale" },
-      { "type": "p", "text": "Vos données servent uniquement à traiter votre demande (devis, rendez-vous, réponse à un message) et, si vous l'avez confirmé, à vous envoyer notre lettre d'information. Le traitement repose sur votre consentement, exprimé par la case à cocher de chaque formulaire." },
-      { "type": "h2", "text": "Durée de conservation" },
-      { "type": "p", "text": "Les demandes sans suite sont supprimées au plus tard 3 ans après le dernier contact. Les abonnés à la lettre d'information sont conservés jusqu'à leur désinscription. [Durées à valider]" },
-      { "type": "h2", "text": "Destinataires et sécurité" },
-      { "type": "p", "text": "Vos données sont accessibles uniquement aux personnes de Krool Holding chargées de traiter votre demande. Elles ne sont jamais vendues. Les pièces jointes sont stockées dans un espace privé, non accessible publiquement. Nos prestataires techniques (hébergement, envoi d'e-mails) agissent sur nos instructions." },
-      { "type": "h2", "text": "Cookies" },
-      { "type": "p", "text": "Ce site n'utilise aucun cookie de mesure d'audience ni de publicité. Seuls des éléments techniques strictement nécessaires à son fonctionnement peuvent être utilisés. Si cela change, votre consentement vous sera demandé au préalable." },
-      { "type": "h2", "text": "Vos droits" },
-      { "type": "p", "text": "Vous pouvez demander l'accès, la rectification ou la suppression de vos données, ou retirer votre consentement à tout moment, en écrivant à contact@krool-holding.com. Les visiteurs situés dans l'Union européenne disposent en outre des droits prévus par le RGPD, dont celui d'introduire une réclamation auprès de leur autorité de contrôle." }
+      {
+        "type": "p",
+        "text": "Krool Holding attache une grande importance à la protection de vos données personnelles. Cette politique explique quelles données nous collectons via ce site, pourquoi, et quels sont vos droits."
+      },
+      {
+        "type": "h2",
+        "text": "Données collectées"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Demande de devis : nom, e-mail, téléphone, organisation, pays, description du besoin et pièces jointes éventuelles.",
+          "Prise de rendez-vous : nom, e-mail, téléphone, organisation, créneau choisi et sujet.",
+          "Formulaire de contact : nom, e-mail, téléphone, organisation et message.",
+          "Lettre d'information et liste d'attente de l'Académie : adresse e-mail (et profil pour l'Académie)."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Nous ne collectons que les données nécessaires pour répondre à votre demande. Aucune adresse IP n'est conservée avec vos demandes."
+      },
+      {
+        "type": "h2",
+        "text": "Finalités et base légale"
+      },
+      {
+        "type": "p",
+        "text": "Vos données servent uniquement à traiter votre demande (devis, rendez-vous, réponse à un message) et, si vous l'avez confirmé, à vous envoyer notre lettre d'information. Le traitement repose sur votre consentement, exprimé par la case à cocher de chaque formulaire."
+      },
+      {
+        "type": "h2",
+        "text": "Durée de conservation"
+      },
+      {
+        "type": "p",
+        "text": "Les demandes sans suite sont supprimées au plus tard 3 ans après le dernier contact. Les abonnés à la lettre d'information sont conservés jusqu'à leur désinscription. [Durées à valider]"
+      },
+      {
+        "type": "h2",
+        "text": "Destinataires et sécurité"
+      },
+      {
+        "type": "p",
+        "text": "Vos données sont accessibles uniquement aux personnes de Krool Holding chargées de traiter votre demande. Elles ne sont jamais vendues. Les pièces jointes sont stockées dans un espace privé, non accessible publiquement. Nos prestataires techniques (hébergement, envoi d'e-mails) agissent sur nos instructions."
+      },
+      {
+        "type": "h2",
+        "text": "Cookies"
+      },
+      {
+        "type": "p",
+        "text": "Ce site n'utilise aucun cookie de mesure d'audience ni de publicité. Pour protéger les formulaires contre les envois automatisés, il utilise Google reCAPTCHA, chargé uniquement lorsque vous commencez à remplir un formulaire : Google peut alors collecter des informations techniques sur votre appareil et votre navigation, conformément à ses règles de confidentialité (policies.google.com/privacy). Si d'autres services s'ajoutent, votre consentement sera demandé au préalable. [À valider par un juriste : consentement préalable éventuel pour les visiteurs de l'UE]"
+      },
+      {
+        "type": "h2",
+        "text": "Vos droits"
+      },
+      {
+        "type": "p",
+        "text": "Vous pouvez demander l'accès, la rectification ou la suppression de vos données, ou retirer votre consentement à tout moment, en écrivant à contact@krool-holding.com. Les visiteurs situés dans l'Union européenne disposent en outre des droits prévus par le RGPD, dont celui d'introduire une réclamation auprès de leur autorité de contrôle."
+      }
     ]
   },
   "en": {
     "title": "Privacy policy",
     "body": [
-      { "type": "p", "text": "Krool Holding attaches great importance to protecting your personal data. This policy explains what data we collect through this website, why, and what your rights are." },
-      { "type": "h2", "text": "Data collected" },
-      { "type": "ul", "items": [
-        "Quote request: name, email, phone, organisation, country, description of the need and any attachments.",
-        "Appointment booking: name, email, phone, organisation, chosen time slot and topic.",
-        "Contact form: name, email, phone, organisation and message.",
-        "Newsletter and Academy waitlist: email address (and profile for the Academy)."
-      ] },
-      { "type": "p", "text": "We only collect the data needed to answer your request. No IP address is stored with your requests." },
-      { "type": "h2", "text": "Purposes and legal basis" },
-      { "type": "p", "text": "Your data is used solely to process your request (quote, appointment, reply to a message) and, if you have confirmed it, to send you our newsletter. Processing is based on your consent, given through the checkbox on each form." },
-      { "type": "h2", "text": "Retention period" },
-      { "type": "p", "text": "Requests that do not lead to an assignment are deleted no later than 3 years after the last contact. Newsletter subscribers are kept until they unsubscribe. [Periods to be validated]" },
-      { "type": "h2", "text": "Recipients and security" },
-      { "type": "p", "text": "Your data is only accessible to the Krool Holding staff in charge of your request. It is never sold. Attachments are stored in a private area that is not publicly accessible. Our technical providers (hosting, email delivery) act on our instructions." },
-      { "type": "h2", "text": "Cookies" },
-      { "type": "p", "text": "This website uses no audience measurement or advertising cookies. Only technical elements strictly necessary for it to work may be used. If this changes, your consent will be requested beforehand." },
-      { "type": "h2", "text": "Your rights" },
-      { "type": "p", "text": "You may request access to, correction or deletion of your data, or withdraw your consent at any time, by writing to contact@krool-holding.com. Visitors located in the European Union also have the rights provided by the GDPR, including the right to lodge a complaint with their supervisory authority." }
+      {
+        "type": "p",
+        "text": "Krool Holding attaches great importance to protecting your personal data. This policy explains what data we collect through this website, why, and what your rights are."
+      },
+      {
+        "type": "h2",
+        "text": "Data collected"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Quote request: name, email, phone, organisation, country, description of the need and any attachments.",
+          "Appointment booking: name, email, phone, organisation, chosen time slot and topic.",
+          "Contact form: name, email, phone, organisation and message.",
+          "Newsletter and Academy waitlist: email address (and profile for the Academy)."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "We only collect the data needed to answer your request. No IP address is stored with your requests."
+      },
+      {
+        "type": "h2",
+        "text": "Purposes and legal basis"
+      },
+      {
+        "type": "p",
+        "text": "Your data is used solely to process your request (quote, appointment, reply to a message) and, if you have confirmed it, to send you our newsletter. Processing is based on your consent, given through the checkbox on each form."
+      },
+      {
+        "type": "h2",
+        "text": "Retention period"
+      },
+      {
+        "type": "p",
+        "text": "Requests that do not lead to an assignment are deleted no later than 3 years after the last contact. Newsletter subscribers are kept until they unsubscribe. [Periods to be validated]"
+      },
+      {
+        "type": "h2",
+        "text": "Recipients and security"
+      },
+      {
+        "type": "p",
+        "text": "Your data is only accessible to the Krool Holding staff in charge of your request. It is never sold. Attachments are stored in a private area that is not publicly accessible. Our technical providers (hosting, email delivery) act on our instructions."
+      },
+      {
+        "type": "h2",
+        "text": "Cookies"
+      },
+      {
+        "type": "p",
+        "text": "This website uses no audience measurement or advertising cookies. To protect its forms against automated submissions, it uses Google reCAPTCHA, loaded only when you start filling in a form: Google may then collect technical information about your device and browsing, in accordance with its privacy policy (policies.google.com/privacy). If other services are added, your consent will be requested beforehand. [To be validated by a lawyer: possible prior consent for EU visitors]"
+      },
+      {
+        "type": "h2",
+        "text": "Your rights"
+      },
+      {
+        "type": "p",
+        "text": "You may request access to, correction or deletion of your data, or withdraw your consent at any time, by writing to contact@krool-holding.com. Visitors located in the European Union also have the rights provided by the GDPR, including the right to lodge a complaint with their supervisory authority."
+      }
     ]
   }
 }

@@ -38,6 +38,8 @@ export function useApiErrors() {
         }
         case "rateLimited":
           return { form: t("errors.rateLimited") };
+        case "captcha":
+          return { form: t("errors.captcha") };
         case "network":
           return { form: t("errors.network") };
         default:

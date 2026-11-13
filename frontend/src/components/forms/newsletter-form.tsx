@@ -4,8 +4,9 @@ import { useLocale, useTranslations } from "next-intl";
 import { useId, useState } from "react";
 
 import { EMAIL_RE, postJson } from "@/lib/api";
+import { getCaptchaToken, preloadRecaptcha } from "@/lib/recaptcha";
 
-import { ConsentCheckbox, FormAlert, FormSuccess, Honeypot, SubmitButton, TextInput } from "./fields";
+import { ConsentCheckbox, FormAlert, FormSuccess, Honeypot, RecaptchaNotice, SubmitButton, TextInput } from "./fields";
 
 /** Inscription à la lettre d'information (double opt-in : e-mail de confirmation). */
 export function NewsletterForm() {
@@ -29,18 +30,20 @@ export function NewsletterForm() {
     if (Object.keys(next).length) return;
 
     setPending(true);
-    const result = await postJson("newsletter/subscribe", { email, locale, consent, website }, locale);
+    const captcha = await getCaptchaToken("newsletter");
+    const result = await postJson("newsletter/subscribe", { email, locale, consent, website, captcha }, locale);
     setPending(false);
     if (result.ok) return setDone(true);
     if (result.kind === "rateLimited") return setErrors({ form: tForm("errors.rateLimited") });
     if (result.kind === "network") return setErrors({ form: tForm("errors.network") });
+    if (result.kind === "captcha") return setErrors({ form: tForm("errors.captcha") });
     setErrors({ form: tForm("errors.generic") });
   }
 
   if (done) return <FormSuccess tone="dark" title={t("successTitle")} text={t("success")} />;
 
   return (
-    <form noValidate onSubmit={onSubmit} className="relative space-y-3">
+    <form noValidate onSubmit={onSubmit} onFocusCapture={preloadRecaptcha} className="relative space-y-3">
       <Honeypot value={website} onChange={setWebsite} />
       <div className="flex flex-col gap-3 sm:flex-row">
         <div className="flex-1">
@@ -67,6 +70,7 @@ export function NewsletterForm() {
       </div>
       <ConsentCheckbox id={`${id}-consent`} checked={consent} onChange={setConsent} error={errors.consent} tone="dark" />
       <FormAlert tone="dark" message={errors.form} />
+      <RecaptchaNotice tone="dark" />
     </form>
   );
 }

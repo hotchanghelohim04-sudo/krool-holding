@@ -45,7 +45,7 @@ export function NewsletterConfirmation() {
   if (state === "confirming") {
     return (
       <p role="status" className="flex items-center gap-3 text-lg">
-        <LoaderCircle aria-hidden className="size-5 animate-spin text-gold-700" />
+        <LoaderCircle aria-hidden className="size-5 animate-spin text-accent" />
         {t("confirming")}
       </p>
     );
@@ -56,10 +56,10 @@ export function NewsletterConfirmation() {
   return (
     <div role="status">
       <h2 className="flex items-center gap-3 text-2xl">
-        <Icon aria-hidden className={ok ? "size-7 text-success" : "size-7 text-danger"} strokeWidth={1.5} />
+        <Icon aria-hidden className={ok ? "size-7 text-success-fg" : "size-7 text-danger-fg"} strokeWidth={1.5} />
         {ok ? t("confirmedTitle") : t("invalidTitle")}
       </h2>
-      <p className="mt-3 text-lg text-slate-600">{ok ? t("confirmedText") : t("invalidText")}</p>
+      <p className="mt-3 text-lg text-fg-muted">{ok ? t("confirmedText") : t("invalidText")}</p>
       <ButtonLink href="/" variant="outline-dark" className="mt-8">
         {t("backHome")}
       </ButtonLink>
