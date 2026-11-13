@@ -9,18 +9,306 @@
     "homeLink": "Krool Holding, retour à l'accueil",
     "skipToContent": "Aller au contenu principal"
   },
+  "Nav": {
+    "mainLabel": "Navigation principale",
+    "home": "Accueil",
+    "services": "Services",
+    "allServices": "Tous nos services",
+    "caseStudies": "Études de cas",
+    "academy": "Académie",
+    "about": "Le cabinet",
+    "references": "Références",
+    "news": "Actualités",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "quote": "Demander un devis",
+    "appointment": "Prendre rendez-vous",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
+  },
   "LocaleSwitcher": {
     "label": "Langue",
     "fr": "Français",
     "en": "English"
   },
+  "Common": {
+    "learnMore": "En savoir plus",
+    "readMore": "Lire la suite",
+    "exampleBadge": "Exemple fictif",
+    "requestQuote": "Demander un devis",
+    "bookAppointment": "Prendre rendez-vous",
+    "contactUs": "Nous contacter",
+    "discoverAcademy": "Découvrir l'Académie",
+    "updatedOn": "Dernière mise à jour : {date}",
+    "breadcrumb": "Fil d'Ariane",
+    "placeholderNotice": "Contenu provisoire, susceptible d'évoluer."
+  },
   "Home": {
-    "eyebrow": "Sécurité industrielle · HSE · Conseil",
-    "title": "Maîtriser les risques industriels, protéger les hommes et l'environnement.",
-    "lead": "Le site de Krool Holding et la plateforme Krool Academy sont en cours de construction.",
-    "status": "Lancement prochainement"
+    "hero": {
+      "eyebrow": "Sécurité industrielle · HSE · Conseil",
+      "title": "Maîtriser les risques industriels, protéger les hommes et l'environnement.",
+      "lead": "Études de dangers, santé et sécurité au travail, EIES, qualité et formation : un cabinet camerounais qui allie méthodes internationales et connaissance du terrain.",
+      "ctaQuote": "Demander un devis",
+      "ctaAcademy": "Découvrir l'Académie",
+      "diagramLabel": "Schéma en nœud papillon : barrières de prévention et de protection autour d'un événement redouté"
+    },
+    "stats": {
+      "title": "Krool Holding en chiffres"
+    },
+    "services": {
+      "eyebrow": "Nos expertises",
+      "title": "Neuf domaines, une même exigence de rigueur",
+      "lead": "De l'étude réglementaire à l'accompagnement terrain, nous couvrons l'ensemble des enjeux sécurité, environnement et qualité de vos sites.",
+      "cta": "Voir tous les services"
+    },
+    "sectors": {
+      "eyebrow": "Secteurs servis",
+      "title": "Au service des industries qui ne peuvent pas se permettre l'accident",
+      "lead": "Chaque secteur a ses dangers, ses réglementations et ses contraintes d'exploitation. Nous les connaissons."
+    },
+    "method": {
+      "eyebrow": "Notre méthode",
+      "title": "Du terrain à la décision",
+      "lead": "Une démarche en quatre temps, appliquée à chaque mission."
+    },
+    "references": {
+      "eyebrow": "Réalisations",
+      "title": "Des missions concrètes, des résultats mesurables",
+      "lead": "Quelques exemples de missions types conduites par le cabinet.",
+      "cta": "Voir les études de cas"
+    },
+    "academy": {
+      "eyebrow": "Krool Academy",
+      "title": "Former vos équipes, en ligne et à leur rythme",
+      "lead": "Cours, quiz, mini-labs interactifs et certificats vérifiables : la plateforme de formation aux risques industriels arrive bientôt.",
+      "cta": "Être prévenu du lancement"
+    },
+    "testimonials": {
+      "eyebrow": "Témoignages",
+      "title": "Ce qu'en disent nos clients"
+    },
+    "cta": {
+      "title": "Un projet, une échéance réglementaire, un doute sur un risque ?",
+      "lead": "Parlons-en. Nous répondons à toute demande sous 48 heures ouvrées."
+    }
+  },
+  "Newsletter": {
+    "title": "La lettre HSE de Krool Holding",
+    "lead": "Réglementation, retours d'expérience et bonnes pratiques, une fois par mois. Désinscription en un clic.",
+    "emailLabel": "Adresse e-mail",
+    "placeholder": "vous@entreprise.com",
+    "submit": "S'inscrire",
+    "successTitle": "Plus qu'une étape !",
+    "success": "Nous venons de vous envoyer un e-mail : cliquez sur le lien qu'il contient pour confirmer votre inscription."
+  },
+  "NewsletterConfirm": {
+    "title": "Confirmation d'inscription",
+    "confirming": "Confirmation en cours…",
+    "confirmedTitle": "Inscription confirmée",
+    "confirmedText": "Merci ! Vous recevrez désormais la lettre HSE de Krool Holding.",
+    "invalidTitle": "Lien invalide ou expiré",
+    "invalidText": "Ce lien a peut-être déjà été utilisé ou a expiré. Vous pouvez vous réinscrire depuis le bas de n'importe quelle page.",
+    "backHome": "Retour à l'accueil"
+  },
+  "Services": {
+    "title": "Nos services",
+    "lead": "Sécurité industrielle, santé et sécurité au travail, environnement, qualité et formation : des prestations complètes pour l'industrie et les institutions.",
+    "deliverables": "Ce que nous livrons",
+    "approach": "Notre démarche",
+    "standards": "Références et normes",
+    "relatedCases": "Études de cas associées",
+    "otherServices": "Autres services",
+    "ctaTitle": "Parlons de votre projet",
+    "ctaText": "Décrivez votre besoin : un consultant vous répond sous 48 heures ouvrées avec une première approche."
+  },
+  "CaseStudies": {
+    "title": "Études de cas",
+    "lead": "Des missions représentatives de notre façon de travailler : un contexte, une démarche, des résultats.",
+    "exampleNotice": "Les études de cas présentées sont des exemples illustratifs, en attendant la publication de missions réelles avec l'accord de nos clients.",
+    "client": "Client",
+    "sector": "Secteur",
+    "service": "Service",
+    "year": "Année",
+    "context": "Contexte",
+    "approach": "Démarche",
+    "results": "Résultats",
+    "back": "Toutes les études de cas"
+  },
+  "About": {
+    "title": "Le cabinet",
+    "mission": "Notre mission",
+    "story": "Notre histoire",
+    "values": "Nos valeurs",
+    "team": "L'équipe",
+    "teamLead": "Des consultants spécialisés, réunis par une même exigence de terrain.",
+    "certifications": "Certifications",
+    "teamNotice": "Profils provisoires : l'équipe définitive sera présentée prochainement."
+  },
+  "References": {
+    "title": "Références et réalisations",
+    "lead": "Les secteurs dans lesquels nous intervenons et des exemples de missions types.",
+    "sectorsTitle": "Secteurs d'intervention",
+    "projectsTitle": "Exemples de missions",
+    "exampleNotice": "Liste indicative de missions types. Les références clients seront publiées avec l'accord de chacun."
+  },
+  "Academy": {
+    "title": "Krool Academy",
+    "lead": "La plateforme de formation en ligne aux risques industriels, à la santé-sécurité, à l'environnement et à la qualité. Lancement prochainement.",
+    "badge": "Bientôt disponible",
+    "featuresTitle": "Une plateforme pensée pour l'industrie",
+    "catalogTitle": "Les parcours de lancement",
+    "catalogLead": "Cinq parcours pour bâtir des bases solides, du premier contact avec le risque industriel jusqu'à l'amélioration continue.",
+    "levels": {
+      "beginner": "Débutant",
+      "intermediate": "Intermédiaire",
+      "advanced": "Avancé"
+    },
+    "hours": "{hours} h",
+    "languages": "FR / EN",
+    "waitlistTitle": "Soyez prévenu du lancement",
+    "waitlistLead": "Laissez votre adresse : nous vous écrirons dès l'ouverture de la plateforme, avec un accès prioritaire aux premiers parcours.",
+    "profileLabel": "Vous êtes",
+    "profiles": {
+      "student": "Étudiant(e)",
+      "professional": "Professionnel(le)",
+      "company": "Une entreprise"
+    },
+    "submit": "Me prévenir",
+    "successTitle": "C'est noté !",
+    "success": "Vous serez parmi les premiers informés de l'ouverture de Krool Academy."
+  },
+  "News": {
+    "title": "Actualités",
+    "lead": "Réglementation, méthodes et retours d'expérience en sécurité industrielle, HSE et qualité.",
+    "readingTime": "{minutes} min de lecture",
+    "back": "Toutes les actualités",
+    "relatedService": "Service associé"
+  },
+  "Faq": {
+    "title": "Questions fréquentes",
+    "lead": "Les réponses aux questions que l'on nous pose le plus souvent.",
+    "moreTitle": "Vous ne trouvez pas votre réponse ?",
+    "moreText": "Écrivez-nous ou réservez un échange de 45 minutes avec un consultant."
+  },
+  "Form": {
+    "fullName": "Nom complet",
+    "email": "E-mail professionnel",
+    "phone": "Téléphone",
+    "company": "Organisation",
+    "country": "Pays",
+    "optional": "facultatif",
+    "requiredHint": "Les champs marqués * sont obligatoires.",
+    "consent": "J'accepte que mes données soient utilisées pour traiter ma demande, conformément à la <link>politique de confidentialité</link>.",
+    "sending": "Envoi en cours…",
+    "honeypot": "Laissez ce champ vide",
+    "errors": {
+      "required": "Ce champ est obligatoire.",
+      "email": "Adresse e-mail invalide.",
+      "phone": "Numéro de téléphone invalide.",
+      "consent": "Votre accord est nécessaire pour traiter la demande.",
+      "generic": "Votre demande n'a pas pu être envoyée. Vérifiez les champs signalés.",
+      "network": "Connexion impossible. Vérifiez votre réseau et réessayez.",
+      "rateLimited": "Trop de demandes depuis votre connexion. Réessayez dans un moment ou écrivez-nous directement.",
+      "tooManyFiles": "{max} fichiers maximum.",
+      "fileTooLarge": "{name} dépasse {mb} Mo.",
+      "fileType": "{name} : format non accepté."
+    }
+  },
+  "Quote": {
+    "title": "Demander un devis",
+    "lead": "Quatre étapes, environ trois minutes. Un consultant vous répond sous 48 heures ouvrées avec une première approche et, si besoin, une proposition de visite.",
+    "progress": "Étape {current} sur {total}",
+    "steps": {
+      "service": "Service",
+      "site": "Votre site",
+      "need": "Votre besoin",
+      "contact": "Coordonnées"
+    },
+    "serviceLabel": "Quel service vous intéresse ?",
+    "serviceOther": "Autre / je ne sais pas encore",
+    "sectorLabel": "Secteur d'activité",
+    "sectorOther": "Autre secteur",
+    "siteSizeLabel": "Taille du site concerné",
+    "sizes": {
+      "small": "Moins de 50 personnes",
+      "medium": "50 à 250 personnes",
+      "large": "Plus de 250 personnes",
+      "multi": "Plusieurs sites"
+    },
+    "descriptionLabel": "Décrivez votre besoin",
+    "descriptionHelp": "Contexte, installations concernées, échéances réglementaires… Plus vous êtes précis, plus notre réponse le sera.",
+    "attachmentsLabel": "Pièces jointes",
+    "attachmentsHelp": "Plans, cahier des charges, rapports… PDF, PNG, JPG, DOCX ou XLSX, 3 fichiers de 5 Mo maximum.",
+    "removeFile": "Retirer {name}",
+    "next": "Continuer",
+    "previous": "Retour",
+    "submit": "Envoyer la demande",
+    "successTitle": "Demande envoyée",
+    "successText": "Merci ! Votre demande porte la référence {reference}. Un e-mail de confirmation vient de vous être envoyé.",
+    "newRequest": "Faire une autre demande",
+    "asideTitle": "Ce qui se passe ensuite",
+    "asideSteps": {
+      "one": "Un consultant étudie votre demande.",
+      "two": "Il vous recontacte sous 48 heures ouvrées.",
+      "three": "Vous recevez une proposition détaillée et chiffrée."
+    },
+    "confidential": "Vos informations et documents restent strictement confidentiels."
+  },
+  "Appointment": {
+    "title": "Prendre rendez-vous",
+    "lead": "Réservez un échange de 45 minutes avec un consultant, en visioconférence, par téléphone ou dans nos locaux.",
+    "slotsTitle": "1. Choisissez un créneau",
+    "formTitle": "2. Vos coordonnées",
+    "timezoneNote": "Horaires de Douala (UTC+1).",
+    "loadingSlots": "Chargement des créneaux…",
+    "noSlots": "Aucun créneau n'est disponible pour le moment. Écrivez-nous et nous vous proposerons une date.",
+    "slotsError": "Les créneaux n'ont pas pu être chargés.",
+    "retry": "Réessayer",
+    "selectedSlot": "Créneau choisi : {date}",
+    "chooseSlot": "Choisissez d'abord un créneau.",
+    "modeLabel": "Modalité",
+    "modes": {
+      "video": "Visioconférence",
+      "phone": "Téléphone",
+      "on-site": "Dans nos locaux"
+    },
+    "topicLabel": "Sujet",
+    "messageLabel": "Précisions",
+    "submit": "Confirmer le rendez-vous",
+    "successTitle": "Rendez-vous confirmé",
+    "successText": "Rendez-vous le {date}. Un e-mail de confirmation vient de vous être envoyé.",
+    "slotTaken": "Ce créneau vient d'être réservé. Merci d'en choisir un autre."
+  },
+  "Contact": {
+    "title": "Contact",
+    "lead": "Une question, une demande d'information ? Écrivez-nous, nous répondons rapidement.",
+    "coordinatesTitle": "Nos coordonnées",
+    "phone": "Téléphone",
+    "address": "Adresse",
+    "hours": "Horaires",
+    "emailsTitle": "Écrire au bon interlocuteur",
+    "emails": {
+      "contact": "Direction et questions générales",
+      "solutions": "Devis et relations commerciales",
+      "support": "Support de l'Académie",
+      "finance": "Facturation et comptabilité"
+    },
+    "formTitle": "Envoyer un message",
+    "subject": "Objet",
+    "message": "Message",
+    "submit": "Envoyer le message",
+    "successTitle": "Message envoyé",
+    "successText": "Merci ! Nous vous répondons dans les meilleurs délais. Un e-mail de confirmation vient de vous être envoyé."
   },
   "Footer": {
+    "tagline": "Sécurité industrielle, HSE et conseil. Cameroun, CEMAC et international.",
+    "servicesTitle": "Services",
+    "firmTitle": "Cabinet",
+    "contactTitle": "Contact",
+    "legalNav": "Informations légales",
+    "legalNotice": "Mentions légales",
+    "privacy": "Confidentialité",
+    "terms": "CGU / CGV",
     "rights": "© {year} Krool Holding. Tous droits réservés.",
     "location": "Cameroun · CEMAC · International"
   },
@@ -28,5 +316,23 @@
     "title": "Page introuvable",
     "description": "La page demandée n'existe pas ou a été déplacée.",
     "back": "Retour à l'accueil"
+  },
+  "Diagrams": {
+    "bowTie": {
+      "threats": "Causes",
+      "event": "Événement redouté",
+      "consequences": "Conséquences",
+      "prevention": "Barrières de prévention",
+      "protection": "Barrières de protection"
+    },
+    "riskMatrix": {
+      "title": "Matrice de criticité",
+      "likelihood": "Probabilité",
+      "severity": "Gravité",
+      "legend": "Niveau de risque",
+      "low": "Acceptable",
+      "medium": "À réduire",
+      "high": "Inacceptable"
+    }
   }
 }

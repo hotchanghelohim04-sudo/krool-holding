@@ -2,6 +2,8 @@ import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 
 const isDev = process.env.NODE_ENV !== "production";
+// Adresse de Django vue depuis le serveur Next.js (lue au build).
+const apiInternalUrl = (process.env.API_INTERNAL_URL ?? "http://localhost:8000").replace(/\/$/, "");
 
 // En-têtes de sécurité (CLAUDE.md §11). La CSP sera durcie (nonces) à l'étape 7.
 const contentSecurityPolicy = [
@@ -46,6 +48,11 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
+  },
+  // Relais /api → Django (dev et Docker sans Caddy). Le navigateur reste sur la même
+  // origine : pas de CORS. En production, Caddy route /api directement vers Django.
+  async rewrites() {
+    return [{ source: "/api/:path*", destination: `${apiInternalUrl}/api/:path*` }];
   },
 };
 
