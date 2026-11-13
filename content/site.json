@@ -1,5 +1,5 @@
 {
-  "$todo": "TODO-CONTENU : coordonnées, chiffres, témoignages et références provisoires (fictifs). À remplacer par Lembe avant la mise en ligne.",
+  "$todo": "TODO-CONTENU : coordonnées, chiffres, témoignages et références provisoires (fictifs). À remplacer par Lembe avant la mise en ligne. Réseaux sociaux : renseigner les URL (vides = icône affichée « bientôt »). Qualifications : n'afficher une marque de certification (logo ISO, NEBOSH…) qu'avec le fichier officiel fourni par l'organisme et un certificat valide.",
   "contact": {
     "phone": "+237 6XX XX XX XX",
     "emails": {
@@ -18,62 +18,260 @@
     }
   },
   "stats": [
-    { "value": 9, "suffix": "", "fr": "domaines d'expertise HSE et qualité", "en": "HSE and quality areas of expertise" },
-    { "value": 6, "suffix": "", "fr": "pays de la zone CEMAC couverts", "en": "CEMAC countries covered" },
-    { "value": 5, "suffix": "", "fr": "parcours de formation au lancement de l'Académie", "en": "learning paths at Academy launch" },
-    { "value": 48, "suffix": " h", "fr": "pour une première réponse à votre demande", "en": "for a first answer to your request" }
+    {
+      "value": 9,
+      "suffix": "",
+      "fr": "domaines d'expertise HSE et qualité",
+      "en": "HSE and quality areas of expertise"
+    },
+    {
+      "value": 6,
+      "suffix": "",
+      "fr": "pays de la zone CEMAC couverts",
+      "en": "CEMAC countries covered"
+    },
+    {
+      "value": 5,
+      "suffix": "",
+      "fr": "parcours de formation au lancement de l'Académie",
+      "en": "learning paths at Academy launch"
+    },
+    {
+      "value": 48,
+      "suffix": " h",
+      "fr": "pour une première réponse à votre demande",
+      "en": "for a first answer to your request"
+    }
   ],
   "sectors": [
-    { "key": "oil-gas", "icon": "Fuel", "fr": "Pétrole et gaz", "en": "Oil and gas" },
-    { "key": "mining", "icon": "Pickaxe", "fr": "Mines et carrières", "en": "Mining and quarrying" },
-    { "key": "energy", "icon": "Zap", "fr": "Énergie", "en": "Energy" },
-    { "key": "agrifood", "icon": "Wheat", "fr": "Agroalimentaire", "en": "Agri-food" },
-    { "key": "chemicals", "icon": "FlaskConical", "fr": "Chimie", "en": "Chemicals" },
-    { "key": "construction", "icon": "Building2", "fr": "BTP et infrastructures", "en": "Construction and infrastructure" },
-    { "key": "manufacturing", "icon": "Factory", "fr": "Industrie manufacturière", "en": "Manufacturing" },
-    { "key": "logistics", "icon": "Ship", "fr": "Ports et logistique", "en": "Ports and logistics" },
-    { "key": "public", "icon": "Landmark", "fr": "Institutions et secteur public", "en": "Public sector and institutions" }
+    {
+      "key": "oil-gas",
+      "icon": "Fuel",
+      "fr": "Pétrole et gaz",
+      "en": "Oil and gas"
+    },
+    {
+      "key": "mining",
+      "icon": "Pickaxe",
+      "fr": "Mines et carrières",
+      "en": "Mining and quarrying"
+    },
+    {
+      "key": "energy",
+      "icon": "Zap",
+      "fr": "Énergie",
+      "en": "Energy"
+    },
+    {
+      "key": "agrifood",
+      "icon": "Wheat",
+      "fr": "Agroalimentaire",
+      "en": "Agri-food"
+    },
+    {
+      "key": "chemicals",
+      "icon": "FlaskConical",
+      "fr": "Chimie",
+      "en": "Chemicals"
+    },
+    {
+      "key": "construction",
+      "icon": "Building2",
+      "fr": "BTP et infrastructures",
+      "en": "Construction and infrastructure"
+    },
+    {
+      "key": "manufacturing",
+      "icon": "Factory",
+      "fr": "Industrie manufacturière",
+      "en": "Manufacturing"
+    },
+    {
+      "key": "logistics",
+      "icon": "Ship",
+      "fr": "Ports et logistique",
+      "en": "Ports and logistics"
+    },
+    {
+      "key": "public",
+      "icon": "Landmark",
+      "fr": "Institutions et secteur public",
+      "en": "Public sector and institutions"
+    }
   ],
   "method": [
     {
-      "fr": { "title": "Écouter", "text": "Comprendre votre activité, vos contraintes et ce qui est réellement en jeu pour vous." },
-      "en": { "title": "Listen", "text": "Understand your business, your constraints and what is really at stake for you." }
+      "fr": {
+        "title": "Écouter",
+        "text": "Comprendre votre activité, vos contraintes et ce qui est réellement en jeu pour vous."
+      },
+      "en": {
+        "title": "Listen",
+        "text": "Understand your business, your constraints and what is really at stake for you."
+      }
     },
     {
-      "fr": { "title": "Observer", "text": "Aller sur le terrain : les risques se lisent dans les installations et les gestes, pas seulement dans les documents." },
-      "en": { "title": "Observe", "text": "Go to the field: risks show in facilities and practices, not only in documents." }
+      "fr": {
+        "title": "Observer",
+        "text": "Aller sur le terrain : les risques se lisent dans les installations et les gestes, pas seulement dans les documents."
+      },
+      "en": {
+        "title": "Observe",
+        "text": "Go to the field: risks show in facilities and practices, not only in documents."
+      }
     },
     {
-      "fr": { "title": "Analyser", "text": "Appliquer des méthodes reconnues et chiffrer les risques pour décider sur des faits." },
-      "en": { "title": "Analyse", "text": "Apply recognised methods and quantify risks to decide on facts." }
+      "fr": {
+        "title": "Analyser",
+        "text": "Appliquer des méthodes reconnues et chiffrer les risques pour décider sur des faits."
+      },
+      "en": {
+        "title": "Analyse",
+        "text": "Apply recognised methods and quantify risks to decide on facts."
+      }
     },
     {
-      "fr": { "title": "Agir", "text": "Proposer des mesures réalistes, hiérarchisées, et vous accompagner jusqu'à leur mise en œuvre." },
-      "en": { "title": "Act", "text": "Propose realistic, prioritised measures and support you through implementation." }
+      "fr": {
+        "title": "Agir",
+        "text": "Proposer des mesures réalistes, hiérarchisées, et vous accompagner jusqu'à leur mise en œuvre."
+      },
+      "en": {
+        "title": "Act",
+        "text": "Propose realistic, prioritised measures and support you through implementation."
+      }
     }
   ],
   "testimonials": [
     {
-      "fr": { "quote": "Une étude de dangers claire, utile à nos équipes d'exploitation et acceptée sans réserve par l'administration.", "author": "Directeur d'exploitation", "company": "Dépôt pétrolier — exemple" },
-      "en": { "quote": "A clear hazard study, useful to our operations teams and accepted by the authorities without reservation.", "author": "Operations Director", "company": "Fuel depot — example" }
+      "fr": {
+        "quote": "Une étude de dangers claire, utile à nos équipes d'exploitation et acceptée sans réserve par l'administration.",
+        "author": "Directeur d'exploitation",
+        "company": "Dépôt pétrolier — exemple"
+      },
+      "en": {
+        "quote": "A clear hazard study, useful to our operations teams and accepted by the authorities without reservation.",
+        "author": "Operations Director",
+        "company": "Fuel depot — example"
+      }
     },
     {
-      "fr": { "quote": "Les formations sont concrètes : nos chefs d'équipe ont tout de suite appliqué l'arbre des causes après un incident.", "author": "Responsable HSE", "company": "Industrie agroalimentaire — exemple" },
-      "en": { "quote": "The training is practical: our team leaders applied cause-tree analysis right after an incident.", "author": "HSE Manager", "company": "Agri-food plant — example" }
+      "fr": {
+        "quote": "Les formations sont concrètes : nos chefs d'équipe ont tout de suite appliqué l'arbre des causes après un incident.",
+        "author": "Responsable HSE",
+        "company": "Industrie agroalimentaire — exemple"
+      },
+      "en": {
+        "quote": "The training is practical: our team leaders applied cause-tree analysis right after an incident.",
+        "author": "HSE Manager",
+        "company": "Agri-food plant — example"
+      }
     },
     {
-      "fr": { "quote": "Un PGES chiffré et réaliste qui a rassuré notre bailleur et les communautés riveraines.", "author": "Chef de projet", "company": "Projet d'infrastructure — exemple" },
-      "en": { "quote": "A costed, realistic ESMP that reassured our lender and the neighbouring communities.", "author": "Project Manager", "company": "Infrastructure project — example" }
+      "fr": {
+        "quote": "Un PGES chiffré et réaliste qui a rassuré notre bailleur et les communautés riveraines.",
+        "author": "Chef de projet",
+        "company": "Projet d'infrastructure — exemple"
+      },
+      "en": {
+        "quote": "A costed, realistic ESMP that reassured our lender and the neighbouring communities.",
+        "author": "Project Manager",
+        "company": "Infrastructure project — example"
+      }
     }
   ],
   "references": [
-    { "sector": "oil-gas", "fr": "Étude de dangers d'un dépôt d'hydrocarbures", "en": "Hazard study for a fuel storage depot" },
-    { "sector": "agrifood", "fr": "Système de management ISO 45001 d'une usine", "en": "ISO 45001 management system for a plant" },
-    { "sector": "mining", "fr": "EIES d'une carrière de granulats", "en": "ESIA for an aggregates quarry" },
-    { "sector": "energy", "fr": "HAZOP d'une centrale thermique", "en": "HAZOP of a thermal power plant" },
-    { "sector": "logistics", "fr": "Plan d'urgence d'un terminal portuaire", "en": "Emergency plan for a port terminal" },
-    { "sector": "chemicals", "fr": "Audit de conformité d'un site chimique", "en": "Compliance audit of a chemical site" },
-    { "sector": "manufacturing", "fr": "Préparation à la certification ISO 9001", "en": "ISO 9001 certification readiness" },
-    { "sector": "construction", "fr": "Plan HSE d'un chantier d'infrastructure", "en": "HSE plan for an infrastructure worksite" }
+    {
+      "sector": "oil-gas",
+      "fr": "Étude de dangers d'un dépôt d'hydrocarbures",
+      "en": "Hazard study for a fuel storage depot"
+    },
+    {
+      "sector": "agrifood",
+      "fr": "Système de management ISO 45001 d'une usine",
+      "en": "ISO 45001 management system for a plant"
+    },
+    {
+      "sector": "mining",
+      "fr": "EIES d'une carrière de granulats",
+      "en": "ESIA for an aggregates quarry"
+    },
+    {
+      "sector": "energy",
+      "fr": "HAZOP d'une centrale thermique",
+      "en": "HAZOP of a thermal power plant"
+    },
+    {
+      "sector": "logistics",
+      "fr": "Plan d'urgence d'un terminal portuaire",
+      "en": "Emergency plan for a port terminal"
+    },
+    {
+      "sector": "chemicals",
+      "fr": "Audit de conformité d'un site chimique",
+      "en": "Compliance audit of a chemical site"
+    },
+    {
+      "sector": "manufacturing",
+      "fr": "Préparation à la certification ISO 9001",
+      "en": "ISO 9001 certification readiness"
+    },
+    {
+      "sector": "construction",
+      "fr": "Plan HSE d'un chantier d'infrastructure",
+      "en": "HSE plan for an infrastructure worksite"
+    }
+  ],
+  "social": [
+    {
+      "network": "linkedin",
+      "url": ""
+    },
+    {
+      "network": "facebook",
+      "url": ""
+    },
+    {
+      "network": "instagram",
+      "url": ""
+    },
+    {
+      "network": "youtube",
+      "url": ""
+    },
+    {
+      "network": "x",
+      "url": ""
+    },
+    {
+      "network": "tiktok",
+      "url": ""
+    },
+    {
+      "network": "whatsapp",
+      "url": ""
+    }
+  ],
+  "credentials": [
+    {
+      "key": "nebosh",
+      "name": "NEBOSH",
+      "logo": null,
+      "fr": "Consultants titulaires du NEBOSH IGC",
+      "en": "Consultants holding the NEBOSH IGC"
+    },
+    {
+      "key": "iso-45001",
+      "name": "ISO 45001",
+      "logo": null,
+      "fr": "Santé et sécurité au travail : référentiel appliqué",
+      "en": "Occupational health and safety: standard applied"
+    },
+    {
+      "key": "iso-9001",
+      "name": "ISO 9001",
+      "logo": null,
+      "fr": "Management de la qualité : référentiel appliqué",
+      "en": "Quality management: standard applied"
+    }
   ]
 }

@@ -1,0 +1,70 @@
+{
+  "$todo": "TODO-CONTENU : partenaires indiqués par Lembe. AVANT LA MISE EN LIGNE : obtenir l'accord écrit de chaque entreprise pour citer son nom et afficher son logo, et déposer les logos officiels fournis par elles dans frontend/public/partners/ (champ « logo »). Sans logo, le nom s'affiche en toutes lettres.",
+  "partners": [
+    {
+      "key": "cimencam",
+      "name": "Cimencam",
+      "logo": null
+    },
+    {
+      "key": "chococam",
+      "name": "Chococam",
+      "logo": null
+    },
+    {
+      "key": "php",
+      "name": "PHP",
+      "logo": null
+    },
+    {
+      "key": "socadel",
+      "name": "Socadel (ex-Eneo)",
+      "logo": null
+    },
+    {
+      "key": "ihs",
+      "name": "IHS",
+      "logo": null
+    },
+    {
+      "key": "sonara",
+      "name": "Sonara",
+      "logo": null
+    },
+    {
+      "key": "wiserve",
+      "name": "Wiserve",
+      "logo": null
+    },
+    {
+      "key": "preventum-sst",
+      "name": "Preventum SST",
+      "logo": null
+    },
+    {
+      "key": "ucb",
+      "name": "UCB",
+      "logo": null
+    },
+    {
+      "key": "brasseries-cameroun",
+      "name": "Brasseries du Cameroun",
+      "logo": null
+    },
+    {
+      "key": "adc",
+      "name": "Aéroports du Cameroun (ADC)",
+      "logo": null
+    },
+    {
+      "key": "apave-cameroun",
+      "name": "Apave Cameroun",
+      "logo": null
+    },
+    {
+      "key": "acc",
+      "name": "Atlantic Cocoa Corporation",
+      "logo": null
+    }
+  ]
+}

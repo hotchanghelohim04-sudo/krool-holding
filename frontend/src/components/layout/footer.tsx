@@ -1,11 +1,13 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { getLocale, getTranslations } from "next-intl/server";
 import { cacheLife } from "next/cache";
+import Image from "next/image";
 
 import { KroolLogo } from "@/components/brand/krool-logo";
 import { NewsletterForm } from "@/components/forms/newsletter-form";
 import type { NativeLocale } from "@/i18n/config";
 import { Link } from "@/i18n/navigation";
+import { SocialLinks } from "./social-links";
 import { getServices, getSite } from "@/lib/content";
 
 // Avec cacheComponents, la date courante doit être lue dans une portée mise en cache.
@@ -61,6 +63,10 @@ export async function Footer() {
             }}
           />
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-slate-300">{t("tagline")}</p>
+          <h2 className="mt-6 font-sans text-xs font-semibold tracking-[0.2em] text-gold-500 uppercase">{t("followUs")}</h2>
+          <div className="mt-3">
+            <SocialLinks social={site.social} />
+          </div>
         </div>
 
         <nav aria-labelledby="footer-services" className="lg:col-span-3">
@@ -121,6 +127,31 @@ export async function Footer() {
               {tNav("appointment")} →
             </Link>
           </div>
+        </div>
+      </div>
+
+      {/* Qualifications et référentiels (à la manière des bandeaux de certifications des grands cabinets).
+          Une marque officielle (logo ISO, NEBOSH…) ne s'affiche que si son fichier est fourni dans content/site.json. */}
+      <div className="border-t border-ink-800">
+        <div className="container-site py-10">
+          <h2 className="text-center font-sans text-xs font-semibold tracking-[0.2em] text-gold-500 uppercase">
+            {t("credentialsTitle")}
+          </h2>
+          <ul className="mt-6 flex flex-wrap items-stretch justify-center gap-4">
+            {site.credentials.map((credential) => (
+              <li
+                key={credential.key}
+                className="flex w-56 flex-col items-center justify-center rounded-md border border-ink-800 bg-ink-900 px-5 py-4 text-center"
+              >
+                {credential.logo ? (
+                  <Image src={credential.logo} alt={credential.name} width={120} height={64} className="h-16 w-auto object-contain" />
+                ) : (
+                  <span className="font-serif text-2xl tracking-wide text-paper">{credential.name}</span>
+                )}
+                <span className="mt-1.5 text-xs leading-snug text-slate-300">{credential[locale]}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 
