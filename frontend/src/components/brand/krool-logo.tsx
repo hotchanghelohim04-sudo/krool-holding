@@ -68,7 +68,7 @@ export function KroolLogo({
         <text x="316" y="1060" textLength="1202" lengthAdjust="spacing" fontSize="272" fontWeight="400" className="fill-logo-gold">
           {labels.name}
         </text>
-        <line x1="672" y1="1152" x2="1152" y2="1152" className="stroke-gold-500" strokeWidth="5" strokeOpacity="0.6" />
+        <line x1="672" y1="1152" x2="1152" y2="1152" className="stroke-logo-line" strokeWidth="5" strokeOpacity="0.6" />
         <text
           x="684"
           y="1270"

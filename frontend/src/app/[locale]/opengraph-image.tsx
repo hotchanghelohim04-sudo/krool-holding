@@ -27,13 +27,13 @@ export default async function OpenGraphImage({ params }: { params: Promise<{ loc
           padding: 72,
           background: "#0d0d0f",
           color: "#f7f5f0",
-          borderBottom: "12px solid #c9a24b",
+          borderBottom: "12px solid #f2a906",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
           {/* eslint-disable-next-line @next/next/no-img-element -- rendu dans une image, pas dans le DOM */}
           <img src={logoSrc} width={96} height={96} alt="" />
-          <div style={{ display: "flex", fontSize: 40, letterSpacing: 8, color: "#c9a24b" }}>KROOL HOLDING</div>
+          <div style={{ display: "flex", fontSize: 40, letterSpacing: 8, color: "#f2a906" }}>KROOL HOLDING</div>
         </div>
         <div style={{ display: "flex", fontSize: 60, lineHeight: 1.15, maxWidth: 1000 }}>{t("title")}</div>
         <div style={{ display: "flex", fontSize: 26, color: "#a1a7b0" }}>krool-holding.com</div>

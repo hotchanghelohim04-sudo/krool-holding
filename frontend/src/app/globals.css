@@ -3,16 +3,17 @@
 /* ==========================================================================
    Design tokens Krool Holding (Tailwind v4 : déclarés dans @theme)
    --------------------------------------------------------------------------
-   Palette EXTRAITE DU LOGO « concept 8 » (frontend/public/brand/*.svg).
+   Or aligné sur le LOGO V2 (#F2A906, teinte 41°) — gamme calculée à teinte constante.
    Contrastes vérifiés (WCAG AA, texte normal ≥ 4.5:1, grand texte ≥ 3:1) :
-     gold-500 / ink-950 ......... 8.09   (or sur noir : OK)
-     gold-300 / ink-950 ......... 10.72
+     gold-500 / ink-950 ......... 9.66   (or sur noir : OK)
+     ink-950 / gold-500 ......... 9.66   (texte noir des boutons or)
+     gold-300 / ink-950 ......... 12.59
      paper / ink-950 ............ 17.82
      slate-300 / ink-950 ........ 8.02   (texte secondaire sur sombre)
      slate-600 / paper .......... 5.87   (texte secondaire sur clair)
-     gold-700 / paper ........... 5.53   (or lisible sur fond clair)
-     gold-600 / paper ........... 3.21   (grands titres / décor uniquement)
-   ⚠ gold-500 sur paper (2.20) ne passe PAS l'AA : jamais pour du texte.
+     gold-700 / paper ........... 5.18   (or lisible sur fond clair)
+     gold-600 / paper ........... 3.29   (grands titres / décor uniquement)
+   ⚠ gold-300/400/500 sur paper (1.4 à 1.8) : JAMAIS pour du texte sur fond clair.
    ========================================================================== */
 
 @theme {
@@ -22,15 +23,16 @@
   --color-ink-800: #222228; /* bordures et séparateurs sur sombre */
   --color-ink-700: #33333b;
 
-  /* --- Couleurs : or (accent de marque, valeurs du logo) --- */
-  --color-gold-300: #d8be80; /* signature « Industrial Safety & Advisory » */
-  --color-gold-400: #d4af55; /* K en petits H */
-  --color-gold-500: #c9a24b; /* or de référence (losange, KROOL) */
-  --color-gold-600: #a8842f; /* or du logo sur fond clair */
-  --color-gold-700: #7a5f1f; /* or pour texte sur fond clair */
+  /* --- Couleurs : or (accent de marque, aligné sur le logo v2) --- */
+  --color-gold-300: #f8ca62; /* texte doré clair sur sombre */
+  --color-gold-400: #f6b628; /* survols, accents */
+  --color-gold-500: #f2a906; /* or de référence = or du logo */
+  --color-gold-600: #b37d05; /* grands titres / décor sur fond clair */
+  --color-gold-700: #8a5f00; /* or pour texte sur fond clair */
 
-  /* --- Or du logo v2 (emblème et wordmark uniquement : plus vif que l'or de l'interface) --- */
+  /* --- Couleurs propres au logo (figées : la palette du site ne doit pas modifier le logo) --- */
   --color-logo-gold: #f2a906;
+  --color-logo-line: #caa24b; /* filet sous « KROOL » */
 
   /* --- Couleur du tampon officiel (certificats, documents) --- */
   --color-seal: #1d3fa0;
@@ -73,7 +75,7 @@
 
   /* --- Ombres et animations discrètes --- */
   --shadow-card: 0 1px 2px rgb(13 13 15 / 0.06), 0 8px 24px rgb(13 13 15 / 0.06);
-  --shadow-glow-gold: 0 0 0 1px rgb(201 162 75 / 0.35), 0 8px 32px rgb(201 162 75 / 0.12);
+  --shadow-glow-gold: 0 0 0 1px rgb(242 169 6 / 0.35), 0 8px 32px rgb(242 169 6 / 0.12);
   --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
   --animate-fade-up: fade-up 0.6s var(--ease-out-soft) both;
   /* Défilement continu (composant Marquee adapté de Magic UI) */
