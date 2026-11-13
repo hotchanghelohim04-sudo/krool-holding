@@ -1,0 +1,28 @@
+# Reverse proxy de production (HTTPS automatique Let's Encrypt).
+# Cloudflare sera placé devant (DNS, CDN, WAF) une fois le domaine acheté.
+
+{$SITE_DOMAIN} {
+	encode zstd gzip
+
+	# API Django et admin de secours (adapter si DJANGO_ADMIN_URL change)
+	@api path /api/* /static/* /media/* /django-admin/*
+	handle @api {
+		reverse_proxy backend:8000
+	}
+
+	# Tout le reste : site Next.js
+	handle {
+		reverse_proxy frontend:3000
+	}
+
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		-Server
+	}
+}
+
+www.{$SITE_DOMAIN} {
+	redir https://{$SITE_DOMAIN}{uri} permanent
+}
