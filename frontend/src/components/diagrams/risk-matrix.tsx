@@ -62,7 +62,7 @@ export function RiskMatrix({ labels }: { labels: RiskMatrixLabels }) {
         <title id="risk-matrix-title">{labels.title}</title>
         {cells}
         {/* Axes */}
-        <g className="fill-slate-600 text-[11px]">
+        <g className="fill-fg-muted text-[11px]">
           {[1, 2, 3, 4, 5].map((n) => (
             <g key={n}>
               <text x={ORIGIN.x + (n - 1) * CELL + (CELL - 3) / 2} y={ORIGIN.y + gridSize + 14} textAnchor="middle">
@@ -78,19 +78,19 @@ export function RiskMatrix({ labels }: { labels: RiskMatrixLabels }) {
           x={ORIGIN.x + gridSize / 2}
           y={ORIGIN.y + gridSize + 34}
           textAnchor="middle"
-          className="fill-ink-950 text-[12px] font-semibold"
+          className="fill-fg text-[12px] font-semibold"
         >
           {labels.likelihood} →
         </text>
         <text
           transform={`translate(16 ${ORIGIN.y + gridSize / 2}) rotate(-90)`}
           textAnchor="middle"
-          className="fill-ink-950 text-[12px] font-semibold"
+          className="fill-fg text-[12px] font-semibold"
         >
           {labels.severity} →
         </text>
       </svg>
-      <figcaption className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-600">
+      <figcaption className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-fg-muted">
         <span className="sr-only">{labels.legend} :</span>
         {(["low", "medium", "high"] as const).map((key) => (
           <span key={key} className="inline-flex items-center gap-1.5">

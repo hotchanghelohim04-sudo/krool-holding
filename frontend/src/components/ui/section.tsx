@@ -2,15 +2,16 @@ import type { ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
 
-type Tone = "dark" | "light" | "white";
+/** dark : toujours noir ; light : surface du thème ; alt : bande alternée (gris clair / anthracite). */
+type Tone = "dark" | "light" | "alt";
 
 const tones: Record<Tone, string> = {
   dark: "bg-ink-950 text-paper",
-  light: "bg-paper text-ink-950",
-  white: "bg-white text-ink-950",
+  light: "bg-surface text-fg",
+  alt: "bg-surface-alt text-fg",
 };
 
-/** Section pleine largeur : alternance sombre / clair (CLAUDE.md §3). */
+/** Section pleine largeur : alternance noir / blanc / bande grise (CLAUDE.md §3, inspiration bakerrisk.com). */
 export function Section({
   tone = "light",
   className,
@@ -56,7 +57,7 @@ export function SectionHeading({
         <p
           className={cn(
             "text-xs font-semibold tracking-[0.2em] uppercase",
-            dark ? "text-gold-500" : "text-gold-700",
+            dark ? "text-gold-500" : "text-accent",
           )}
         >
           {eyebrow}
@@ -66,7 +67,7 @@ export function SectionHeading({
         {title}
       </h2>
       {lead && (
-        <p className={cn("mt-4 text-lg", dark ? "text-slate-300" : "text-slate-600")}>{lead}</p>
+        <p className={cn("mt-4 text-lg", dark ? "text-slate-300" : "text-fg-muted")}>{lead}</p>
       )}
     </div>
   );

@@ -8,6 +8,7 @@ import { locale as rootLocale } from "next/root-params";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { JsonLd } from "@/components/seo/json-ld";
+import { ThemeScript } from "@/components/theme/theme-script";
 import type { NativeLocale } from "@/i18n/config";
 import { routing } from "@/i18n/routing";
 import { getSite } from "@/lib/content";
@@ -27,7 +28,7 @@ const playfair = Playfair_Display({
  * Traductions des composants client présents sur toutes les pages (en-tête, pied de page).
  * Les formulaires propres à une page reçoivent les leurs via <ClientMessages>.
  */
-const CLIENT_NAMESPACES = ["LocaleSwitcher", "Nav", "Form", "Newsletter"] as const;
+const CLIENT_NAMESPACES = ["LocaleSwitcher", "Nav", "Form", "Newsletter", "Theme"] as const;
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -77,7 +78,11 @@ export default async function LocaleLayout({ children }: LayoutProps<"/[locale]"
   };
 
   return (
-    <html lang={locale} className={`${inter.variable} ${playfair.variable} antialiased`}>
+    // suppressHydrationWarning : data-theme est posé par ThemeScript avant l'hydratation.
+    <html lang={locale} className={`${inter.variable} ${playfair.variable} antialiased`} suppressHydrationWarning>
+      <head>
+        <ThemeScript />
+      </head>
       <body className="flex min-h-dvh flex-col">
         <JsonLd data={organization} />
         <NextIntlClientProvider messages={clientMessages}>

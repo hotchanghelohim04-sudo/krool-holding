@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useEffect, useId, useRef, useState } from "react";
 
+import { ThemeToggle } from "@/components/theme/theme-toggle";
 import { buttonStyles } from "@/components/ui/button";
 import { usePathname } from "@/i18n/navigation";
 
@@ -97,6 +98,8 @@ export function MobileMenu({ services }: { services: ServiceNavItem[] }) {
                 </li>
               ))}
             </ul>
+            {/* Sur petit écran, la bascule de thème est ici plutôt que dans l'en-tête. */}
+            <ThemeToggle withLabel className="mt-4 sm:hidden" />
             <div className="mt-8 grid gap-3">
               <NavLink href="/devis" className={buttonStyles("primary", "lg")} onNavigate={close}>
                 {t("quote")}

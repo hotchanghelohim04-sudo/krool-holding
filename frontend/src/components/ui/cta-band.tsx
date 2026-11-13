@@ -6,7 +6,7 @@ import { ButtonLink } from "./button";
 export async function CtaBand({ title, text }: { title: string; text: string }) {
   const t = await getTranslations("Nav");
   return (
-    <section className="bg-paper">
+    <section className="bg-surface">
       <div className="container-site py-16 sm:py-20">
         <div className="reveal relative overflow-hidden rounded-xl border border-gold-600/30 bg-ink-950 px-6 py-12 text-paper sm:px-12">
           <div

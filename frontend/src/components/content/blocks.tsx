@@ -6,12 +6,12 @@ import type { Block } from "@/lib/content";
  */
 export function Blocks({ blocks }: { blocks: Block[] }) {
   return (
-    <div className="space-y-5 text-[1.0625rem] leading-relaxed text-ink-950/85">
+    <div className="space-y-5 text-[1.0625rem] leading-relaxed text-fg/85">
       {blocks.map((block, index) => {
         switch (block.type) {
           case "h2":
             return (
-              <h2 key={index} className="pt-4 text-2xl text-ink-950">
+              <h2 key={index} className="pt-4 text-2xl text-fg">
                 {block.text}
               </h2>
             );

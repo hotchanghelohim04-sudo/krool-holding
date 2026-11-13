@@ -14,13 +14,21 @@
      gold-700 / paper ........... 5.18   (or lisible sur fond clair)
      gold-600 / paper ........... 3.29   (grands titres / décor uniquement)
    ⚠ gold-300/400/500 sur paper (1.4 à 1.8) : JAMAIS pour du texte sur fond clair.
+
+   THÈMES CLAIR / SOMBRE (inspiration bakerrisk.com : noir pur, blanc, bandes grises)
+   - Sections toujours sombres (hero, en-tête, pied de page, bandes noires) : tokens ink-*.
+   - Sections « thémables » : tokens sémantiques surface / fg / line / accent… ci-dessous,
+     dont les valeurs changent avec data-theme (ou la préférence système).
+   Contrastes vérifiés dans les deux thèmes (texte ≥ 4.5:1) :
+     clair : fg 19.9 · fg-muted 6.7 (5.97 sur bande) · accent 5.65 · danger 6.5 · success 5.3
+     sombre : fg 19.3 · fg-muted 8.7 · accent 11.6 · danger 8.3 · success 9.5
    ========================================================================== */
 
 @theme {
-  /* --- Couleurs : noir profond (fond du favicon et des logos) --- */
-  --color-ink-950: #0d0d0f; /* fond principal des sections sombres */
-  --color-ink-900: #16161a; /* cartes / surfaces sur fond sombre */
-  --color-ink-800: #222228; /* bordures et séparateurs sur sombre */
+  /* --- Couleurs : noir (vrai noir, comme bakerrisk.com) --- */
+  --color-ink-950: #000000; /* fond des sections sombres, en-tête, pied de page */
+  --color-ink-900: #0f0f11; /* cartes / surfaces sur fond sombre */
+  --color-ink-800: #1f1f23; /* bordures et séparateurs sur sombre */
   --color-ink-700: #33333b;
 
   /* --- Couleurs : or (accent de marque, aligné sur le logo v2) --- */
@@ -53,6 +61,8 @@
   --color-danger: #b3261e;
   --color-info: #1d5c96;
 
+  /* --- Pour le texte des états sur fond sombre (voir tokens thémables) --- */
+
   /* --- Typographies (variables injectées par next/font) --- */
   --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
@@ -74,7 +84,7 @@
   --radius-2xl: 1.5rem;
 
   /* --- Ombres et animations discrètes --- */
-  --shadow-card: 0 1px 2px rgb(13 13 15 / 0.06), 0 8px 24px rgb(13 13 15 / 0.06);
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.06), 0 8px 24px rgb(0 0 0 / 0.08);
   --shadow-glow-gold: 0 0 0 1px rgb(242 169 6 / 0.35), 0 8px 32px rgb(242 169 6 / 0.12);
   --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
   --animate-fade-up: fade-up 0.6s var(--ease-out-soft) both;
@@ -100,6 +110,49 @@
       transform: translateY(0);
     }
   }
+}
+
+/* --- Tokens thémables : les utilitaires bg-surface, text-fg… lisent ces variables --- */
+@theme inline {
+  --color-surface: var(--surface);
+  --color-surface-alt: var(--surface-alt);
+  --color-surface-raised: var(--surface-raised);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-accent: var(--accent);
+  --color-danger-fg: var(--danger-fg);
+  --color-success-fg: var(--success-fg);
+  --color-warning-fg: var(--warning-fg);
+}
+
+/* Thème clair (par défaut) : blanc, bandes gris clair, texte noir chaud. */
+:root {
+  color-scheme: light;
+  --surface: #ffffff;
+  --surface-alt: #f2f2f2;
+  --surface-raised: #ffffff;
+  --fg: #0a0903;
+  --fg-muted: #5c5c5c;
+  --accent: #8a5f00; /* gold-700 */
+  --danger-fg: #b3261e;
+  --success-fg: #1f7a4d;
+  --warning-fg: #9a5b00;
+}
+
+/* Thème sombre : noir pur et surfaces à peine plus claires. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --surface: #000000;
+  --surface-alt: #0d0d0f;
+  --surface-raised: #141416;
+  --fg: #f5f5f5;
+  --fg-muted: #a1a7b0;
+  --accent: #f6b628; /* gold-400 */
+  --danger-fg: #ff7a70;
+  --success-fg: #4cc38a;
+  --warning-fg: #f6b628;
 }
 
 /* --- Utilitaires de mise en page réutilisables --- */
@@ -166,8 +219,8 @@
   }
 
   body {
-    background-color: var(--color-paper);
-    color: var(--color-ink-950);
+    background-color: var(--surface);
+    color: var(--fg);
     font-family: var(--font-sans);
   }
 
@@ -196,4 +249,9 @@
       transition-duration: 0.01ms !important;
     }
   }
+}
+
+/* Badge reCAPTCHA masqué : la mention exigée par Google est affichée sous chaque formulaire. */
+.grecaptcha-badge {
+  visibility: hidden;
 }

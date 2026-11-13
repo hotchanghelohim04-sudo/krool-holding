@@ -51,7 +51,7 @@ export function BowTieDiagram({ labels, title }: { labels: BowTieLabels; title: 
       ))}
 
       {/* Événement redouté */}
-      <circle cx={CENTER.x} cy={CENTER.y} r="52" className="fill-ink-950 stroke-gold-400" strokeWidth="2" />
+      <circle cx={CENTER.x} cy={CENTER.y} r="52" className="fill-fg stroke-gold-400" strokeWidth="2" />
       <circle cx={CENTER.x} cy={CENTER.y} r="60" className="fill-none stroke-gold-500/30" strokeWidth="1" />
       <foreignObject x={CENTER.x - 46} y={CENTER.y - 24} width="92" height="48">
         <div className="flex h-full items-center justify-center text-center font-serif text-[12px] leading-tight text-gold-300">

@@ -8,6 +8,8 @@ import type { NativeLocale } from "@/i18n/config";
 import { Link } from "@/i18n/navigation";
 import { getServices } from "@/lib/content";
 
+import { ThemeToggle } from "@/components/theme/theme-toggle";
+
 import { LocaleSwitcher } from "./locale-switcher";
 import { MobileMenu } from "./mobile-menu";
 import { NavLink } from "./nav-link";
@@ -33,7 +35,7 @@ export async function Header() {
     <header className="sticky top-0 z-40 border-b border-ink-800 bg-ink-950 text-paper">
       <a
         href="#contenu"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-paper focus:px-3 focus:py-2 focus:text-ink-950"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-gold-500 focus:px-3 focus:py-2 focus:text-black"
       >
         {t("skipToContent")}
       </a>
@@ -95,6 +97,7 @@ export async function Header() {
 
         <div className="flex items-center gap-2 sm:gap-3">
           <LocaleSwitcher />
+          <ThemeToggle className="hidden sm:inline-flex" />
           <ButtonLink href="/devis" className="hidden lg:inline-flex">
             {tNav("quote")}
           </ButtonLink>
