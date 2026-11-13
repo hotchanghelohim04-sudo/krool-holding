@@ -18,6 +18,9 @@ RUN if [ "$INSTALL_DEV" = "true" ]; then pip install -r requirements-dev.txt; \
 
 COPY --chown=app:app . .
 
+# Dossiers écrits à l'exécution (collectstatic, uploads) : seuls endroits modifiables par « app ».
+RUN mkdir -p staticfiles media && chown app:app staticfiles media
+
 USER app
 EXPOSE 8000
 
