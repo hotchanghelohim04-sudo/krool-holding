@@ -31,6 +31,23 @@ powershell -ExecutionPolicy Bypass -File infra\scripts\verifier-docker.ps1
 En production : `DJANGO_SETTINGS_MODULE=config.settings.prod`, `SITE_DOMAIN` renseigné, puis
 `docker compose --profile prod up -d --build` (ajoute Caddy et le HTTPS automatique).
 
+### Formulaires et administration (étape 1)
+
+Le site envoie ses formulaires à l'API Django (`/api/quotes`, `/api/contact`, `/api/appointments`,
+`/api/newsletter/*`, `/api/academy/waitlist`). En local, les e-mails ne partent pas : ils
+s'affichent dans les journaux du worker (`docker compose logs -f worker`).
+
+```bash
+# Compte administrateur (admin Django de secours : http://localhost:8000/django-admin/)
+docker compose exec backend python manage.py createsuperuser
+# Créneaux de rendez-vous du lundi au vendredi (modifiables ensuite dans l'admin)
+docker compose exec backend python manage.py generate_slots --days 21
+```
+
+Les demandes (devis et pièces jointes, rendez-vous, messages, abonnés, liste d'attente) se
+consultent dans l'admin Django en attendant le back-office de l'étape 2. Les pièces jointes
+sont stockées dans un volume privé (`privatedata`), jamais exposé par une URL.
+
 ## Démarrage sans Docker
 
 **Frontend**
@@ -58,6 +75,7 @@ python manage.py runserver
 | Commande | Rôle |
 | --- | --- |
 | `npm run lint` / `npm run typecheck` / `npm run build` | Frontend |
+| `npm test` | Cohérence des contenus (FR/EN, slugs, codes partagés avec l'API) |
 | `pytest` / `ruff check .` / `ruff format --check .` | Backend |
 | `pip-audit -r requirements.txt` / `npm audit --omit=dev` | Audit des dépendances |
 
