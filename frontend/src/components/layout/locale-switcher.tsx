@@ -18,7 +18,7 @@ export function LocaleSwitcher() {
 
   return (
     <nav aria-label={t("label")} className="flex items-center gap-2 text-sm">
-      <Languages aria-hidden className="size-4 text-slate-300" strokeWidth={1.5} />
+      <Languages aria-hidden className="hidden size-4 text-slate-300 sm:block" strokeWidth={1.5} />
       <ul className="flex gap-1">
         {routing.locales.map((locale) => (
           <li key={locale}>
