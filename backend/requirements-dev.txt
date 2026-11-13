@@ -1,0 +1,6 @@
+# Dépendances de développement et de CI
+-r requirements.txt
+pytest>=8.3
+pytest-django>=4.10
+ruff>=0.11
+pip-audit>=2.9
