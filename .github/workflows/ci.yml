@@ -20,7 +20,7 @@ jobs:
       run:
         working-directory: frontend
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - uses: actions/setup-node@v5
         with:
           node-version: 24
@@ -54,7 +54,7 @@ jobs:
       DJANGO_SECRET_KEY: ci-only-not-a-secret
       DATABASE_URL: postgres://krool:krool@localhost:5432/krool
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - uses: actions/setup-python@v6
         with:
           python-version: "3.13"
@@ -73,7 +73,7 @@ jobs:
     name: Docker Compose (build + démarrage de la stack)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - name: Préparer un .env de test (secrets aléatoires, jamais commités)
         run: |
           cp .env.example .env
@@ -98,7 +98,7 @@ jobs:
     name: Scan des secrets
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
       # Binaire gitleaks (version figée) : analyse tout l'historique à chaque exécution.
