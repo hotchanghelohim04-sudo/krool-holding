@@ -156,5 +156,7 @@ Début : vidéos non listées (YouTube ou Vimeo) ; migration possible vers un h�
 
 **Avancement** :
 - **2026-11-13 — Étape 0 terminée (en local).** Monorepo, Next.js 16.4 (App Router, `cacheComponents`, `src/proxy.ts`) + Tailwind v4 (tokens dans `@theme`, `frontend/src/app/globals.css`, doc `docs/design-tokens.md`) + next-intl 4 (FR/EN via `next/root-params`, hreflang, architecture langues auto documentée dans `docs/architecture/i18n.md`). Django 5.2 + DRF + modèle `accounts.User` personnalisé + Argon2 + Celery/Redis + `/api/health/` + 5 tests. Docker Compose (local + profil `prod` avec Caddy), `.env.example`, CI GitHub Actions (lint, types, build, tests, pip-audit, npm audit, gitleaks), Dependabot.
-- **En attente** : fichiers du logo (`logo-source/` était vide → `frontend/public/brand/` prêt, logo provisoire en CSS marqué `TODO-LOGO`, palette à recaler) ; création du dépôt GitHub et premier push (CLI `gh` absente) ; Docker non installé sur le poste → `docker compose` non testé localement.
+- **2026-11-13 — Dépôt GitHub** : https://github.com/hotchanghelohim04-sudo/krool-holding (public), `main` poussée, CI verte (gitleaks via binaire, actions Node 24).
+- **2026-11-13 — Identité visuelle intégrée** : logos SVG dans `frontend/public/brand/`, favicons dans `frontend/src/app/`, tampons dans `backend/assets/brand/` (jamais servis publiquement), exports PNG + SVG Figma dans `docs/brand/`. Palette exacte extraite du logo (or `#C9A24B`, noir `#0D0D0F`, or fond clair `#A8842F`/`#7A5F1F`, tampon `#1D3FA0`) → tokens et `docs/design-tokens.md` à jour. En-tête : emblème `logo-mark.svg` + nom.
+- **En attente** : Docker non installé sur le poste → `docker compose` non testé localement.
 - **Prochaine étape** : Étape 1 — site vitrine.
