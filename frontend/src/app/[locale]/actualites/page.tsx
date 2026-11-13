@@ -1,13 +1,14 @@
 import { ArrowUpRight } from "lucide-react";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 import { locale as rootLocale } from "next/root-params";
 
 import { PageHeader } from "@/components/ui/page-header";
 import { Section } from "@/components/ui/section";
 import type { NativeLocale } from "@/i18n/config";
 import { Link } from "@/i18n/navigation";
-import { getArticles } from "@/lib/content";
+import { getArticles, getImages } from "@/lib/content";
 import { formatDate } from "@/lib/format";
 import { pageMetadata } from "@/lib/metadata";
 import { cn } from "@/lib/utils";
@@ -19,6 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function NewsPage() {
+  const images = await getImages();
   const locale = (await rootLocale()) as NativeLocale;
   const [t, tCommon, articles] = await Promise.all([
     getTranslations("News"),
@@ -28,7 +30,7 @@ export default async function NewsPage() {
 
   return (
     <>
-      <PageHeader title={t("title")} lead={t("lead")} />
+      <PageHeader image={images.headers.news} title={t("title")} lead={t("lead")} />
       <Section tone="light">
         <ul className="grid gap-6 lg:grid-cols-3">
           {articles.map((article, index) => (
@@ -36,24 +38,34 @@ export default async function NewsPage() {
               <Link
                 href={{ pathname: "/actualites/[slug]", params: { slug: article[locale].slug } }}
                 className={cn(
-                  "group flex h-full flex-col rounded-lg border border-ink-950/10 bg-white p-7 transition-[border-color,box-shadow] hover:border-gold-600/50 hover:shadow-card",
-                  index === 0 && "lg:flex-row lg:items-end lg:gap-12 lg:bg-ink-950 lg:p-10 lg:text-paper",
+                  "group flex h-full flex-col overflow-hidden rounded-lg border border-fg/10 bg-surface-raised transition-[border-color,box-shadow] hover:border-gold-500/60 hover:shadow-card",
+                  index === 0 && "lg:flex-row",
                 )}
               >
-                <div className="flex-1">
-                  <p className={cn("text-sm text-slate-600", index === 0 && "lg:text-slate-300")}>
+                <div className={cn("relative aspect-[16/10] overflow-hidden", index === 0 && "lg:aspect-auto lg:w-1/2")}>
+                  <Image
+                    src={article.image}
+                    alt=""
+                    fill
+                    sizes={index === 0 ? "(min-width: 1024px) 50vw, 100vw" : "(min-width: 1024px) 33vw, 100vw"}
+                    quality={65}
+                    className="object-cover transition-transform duration-700 ease-out-soft group-hover:scale-105"
+                  />
+                </div>
+                <div className={cn("flex flex-1 flex-col p-7", index === 0 && "lg:justify-center lg:p-12")}>
+                  <p className="text-sm text-fg-muted">
                     <time dateTime={article.date}>{formatDate(article.date, locale)}</time> ·{" "}
                     {t("readingTime", { minutes: article.readingMinutes })}
                   </p>
-                  <h2 className={cn("mt-3 text-2xl leading-snug group-hover:text-gold-700", index === 0 && "lg:text-3xl lg:group-hover:text-gold-300")}>
+                  <h2 className={cn("mt-3 text-2xl leading-snug group-hover:text-accent", index === 0 && "lg:text-3xl")}>
                     {article[locale].title}
                   </h2>
-                  <p className={cn("mt-3 text-slate-600", index === 0 && "lg:text-slate-300")}>{article[locale].excerpt}</p>
+                  <p className="mt-3 flex-1 text-fg-muted">{article[locale].excerpt}</p>
+                  <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-accent">
+                    {tCommon("readMore")}
+                    <ArrowUpRight aria-hidden className="size-4" strokeWidth={1.5} />
+                  </span>
                 </div>
-                <span className={cn("mt-6 inline-flex shrink-0 items-center gap-1.5 text-sm font-medium text-gold-700", index === 0 && "lg:text-gold-400")}>
-                  {tCommon("readMore")}
-                  <ArrowUpRight aria-hidden className="size-4" strokeWidth={1.5} />
-                </span>
               </Link>
             </li>
           ))}

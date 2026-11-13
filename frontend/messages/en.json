@@ -89,6 +89,15 @@
     "cta": {
       "title": "A project, a regulatory deadline, a doubt about a risk?",
       "lead": "Let's talk. We answer every request within 48 business hours."
+    },
+    "firm": {
+      "eyebrow": "The firm",
+      "title": "A field-focused partner for your HSE challenges",
+      "cta": "Discover the firm"
+    },
+    "partners": {
+      "eyebrow": "They trust us",
+      "title": "Leading industrial companies and institutions"
     }
   },
   "Newsletter": {
@@ -210,8 +219,10 @@
       "rateLimited": "Too many requests from your connection. Try again later or email us directly.",
       "tooManyFiles": "{max} files maximum.",
       "fileTooLarge": "{name} exceeds {mb} MB.",
-      "fileType": "{name}: format not accepted."
-    }
+      "fileType": "{name}: format not accepted.",
+      "captcha": "The anti-robot check failed. Please try again; if the problem persists, email us directly."
+    },
+    "recaptchaNotice": "This site is protected by reCAPTCHA and the Google <privacy>Privacy Policy</privacy> and <terms>Terms of Service</terms> apply."
   },
   "Quote": {
     "title": "Request a quote",
@@ -309,7 +320,19 @@
     "privacy": "Privacy",
     "terms": "Terms",
     "rights": "© {year} Krool Holding. All rights reserved.",
-    "location": "Cameroon · CEMAC · International"
+    "location": "Cameroon · CEMAC · International",
+    "followUs": "Follow us",
+    "socialSoon": "{network}: coming soon",
+    "credentialsTitle": "Qualifications and standards",
+    "networks": {
+      "linkedin": "LinkedIn",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "x": "X (Twitter)",
+      "tiktok": "TikTok",
+      "whatsapp": "WhatsApp"
+    }
   },
   "NotFound": {
     "title": "Page not found",
@@ -339,5 +362,9 @@
     "name": "KROOL",
     "suffix": "HOLDING",
     "signature": "INDUSTRIAL SAFETY & ADVISORY"
+  },
+  "Theme": {
+    "toDark": "Switch to dark mode",
+    "toLight": "Switch to light mode"
   }
 }

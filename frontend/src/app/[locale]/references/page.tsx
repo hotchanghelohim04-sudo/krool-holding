@@ -8,7 +8,7 @@ import { Icon } from "@/components/ui/icon";
 import { PageHeader } from "@/components/ui/page-header";
 import { Section, SectionHeading } from "@/components/ui/section";
 import type { NativeLocale } from "@/i18n/config";
-import { getSite } from "@/lib/content";
+import { getImages, getSite } from "@/lib/content";
 import { pageMetadata } from "@/lib/metadata";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -18,18 +18,19 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function ReferencesPage() {
+  const images = await getImages();
   const locale = (await rootLocale()) as NativeLocale;
   const [t, tHome, site] = await Promise.all([getTranslations("References"), getTranslations("Home"), getSite()]);
   const sectorOf = (key: string) => site.sectors.find((s) => s.key === key);
 
   return (
     <>
-      <PageHeader title={t("title")} lead={t("lead")} />
+      <PageHeader image={images.headers.references} title={t("title")} lead={t("lead")} />
       <Section tone="light" labelledBy="sectors-title">
         <SectionHeading id="sectors-title" title={t("sectorsTitle")} />
         <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {site.sectors.map((sector) => (
-            <li key={sector.key} className="reveal flex items-center gap-4 rounded-lg border border-ink-950/10 bg-white p-5">
+            <li key={sector.key} className="reveal flex items-center gap-4 rounded-lg border border-fg/10 bg-surface-raised p-5">
               <span className="inline-flex size-11 items-center justify-center rounded-md bg-ink-950 text-gold-400">
                 <Icon name={sector.icon} className="size-5" />
               </span>

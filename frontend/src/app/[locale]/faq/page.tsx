@@ -8,7 +8,7 @@ import { ButtonLink } from "@/components/ui/button";
 import { PageHeader } from "@/components/ui/page-header";
 import { Section } from "@/components/ui/section";
 import type { NativeLocale } from "@/i18n/config";
-import { getFaq } from "@/lib/content";
+import { getFaq, getImages } from "@/lib/content";
 import { pageMetadata } from "@/lib/metadata";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -18,6 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function FaqPage() {
+  const images = await getImages();
   const locale = (await rootLocale()) as NativeLocale;
   const [t, tNav, faq] = await Promise.all([getTranslations("Faq"), getTranslations("Nav"), getFaq()]);
   const items = faq[locale];
@@ -35,18 +36,18 @@ export default async function FaqPage() {
           })),
         }}
       />
-      <PageHeader title={t("title")} lead={t("lead")} />
+      <PageHeader image={images.headers.faq} title={t("title")} lead={t("lead")} />
       <Section tone="light">
         <div className="grid gap-12 lg:grid-cols-[2fr_1fr]">
           {/* Accordéon natif <details> : accessible et sans JavaScript */}
-          <div className="divide-y divide-ink-950/10 border-y border-ink-950/10">
+          <div className="divide-y divide-fg/10 border-y border-fg/10">
             {items.map((item) => (
               <details key={item.q} className="group py-2">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-4 text-lg font-medium marker:content-none hover:text-gold-700 [&::-webkit-details-marker]:hidden">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-4 text-lg font-medium marker:content-none hover:text-accent [&::-webkit-details-marker]:hidden">
                   {item.q}
-                  <Plus aria-hidden className="size-5 shrink-0 text-gold-700 transition-transform duration-300 group-open:rotate-45" strokeWidth={1.5} />
+                  <Plus aria-hidden className="size-5 shrink-0 text-accent transition-transform duration-300 group-open:rotate-45" strokeWidth={1.5} />
                 </summary>
-                <p className="pb-5 leading-relaxed text-slate-600">{item.a}</p>
+                <p className="pb-5 leading-relaxed text-fg-muted">{item.a}</p>
               </details>
             ))}
           </div>

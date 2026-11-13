@@ -10,14 +10,14 @@ import { Icon } from "@/components/ui/icon";
 import { PageHeader } from "@/components/ui/page-header";
 import { Section, SectionHeading } from "@/components/ui/section";
 import type { NativeLocale } from "@/i18n/config";
-import { getAcademy } from "@/lib/content";
+import { getAcademy, getImages } from "@/lib/content";
 import { pageMetadata } from "@/lib/metadata";
 import { cn } from "@/lib/utils";
 
 const LEVEL_STYLE = {
-  beginner: "border-success/40 text-success",
-  intermediate: "border-warning/40 text-warning",
-  advanced: "border-danger/40 text-danger",
+  beginner: "border-success/40 text-success-fg",
+  intermediate: "border-warning/40 text-warning-fg",
+  advanced: "border-danger/40 text-danger-fg",
 } as const;
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -27,6 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function AcademyPage() {
+  const images = await getImages();
   const locale = (await rootLocale()) as NativeLocale;
   const [t, tDiagrams, academy] = await Promise.all([
     getTranslations("Academy"),
@@ -36,7 +37,7 @@ export default async function AcademyPage() {
 
   return (
     <>
-      <PageHeader title={t("title")} lead={t("lead")}>
+      <PageHeader image={images.headers.academy} title={t("title")} lead={t("lead")}>
         <span className="mt-6 inline-flex items-center gap-2 rounded-sm border border-gold-500/40 px-3 py-1.5 text-sm text-gold-300">
           <span aria-hidden className="size-2 rounded-full bg-gold-500 motion-safe:animate-pulse" />
           {t("badge")}
@@ -54,13 +55,13 @@ export default async function AcademyPage() {
                     <Icon name={feature.icon} className="size-5" />
                   </span>
                   <h3 className="mt-4 text-lg">{feature[locale].title}</h3>
-                  <p className="mt-1.5 text-sm text-slate-600">{feature[locale].text}</p>
+                  <p className="mt-1.5 text-sm text-fg-muted">{feature[locale].text}</p>
                 </li>
               ))}
             </ul>
           </div>
           {/* Aperçu d'un mini-lab : la matrice de risques interactive de la Phase 2 */}
-          <div className="reveal rounded-lg border border-ink-950/10 bg-white p-6 shadow-card">
+          <div className="reveal rounded-lg border border-fg/10 bg-surface-raised p-6 shadow-card">
             <RiskMatrix
               labels={{
                 title: tDiagrams("riskMatrix.title"),
@@ -76,26 +77,26 @@ export default async function AcademyPage() {
         </div>
       </Section>
 
-      <Section tone="white" labelledBy="catalog-title">
+      <Section tone="alt" labelledBy="catalog-title">
         <SectionHeading id="catalog-title" title={t("catalogTitle")} lead={t("catalogLead")} />
         <ul className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {academy.courses.map((course, index) => (
-            <li key={course.key} className="reveal flex flex-col rounded-lg border border-ink-950/10 bg-paper p-6">
+            <li key={course.key} className="reveal flex flex-col rounded-lg border border-fg/10 bg-surface-raised p-6">
               <div className="flex items-center justify-between">
-                <span className="font-serif text-3xl text-gold-700/70 tabular-nums">{String(index + 1).padStart(2, "0")}</span>
+                <span className="font-serif text-3xl text-accent/70 tabular-nums">{String(index + 1).padStart(2, "0")}</span>
                 <span className={cn("rounded-xs border px-2 py-0.5 text-xs font-medium", LEVEL_STYLE[course.level])}>
                   {t(`levels.${course.level}`)}
                 </span>
               </div>
               <h3 className="mt-4 text-xl leading-snug">{course[locale].title}</h3>
-              <p className="mt-2 flex-1 text-sm text-slate-600">{course[locale].summary}</p>
-              <p className="mt-5 flex gap-4 border-t border-ink-950/10 pt-4 text-sm text-slate-600">
+              <p className="mt-2 flex-1 text-sm text-fg-muted">{course[locale].summary}</p>
+              <p className="mt-5 flex gap-4 border-t border-fg/10 pt-4 text-sm text-fg-muted">
                 <span className="inline-flex items-center gap-1.5">
-                  <Clock aria-hidden className="size-4 text-gold-700" strokeWidth={1.5} />
+                  <Clock aria-hidden className="size-4 text-accent" strokeWidth={1.5} />
                   {t("hours", { hours: course.hours })}
                 </span>
                 <span className="inline-flex items-center gap-1.5">
-                  <Languages aria-hidden className="size-4 text-gold-700" strokeWidth={1.5} />
+                  <Languages aria-hidden className="size-4 text-accent" strokeWidth={1.5} />
                   {t("languages")}
                 </span>
               </p>

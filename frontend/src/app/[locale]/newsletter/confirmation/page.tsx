@@ -21,11 +21,11 @@ export default async function NewsletterConfirmationPage() {
   return (
     <>
       <PageHeader title={t("title")} />
-      <div className="bg-paper">
+      <div className="bg-surface">
         <div className="container-site py-14 sm:py-20">
           <div className="max-w-2xl">
             {/* Le jeton est lu dans l'URL côté navigateur : le reste de la page reste statique. */}
-            <Suspense fallback={<p className="text-lg text-slate-600">{t("confirming")}</p>}>
+            <Suspense fallback={<p className="text-lg text-fg-muted">{t("confirming")}</p>}>
               <ClientMessages namespaces={["NewsletterConfirm"]}>
                 <NewsletterConfirmation />
               </ClientMessages>

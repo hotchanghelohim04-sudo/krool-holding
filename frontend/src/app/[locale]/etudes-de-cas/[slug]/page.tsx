@@ -62,47 +62,47 @@ export default async function CaseStudyPage({ params }: PageProps<"/[locale]/etu
 
   return (
     <>
-      <PageHeader eyebrow={study.isExample ? tCommon("exampleBadge") : t("title")} title={content.title} lead={content.summary} />
+      <PageHeader eyebrow={study.isExample ? tCommon("exampleBadge") : t("title")} title={content.title} lead={content.summary} image={study.image} />
       <Section tone="light">
         <div className="grid gap-12 lg:grid-cols-[2fr_1fr]">
           <article className="space-y-10">
             <div>
               <h2 className="text-2xl">{t("context")}</h2>
-              <p className="mt-4 text-lg leading-relaxed text-ink-950/85">{content.context}</p>
+              <p className="mt-4 text-lg leading-relaxed text-fg/85">{content.context}</p>
             </div>
             <div>
               <h2 className="text-2xl">{t("approach")}</h2>
               <ol className="mt-5 space-y-4">
                 {content.approach.map((step, index) => (
                   <li key={step} className="flex gap-4">
-                    <span className="flex size-8 shrink-0 items-center justify-center rounded-full border border-gold-600 font-serif text-sm text-gold-700">
+                    <span className="flex size-8 shrink-0 items-center justify-center rounded-full border border-gold-600 font-serif text-sm text-accent">
                       {index + 1}
                     </span>
-                    <span className="pt-1 text-ink-950/85">{step}</span>
+                    <span className="pt-1 text-fg/85">{step}</span>
                   </li>
                 ))}
               </ol>
             </div>
           </article>
           <aside className="space-y-6">
-            <dl className="rounded-lg border border-ink-950/10 bg-white p-6 text-sm">
+            <dl className="rounded-lg border border-fg/10 bg-surface-raised p-6 text-sm">
               {[
                 [t("client"), content.client],
                 [t("sector"), sector?.[locale]],
                 [t("year"), String(study.year)],
               ].map(([label, value]) => (
-                <div key={label} className="flex justify-between gap-4 border-b border-ink-950/10 py-3 last:border-0">
-                  <dt className="text-slate-600">{label}</dt>
+                <div key={label} className="flex justify-between gap-4 border-b border-fg/10 py-3 last:border-0">
+                  <dt className="text-fg-muted">{label}</dt>
                   <dd className="text-right font-medium">{value}</dd>
                 </div>
               ))}
               {service && (
                 <div className="flex justify-between gap-4 py-3">
-                  <dt className="text-slate-600">{t("service")}</dt>
+                  <dt className="text-fg-muted">{t("service")}</dt>
                   <dd className="text-right">
                     <Link
                       href={{ pathname: "/services/[slug]", params: { slug: service[locale].slug } }}
-                      className="font-medium text-gold-700 underline-offset-2 hover:underline"
+                      className="font-medium text-accent underline-offset-2 hover:underline"
                     >
                       {service[locale].title}
                     </Link>
@@ -123,7 +123,7 @@ export default async function CaseStudyPage({ params }: PageProps<"/[locale]/etu
             </div>
           </aside>
         </div>
-        <Link href="/etudes-de-cas" className="mt-12 inline-flex items-center gap-2 text-sm font-medium text-gold-700 hover:underline">
+        <Link href="/etudes-de-cas" className="mt-12 inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline">
           <ArrowLeft aria-hidden className="size-4" strokeWidth={1.5} />
           {t("back")}
         </Link>

@@ -7,7 +7,7 @@ import { ContactForm } from "@/components/forms/contact-form";
 import { ClientMessages } from "@/components/i18n/client-messages";
 import { PageHeader } from "@/components/ui/page-header";
 import type { NativeLocale } from "@/i18n/config";
-import { getSite } from "@/lib/content";
+import { getImages, getSite } from "@/lib/content";
 import { pageMetadata } from "@/lib/metadata";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -17,6 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function ContactPage() {
+  const images = await getImages();
   const locale = (await rootLocale()) as NativeLocale;
   const [t, site] = await Promise.all([getTranslations("Contact"), getSite()]);
   const { contact } = site;
@@ -24,8 +25,8 @@ export default async function ContactPage() {
 
   return (
     <>
-      <PageHeader title={t("title")} lead={t("lead")} />
-      <div className="bg-paper">
+      <PageHeader image={images.headers.contact} title={t("title")} lead={t("lead")} />
+      <div className="bg-surface">
         <div className="container-site grid gap-12 py-14 sm:py-20 lg:grid-cols-[1fr_1.4fr]">
           <aside className="space-y-8">
             <div className="rounded-lg bg-ink-950 p-7 text-paper">
@@ -56,13 +57,13 @@ export default async function ContactPage() {
             </div>
             <div>
               <h2 className="text-xl">{t("emailsTitle")}</h2>
-              <ul className="mt-4 divide-y divide-ink-950/10 rounded-lg border border-ink-950/10 bg-white">
+              <ul className="mt-4 divide-y divide-fg/10 rounded-lg border border-fg/10 bg-surface-raised">
                 {emails.map((key) => (
                   <li key={key} className="flex gap-3 p-4">
-                    <Mail aria-hidden className="mt-0.5 size-4 shrink-0 text-gold-700" strokeWidth={1.5} />
+                    <Mail aria-hidden className="mt-0.5 size-4 shrink-0 text-accent" strokeWidth={1.5} />
                     <div className="min-w-0">
-                      <p className="text-sm text-slate-600">{t(`emails.${key}`)}</p>
-                      <a href={`mailto:${contact.emails[key]}`} className="font-medium break-all text-ink-950 hover:text-gold-700">
+                      <p className="text-sm text-fg-muted">{t(`emails.${key}`)}</p>
+                      <a href={`mailto:${contact.emails[key]}`} className="font-medium break-all text-fg hover:text-accent">
                         {contact.emails[key]}
                       </a>
                     </div>
@@ -71,7 +72,7 @@ export default async function ContactPage() {
               </ul>
             </div>
           </aside>
-          <section aria-labelledby="contact-form-title" className="rounded-lg border border-ink-950/10 bg-white p-6 shadow-card sm:p-10">
+          <section aria-labelledby="contact-form-title" className="rounded-lg border border-fg/10 bg-surface-raised p-6 shadow-card sm:p-10">
             <h2 id="contact-form-title" className="mb-6 text-2xl">
               {t("formTitle")}
             </h2>

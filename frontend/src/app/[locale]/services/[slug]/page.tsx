@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { locale as rootLocale } from "next/root-params";
 
+import { BowTieDiagram } from "@/components/diagrams/bow-tie";
 import { RiskMatrix } from "@/components/diagrams/risk-matrix";
 import { JsonLd } from "@/components/seo/json-ld";
 import { ButtonLink } from "@/components/ui/button";
@@ -16,8 +17,9 @@ import { Link, permanentRedirect } from "@/i18n/navigation";
 import { findBySlug, getCaseStudies, getServices } from "@/lib/content";
 import { absoluteUrl, pageMetadata } from "@/lib/metadata";
 
-// Services pour lesquels la matrice de criticité illustre la démarche.
-const WITH_RISK_MATRIX = new Set(["hazard-studies", "industrial-safety"]);
+// Schéma technique illustrant la démarche : matrice de criticité ou nœud papillon.
+const WITH_RISK_MATRIX = new Set(["hazard-studies"]);
+const WITH_BOW_TIE = new Set(["industrial-safety"]);
 
 // Fiches pré-rendues pour chaque slug (generateStaticParams) ; la page lit son slug
 // avant tout rendu pour pouvoir rediriger vers le slug de la bonne langue.
@@ -79,7 +81,7 @@ export default async function ServicePage({ params }: PageProps<"/[locale]/servi
           provider: { "@type": "Organization", name: "Krool Holding", url: absoluteUrl(`/${locale}`) },
         }}
       />
-      <PageHeader eyebrow={tNav("services")} title={content.title} lead={content.summary}>
+      <PageHeader eyebrow={tNav("services")} title={content.title} lead={content.summary} image={service.image}>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <ButtonLink href="/devis" size="lg">
             {tNav("quote")}
@@ -98,7 +100,7 @@ export default async function ServicePage({ params }: PageProps<"/[locale]/servi
             </span>
             <p className="mt-6 font-serif text-2xl leading-snug">{content.intro}</p>
             {WITH_RISK_MATRIX.has(service.key) && (
-              <div className="reveal mt-10">
+              <div className="mt-10">
                 <RiskMatrix
                   labels={{
                     title: tDiagrams("riskMatrix.title"),
@@ -112,13 +114,28 @@ export default async function ServicePage({ params }: PageProps<"/[locale]/servi
                 />
               </div>
             )}
+            {WITH_BOW_TIE.has(service.key) && (
+              <div className="mt-10 rounded-xl border border-ink-800 bg-ink-950 p-4 sm:p-6">
+                <BowTieDiagram
+                  title={tDiagrams("bowTie.event")}
+                  labels={{
+                    threats: tDiagrams("bowTie.threats"),
+                    event: tDiagrams("bowTie.event"),
+                    consequences: tDiagrams("bowTie.consequences"),
+                    prevention: tDiagrams("bowTie.prevention"),
+                    protection: tDiagrams("bowTie.protection"),
+                  }}
+                />
+              </div>
+            )}
           </div>
-          <div className="reveal rounded-lg border border-ink-950/10 bg-white p-7 shadow-card">
+          {/* Pas d'animation de révélation : bloc visible dès le chargement. */}
+          <div className="rounded-lg border border-fg/10 bg-surface-raised p-7 shadow-card">
             <h2 className="text-2xl">{t("deliverables")}</h2>
             <ul className="mt-5 space-y-3">
               {content.deliverables.map((item) => (
                 <li key={item} className="flex gap-3">
-                  <Check aria-hidden className="mt-1 size-4 shrink-0 text-gold-700" strokeWidth={2} />
+                  <Check aria-hidden className="mt-1 size-4 shrink-0 text-accent" strokeWidth={2} />
                   <span>{item}</span>
                 </li>
               ))}
@@ -126,7 +143,7 @@ export default async function ServicePage({ params }: PageProps<"/[locale]/servi
             <h2 className="mt-8 text-lg">{t("standards")}</h2>
             <ul className="mt-3 flex flex-wrap gap-2">
               {content.standards.map((standard) => (
-                <li key={standard} className="rounded-xs border border-ink-950/15 px-2.5 py-1 text-xs text-slate-600">
+                <li key={standard} className="rounded-xs border border-fg/15 px-2.5 py-1 text-xs text-fg-muted">
                   {standard}
                 </li>
               ))}
@@ -150,7 +167,7 @@ export default async function ServicePage({ params }: PageProps<"/[locale]/servi
       </Section>
 
       {(related.length > 0 || others.length > 0) && (
-        <Section tone="white">
+        <Section tone="alt">
           {related.length > 0 && (
             <div className="mb-14">
               <h2 className="text-2xl">{t("relatedCases")}</h2>
@@ -159,10 +176,10 @@ export default async function ServicePage({ params }: PageProps<"/[locale]/servi
                   <li key={study.key}>
                     <Link
                       href={{ pathname: "/etudes-de-cas/[slug]", params: { slug: study[locale].slug } }}
-                      className="block rounded-lg border border-ink-950/10 p-5 transition-colors hover:border-gold-600/50"
+                      className="block rounded-lg border border-fg/10 p-5 transition-colors hover:border-gold-600/50"
                     >
-                      {study.isExample && <span className="text-xs text-slate-600">{tCommon("exampleBadge")}</span>}
-                      <span className="mt-1 block font-medium hover:text-gold-700">{study[locale].title}</span>
+                      {study.isExample && <span className="text-xs text-fg-muted">{tCommon("exampleBadge")}</span>}
+                      <span className="mt-1 block font-medium hover:text-accent">{study[locale].title}</span>
                     </Link>
                   </li>
                 ))}
@@ -175,9 +192,9 @@ export default async function ServicePage({ params }: PageProps<"/[locale]/servi
               <li key={other.key}>
                 <Link
                   href={{ pathname: "/services/[slug]", params: { slug: other[locale].slug } }}
-                  className="flex h-full items-start gap-3 rounded-lg border border-ink-950/10 p-5 transition-colors hover:border-gold-600/50"
+                  className="flex h-full items-start gap-3 rounded-lg border border-fg/10 p-5 transition-colors hover:border-gold-600/50"
                 >
-                  <Icon name={other.icon} className="mt-0.5 size-5 shrink-0 text-gold-700" />
+                  <Icon name={other.icon} className="mt-0.5 size-5 shrink-0 text-accent" />
                   <span className="text-sm font-medium">{other[locale].title}</span>
                 </Link>
               </li>

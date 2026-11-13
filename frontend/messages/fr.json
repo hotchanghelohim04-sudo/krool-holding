@@ -89,6 +89,15 @@
     "cta": {
       "title": "Un projet, une échéance réglementaire, un doute sur un risque ?",
       "lead": "Parlons-en. Nous répondons à toute demande sous 48 heures ouvrées."
+    },
+    "firm": {
+      "eyebrow": "Le cabinet",
+      "title": "Un partenaire de terrain pour vos enjeux HSE",
+      "cta": "Découvrir le cabinet"
+    },
+    "partners": {
+      "eyebrow": "Ils nous font confiance",
+      "title": "Industriels et institutions de référence"
     }
   },
   "Newsletter": {
@@ -210,8 +219,10 @@
       "rateLimited": "Trop de demandes depuis votre connexion. Réessayez dans un moment ou écrivez-nous directement.",
       "tooManyFiles": "{max} fichiers maximum.",
       "fileTooLarge": "{name} dépasse {mb} Mo.",
-      "fileType": "{name} : format non accepté."
-    }
+      "fileType": "{name} : format non accepté.",
+      "captcha": "La vérification anti-robot a échoué. Réessayez ; si le problème persiste, écrivez-nous directement par e-mail."
+    },
+    "recaptchaNotice": "Ce site est protégé par reCAPTCHA : les <privacy>règles de confidentialité</privacy> et les <terms>conditions d’utilisation</terms> de Google s’appliquent."
   },
   "Quote": {
     "title": "Demander un devis",
@@ -309,7 +320,19 @@
     "privacy": "Confidentialité",
     "terms": "CGU / CGV",
     "rights": "© {year} Krool Holding. Tous droits réservés.",
-    "location": "Cameroun · CEMAC · International"
+    "location": "Cameroun · CEMAC · International",
+    "followUs": "Suivez-nous",
+    "socialSoon": "{network} : bientôt disponible",
+    "credentialsTitle": "Qualifications et référentiels",
+    "networks": {
+      "linkedin": "LinkedIn",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "x": "X (Twitter)",
+      "tiktok": "TikTok",
+      "whatsapp": "WhatsApp"
+    }
   },
   "NotFound": {
     "title": "Page introuvable",
@@ -339,5 +362,9 @@
     "name": "KROOL",
     "suffix": "HOLDING",
     "signature": "INDUSTRIAL SAFETY & ADVISORY"
+  },
+  "Theme": {
+    "toDark": "Passer en mode sombre",
+    "toLight": "Passer en mode clair"
   }
 }

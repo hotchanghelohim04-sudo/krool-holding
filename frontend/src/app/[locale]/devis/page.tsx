@@ -7,7 +7,7 @@ import { QuoteForm } from "@/components/forms/quote-form";
 import { ClientMessages } from "@/components/i18n/client-messages";
 import { PageHeader } from "@/components/ui/page-header";
 import type { NativeLocale } from "@/i18n/config";
-import { getServices, getSite } from "@/lib/content";
+import { getImages, getServices, getSite } from "@/lib/content";
 import { pageMetadata } from "@/lib/metadata";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -17,15 +17,16 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function QuotePage() {
+  const images = await getImages();
   const locale = (await rootLocale()) as NativeLocale;
   const [t, services, site] = await Promise.all([getTranslations("Quote"), getServices(), getSite()]);
 
   return (
     <>
-      <PageHeader title={t("title")} lead={t("lead")} />
-      <div className="bg-paper">
+      <PageHeader image={images.headers.quote} title={t("title")} lead={t("lead")} />
+      <div className="bg-surface">
         <div className="container-site grid gap-12 py-14 sm:py-20 lg:grid-cols-[2fr_1fr]">
-          <div className="rounded-lg border border-ink-950/10 bg-white p-6 shadow-card sm:p-10">
+          <div className="rounded-lg border border-fg/10 bg-surface-raised p-6 shadow-card sm:p-10">
             <ClientMessages namespaces={["Form", "Quote"]}>
               <QuoteForm
                 services={services.map((s) => ({ value: s.key, label: s[locale].title }))}
@@ -47,8 +48,8 @@ export default async function QuotePage() {
                 ))}
               </ol>
             </div>
-            <p className="flex items-start gap-3 text-sm text-slate-600">
-              <Lock aria-hidden className="mt-0.5 size-4 shrink-0 text-gold-700" strokeWidth={1.5} />
+            <p className="flex items-start gap-3 text-sm text-fg-muted">
+              <Lock aria-hidden className="mt-0.5 size-4 shrink-0 text-accent" strokeWidth={1.5} />
               {t("confidential")}
             </p>
           </aside>

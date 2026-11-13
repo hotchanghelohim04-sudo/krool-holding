@@ -78,28 +78,28 @@ export default async function ArticlePage({ params }: PageProps<"/[locale]/actua
           },
         }}
       />
-      <PageHeader eyebrow={t("title")} title={content.title} lead={content.excerpt}>
+      <PageHeader eyebrow={t("title")} title={content.title} lead={content.excerpt} image={article.image}>
         <p className="mt-6 text-sm text-slate-300">
           <time dateTime={article.date}>{formatDate(article.date, locale)}</time> ·{" "}
           {t("readingTime", { minutes: article.readingMinutes })}
         </p>
       </PageHeader>
-      <article className="bg-paper">
+      <article className="bg-surface">
         <div className="container-site py-14 sm:py-20">
           <div className="mx-auto max-w-prose">
             <Blocks blocks={content.body} />
             {service && (
-              <p className="mt-12 border-t border-ink-950/10 pt-6 text-sm text-slate-600">
+              <p className="mt-12 border-t border-fg/10 pt-6 text-sm text-fg-muted">
                 {t("relatedService")} :{" "}
                 <Link
                   href={{ pathname: "/services/[slug]", params: { slug: service[locale].slug } }}
-                  className="font-medium text-gold-700 underline-offset-2 hover:underline"
+                  className="font-medium text-accent underline-offset-2 hover:underline"
                 >
                   {service[locale].title}
                 </Link>
               </p>
             )}
-            <Link href="/actualites" className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-gold-700 hover:underline">
+            <Link href="/actualites" className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline">
               <ArrowLeft aria-hidden className="size-4" strokeWidth={1.5} />
               {t("back")}
             </Link>
