@@ -3,6 +3,7 @@
 Garde-fous communs (CLAUDE.md §7 et §11) :
 - champ piège « website » invisible pour les humains : s'il est rempli, on
   répond comme si tout allait bien, sans rien enregistrer ni envoyer ;
+- Google reCAPTCHA v3 (champ « captcha ») vérifié côté serveur, si configuré ;
 - limitation de débit par IP (portée « leads ») ;
 - aucune authentification ni cookie de session : ces vues n'agissent sur
   aucun compte, il n'y a donc rien à protéger par CSRF ;
@@ -21,6 +22,7 @@ from rest_framework.throttling import ScopedRateThrottle
 from rest_framework.views import APIView
 
 from . import tasks
+from .captcha import verify_captcha
 from .models import (
     AcademyWaitlistEntry,
     Appointment,
@@ -51,10 +53,19 @@ class PublicFormView(APIView):
     throttle_classes = [ScopedRateThrottle]
     throttle_scope = "leads"
     success_status = status.HTTP_201_CREATED
+    # Action reCAPTCHA attendue (doit correspondre à celle du front) ; None = pas de captcha.
+    captcha_action: str | None = None
 
     def post(self, request):
         if request.data.get(HONEYPOT_FIELD):
             return Response(self.decoy_body(), status=self.success_status)
+        if self.captcha_action and not verify_captcha(
+            str(request.data.get("captcha", "")), self.captcha_action
+        ):
+            return Response(
+                {"code": "captcha_failed", "detail": "Vérification anti-robot échouée."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
         return self.handle(request)
 
     def decoy_body(self) -> dict:
@@ -65,6 +76,8 @@ class PublicFormView(APIView):
 
 
 class QuoteRequestView(PublicFormView):
+    captcha_action = "quote"
+
     def handle(self, request):
         serializer = QuoteRequestSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
@@ -90,6 +103,8 @@ class QuoteRequestView(PublicFormView):
 
 
 class ContactMessageView(PublicFormView):
+    captcha_action = "contact"
+
     def handle(self, request):
         serializer = ContactMessageSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
@@ -113,6 +128,8 @@ class AppointmentSlotListView(ListAPIView):
 
 
 class AppointmentBookingView(PublicFormView):
+    captcha_action = "appointment"
+
     def handle(self, request):
         serializer = AppointmentRequestSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
@@ -144,6 +161,7 @@ class AppointmentBookingView(PublicFormView):
 
 
 class NewsletterSubscribeView(PublicFormView):
+    captcha_action = "newsletter"
     success_status = status.HTTP_202_ACCEPTED
 
     def decoy_body(self):
@@ -207,6 +225,8 @@ class NewsletterConfirmView(PublicFormView):
 
 
 class AcademyWaitlistView(PublicFormView):
+    captcha_action = "waitlist"
+
     def handle(self, request):
         serializer = AcademyWaitlistSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)

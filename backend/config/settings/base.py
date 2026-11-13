@@ -174,6 +174,10 @@ EMAIL_CONTACT = env("EMAIL_CONTACT", default="contact@krool-holding.com")
 EMAIL_SOLUTIONS = env("EMAIL_SOLUTIONS", default="solutions@krool-holding.com")
 EMAIL_SUPPORT = env("EMAIL_SUPPORT", default="support@krool-holding.com")
 
+# --- Google reCAPTCHA v3 (formulaires publics) : désactivé si la clé secrète est vide ---
+RECAPTCHA_SECRET_KEY = env("RECAPTCHA_SECRET_KEY", default="")
+RECAPTCHA_MIN_SCORE = env.float("RECAPTCHA_MIN_SCORE", default=0.5)
+
 # URL publique du site (liens dans les e-mails : confirmation newsletter…).
 SITE_URL = env("SITE_URL", default="http://localhost:3000").rstrip("/")
 

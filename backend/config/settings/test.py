@@ -13,3 +13,4 @@ from pathlib import Path  # noqa: E402
 
 PRIVATE_MEDIA_ROOT = Path(tempfile.gettempdir()) / "krool-tests-private"
 SITE_URL = "https://example.test"
+RECAPTCHA_SECRET_KEY = ""  # désactivé par défaut ; activé dans les tests dédiés
