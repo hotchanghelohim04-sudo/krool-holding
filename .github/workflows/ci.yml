@@ -29,6 +29,8 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run typecheck
+      - name: Cohérence des contenus et traductions
+        run: npm test
       - run: npm run build
       - name: Audit des dépendances de production
         run: npm audit --omit=dev --audit-level=high
