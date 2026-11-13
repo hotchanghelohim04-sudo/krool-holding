@@ -1,0 +1,25 @@
+{
+  "$todo": "TODO-CONTENU : photos libres de droits (Pexels) en attendant des photos réelles du cabinet et des chantiers. Crédits : docs/brand/photo-credits.md.",
+  "hero": "/images/hero-refinery-dusk.jpg",
+  "headers": {
+    "services": "/images/header-services.jpg",
+    "caseStudies": "/images/header-case-studies.jpg",
+    "about": "/images/header-douala.jpg",
+    "academy": "/images/header-academy.jpg",
+    "references": "/images/header-references.jpg",
+    "news": "/images/header-news.jpg",
+    "quote": "/images/header-quote.jpg",
+    "appointment": "/images/header-appointment.jpg",
+    "contact": "/images/header-douala.jpg",
+    "faq": "/images/header-faq.jpg"
+  },
+  "home": {
+    "firm": "/images/home-douala-workers.jpg",
+    "sectors": "/images/header-references.jpg",
+    "academy": "/images/header-academy.jpg",
+    "cta": "/images/home-plant.jpg"
+  },
+  "about": {
+    "team": "/images/home-team.jpg"
+  }
+}

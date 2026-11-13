@@ -17,12 +17,28 @@
       "Préparation à la certification"
     ],
     "approach": [
-      { "title": "Diagnostic", "text": "Processus, exigences clients et performance actuelle." },
-      { "title": "Conception", "text": "Système documentaire allégé et indicateurs utiles." },
-      { "title": "Déploiement", "text": "Formation des pilotes de processus et audits à blanc." },
-      { "title": "Amélioration", "text": "Revues, actions correctives et cycle PDCA." }
+      {
+        "title": "Diagnostic",
+        "text": "Processus, exigences clients et performance actuelle."
+      },
+      {
+        "title": "Conception",
+        "text": "Système documentaire allégé et indicateurs utiles."
+      },
+      {
+        "title": "Déploiement",
+        "text": "Formation des pilotes de processus et audits à blanc."
+      },
+      {
+        "title": "Amélioration",
+        "text": "Revues, actions correctives et cycle PDCA."
+      }
     ],
-    "standards": ["ISO 9001", "ISO 19011 (audit)", "Système intégré QHSE"]
+    "standards": [
+      "ISO 9001",
+      "ISO 19011 (audit)",
+      "Système intégré QHSE"
+    ]
   },
   "en": {
     "slug": "industrial-quality",
@@ -38,11 +54,28 @@
       "Certification readiness"
     ],
     "approach": [
-      { "title": "Assessment", "text": "Processes, customer requirements and current performance." },
-      { "title": "Design", "text": "Lean documentation system and useful indicators." },
-      { "title": "Deployment", "text": "Training of process owners and mock audits." },
-      { "title": "Improvement", "text": "Reviews, corrective actions and the PDCA cycle." }
+      {
+        "title": "Assessment",
+        "text": "Processes, customer requirements and current performance."
+      },
+      {
+        "title": "Design",
+        "text": "Lean documentation system and useful indicators."
+      },
+      {
+        "title": "Deployment",
+        "text": "Training of process owners and mock audits."
+      },
+      {
+        "title": "Improvement",
+        "text": "Reviews, corrective actions and the PDCA cycle."
+      }
     ],
-    "standards": ["ISO 9001", "ISO 19011 (auditing)", "Integrated QHSE system"]
-  }
+    "standards": [
+      "ISO 9001",
+      "ISO 19011 (auditing)",
+      "Integrated QHSE system"
+    ]
+  },
+  "image": "/images/service-quality.jpg"
 }

@@ -18,9 +18,18 @@
       "PGES chiffré avec indicateurs de suivi et responsabilités claires."
     ],
     "results": [
-      { "value": "3", "label": "consultations publiques menées" },
-      { "value": "27", "label": "mesures intégrées au PGES" },
-      { "value": "1", "label": "certificat de conformité obtenu" }
+      {
+        "value": "3",
+        "label": "consultations publiques menées"
+      },
+      {
+        "value": "27",
+        "label": "mesures intégrées au PGES"
+      },
+      {
+        "value": "1",
+        "label": "certificat de conformité obtenu"
+      }
     ]
   },
   "en": {
@@ -36,9 +45,19 @@
       "Costed ESMP with monitoring indicators and clear responsibilities."
     ],
     "results": [
-      { "value": "3", "label": "public consultations held" },
-      { "value": "27", "label": "measures included in the ESMP" },
-      { "value": "1", "label": "compliance certificate obtained" }
+      {
+        "value": "3",
+        "label": "public consultations held"
+      },
+      {
+        "value": "27",
+        "label": "measures included in the ESMP"
+      },
+      {
+        "value": "1",
+        "label": "compliance certificate obtained"
+      }
     ]
-  }
+  },
+  "image": "/images/case-quarry.jpg"
 }

@@ -17,12 +17,29 @@
       "Audits de conformité réglementaire des établissements classés"
     ],
     "approach": [
-      { "title": "Visite et collecte", "text": "Inspection du site, entretiens avec les équipes, revue des procédures et du retour d'expérience." },
-      { "title": "Analyse", "text": "Identification des scénarios d'accident, évaluation de leur gravité et de leur probabilité." },
-      { "title": "Recommandations", "text": "Mesures techniques et organisationnelles hiérarchisées selon leur efficacité et leur coût." },
-      { "title": "Accompagnement", "text": "Suivi de la mise en œuvre, formation des équipes et indicateurs de performance sécurité." }
+      {
+        "title": "Visite et collecte",
+        "text": "Inspection du site, entretiens avec les équipes, revue des procédures et du retour d'expérience."
+      },
+      {
+        "title": "Analyse",
+        "text": "Identification des scénarios d'accident, évaluation de leur gravité et de leur probabilité."
+      },
+      {
+        "title": "Recommandations",
+        "text": "Mesures techniques et organisationnelles hiérarchisées selon leur efficacité et leur coût."
+      },
+      {
+        "title": "Accompagnement",
+        "text": "Suivi de la mise en œuvre, formation des équipes et indicateurs de performance sécurité."
+      }
     ],
-    "standards": ["Loi n° 98/015 relative aux établissements classés", "IEC 61511", "IEC 61882 (HAZOP)", "ISO 45001"]
+    "standards": [
+      "Loi n° 98/015 relative aux établissements classés",
+      "IEC 61511",
+      "IEC 61882 (HAZOP)",
+      "ISO 45001"
+    ]
   },
   "en": {
     "slug": "industrial-safety",
@@ -38,11 +55,29 @@
       "Regulatory compliance audits of classified facilities"
     ],
     "approach": [
-      { "title": "Site visit and data collection", "text": "Site inspection, interviews with teams, review of procedures and lessons learned." },
-      { "title": "Analysis", "text": "Identification of accident scenarios and assessment of their severity and likelihood." },
-      { "title": "Recommendations", "text": "Technical and organisational measures ranked by effectiveness and cost." },
-      { "title": "Support", "text": "Implementation follow-up, team training and safety performance indicators." }
+      {
+        "title": "Site visit and data collection",
+        "text": "Site inspection, interviews with teams, review of procedures and lessons learned."
+      },
+      {
+        "title": "Analysis",
+        "text": "Identification of accident scenarios and assessment of their severity and likelihood."
+      },
+      {
+        "title": "Recommendations",
+        "text": "Technical and organisational measures ranked by effectiveness and cost."
+      },
+      {
+        "title": "Support",
+        "text": "Implementation follow-up, team training and safety performance indicators."
+      }
     ],
-    "standards": ["Cameroon Law No. 98/015 on classified facilities", "IEC 61511", "IEC 61882 (HAZOP)", "ISO 45001"]
-  }
+    "standards": [
+      "Cameroon Law No. 98/015 on classified facilities",
+      "IEC 61511",
+      "IEC 61882 (HAZOP)",
+      "ISO 45001"
+    ]
+  },
+  "image": "/images/service-industrial-safety.jpg"
 }

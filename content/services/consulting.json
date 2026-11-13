@@ -17,12 +17,28 @@
       "Préparation aux inspections des autorités"
     ],
     "approach": [
-      { "title": "Cadrage", "text": "Compréhension de la décision à éclairer, du calendrier et des parties prenantes." },
-      { "title": "Investigation", "text": "Revue documentaire, visites et entretiens ciblés." },
-      { "title": "Synthèse", "text": "Risques, coûts et options présentés de façon claire pour la direction." },
-      { "title": "Suivi", "text": "Appui à la mise en œuvre et points d'étape réguliers." }
+      {
+        "title": "Cadrage",
+        "text": "Compréhension de la décision à éclairer, du calendrier et des parties prenantes."
+      },
+      {
+        "title": "Investigation",
+        "text": "Revue documentaire, visites et entretiens ciblés."
+      },
+      {
+        "title": "Synthèse",
+        "text": "Risques, coûts et options présentés de façon claire pour la direction."
+      },
+      {
+        "title": "Suivi",
+        "text": "Appui à la mise en œuvre et points d'étape réguliers."
+      }
     ],
-    "standards": ["Normes de performance de la SFI (IFC)", "Principes de l'Équateur", "ISO 31000"]
+    "standards": [
+      "Normes de performance de la SFI (IFC)",
+      "Principes de l'Équateur",
+      "ISO 31000"
+    ]
   },
   "en": {
     "slug": "consulting",
@@ -38,11 +54,28 @@
       "Preparation for regulatory inspections"
     ],
     "approach": [
-      { "title": "Scoping", "text": "Understanding the decision at stake, the timeline and the stakeholders." },
-      { "title": "Investigation", "text": "Document review, site visits and targeted interviews." },
-      { "title": "Synthesis", "text": "Risks, costs and options presented clearly for management." },
-      { "title": "Follow-up", "text": "Implementation support and regular progress reviews." }
+      {
+        "title": "Scoping",
+        "text": "Understanding the decision at stake, the timeline and the stakeholders."
+      },
+      {
+        "title": "Investigation",
+        "text": "Document review, site visits and targeted interviews."
+      },
+      {
+        "title": "Synthesis",
+        "text": "Risks, costs and options presented clearly for management."
+      },
+      {
+        "title": "Follow-up",
+        "text": "Implementation support and regular progress reviews."
+      }
     ],
-    "standards": ["IFC Performance Standards", "Equator Principles", "ISO 31000"]
-  }
+    "standards": [
+      "IFC Performance Standards",
+      "Equator Principles",
+      "ISO 31000"
+    ]
+  },
+  "image": "/images/header-appointment.jpg"
 }

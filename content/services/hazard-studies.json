@@ -17,12 +17,28 @@
       "Dossier d'étude de dangers prêt pour l'administration"
     ],
     "approach": [
-      { "title": "Description du site", "text": "Installations, produits, procédés et environnement (populations, enjeux)." },
-      { "title": "Identification des dangers", "text": "Analyse préliminaire des risques et retour d'expérience d'accidents similaires." },
-      { "title": "Criticité", "text": "Cotation gravité × probabilité et sélection des scénarios majeurs." },
-      { "title": "Maîtrise des risques", "text": "Barrières existantes, mesures complémentaires et cartographie des effets." }
+      {
+        "title": "Description du site",
+        "text": "Installations, produits, procédés et environnement (populations, enjeux)."
+      },
+      {
+        "title": "Identification des dangers",
+        "text": "Analyse préliminaire des risques et retour d'expérience d'accidents similaires."
+      },
+      {
+        "title": "Criticité",
+        "text": "Cotation gravité × probabilité et sélection des scénarios majeurs."
+      },
+      {
+        "title": "Maîtrise des risques",
+        "text": "Barrières existantes, mesures complémentaires et cartographie des effets."
+      }
     ],
-    "standards": ["Loi n° 98/015 relative aux établissements classés", "Méthode du nœud papillon", "IEC 61882 (HAZOP)"]
+    "standards": [
+      "Loi n° 98/015 relative aux établissements classés",
+      "Méthode du nœud papillon",
+      "IEC 61882 (HAZOP)"
+    ]
   },
   "en": {
     "slug": "hazard-studies",
@@ -38,11 +54,28 @@
       "Hazard study report ready for submission to the authorities"
     ],
     "approach": [
-      { "title": "Site description", "text": "Facilities, substances, processes and surroundings (population, sensitive receptors)." },
-      { "title": "Hazard identification", "text": "Preliminary risk analysis and lessons from similar accidents." },
-      { "title": "Criticality", "text": "Severity × likelihood rating and selection of major scenarios." },
-      { "title": "Risk control", "text": "Existing barriers, additional measures and effect-zone mapping." }
+      {
+        "title": "Site description",
+        "text": "Facilities, substances, processes and surroundings (population, sensitive receptors)."
+      },
+      {
+        "title": "Hazard identification",
+        "text": "Preliminary risk analysis and lessons from similar accidents."
+      },
+      {
+        "title": "Criticality",
+        "text": "Severity × likelihood rating and selection of major scenarios."
+      },
+      {
+        "title": "Risk control",
+        "text": "Existing barriers, additional measures and effect-zone mapping."
+      }
     ],
-    "standards": ["Cameroon Law No. 98/015 on classified facilities", "Bow-tie method", "IEC 61882 (HAZOP)"]
-  }
+    "standards": [
+      "Cameroon Law No. 98/015 on classified facilities",
+      "Bow-tie method",
+      "IEC 61882 (HAZOP)"
+    ]
+  },
+  "image": "/images/service-hazard-studies.jpg"
 }

@@ -81,6 +81,20 @@ test("les codes de services et de secteurs sont acceptés par l'API Django", () 
   }
 });
 
+test("toutes les images référencées dans content/ existent dans public/", () => {
+  const publicDir = path.resolve(here, "..", "public");
+  const refs = new Set();
+  const collect = (value) => {
+    if (typeof value === "string" && /^\/(images|partners|brand)\//.test(value)) refs.add(value);
+    else if (value && typeof value === "object") Object.values(value).forEach(collect);
+  };
+  contentFiles.map(readJson).forEach(collect);
+  assert.ok(refs.size > 20, "trop peu d'images référencées");
+  for (const ref of refs) {
+    assert.doesNotThrow(() => readFileSync(path.join(publicDir, ref)), `image manquante : ${ref}`);
+  }
+});
+
 test("les traductions de l'interface ont les mêmes clés en FR et en EN", () => {
   const fr = readJson(path.join(here, "..", "messages", "fr.json"));
   const en = readJson(path.join(here, "..", "messages", "en.json"));

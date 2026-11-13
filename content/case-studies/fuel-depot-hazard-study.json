@@ -18,9 +18,18 @@
       "Analyse en nœud papillon des barrières et proposition de mesures complémentaires hiérarchisées."
     ],
     "results": [
-      { "value": "9", "label": "scénarios majeurs analysés et cartographiés" },
-      { "value": "14", "label": "mesures de maîtrise des risques proposées" },
-      { "value": "0", "label": "réserve de l'administration sur le dossier" }
+      {
+        "value": "9",
+        "label": "scénarios majeurs analysés et cartographiés"
+      },
+      {
+        "value": "14",
+        "label": "mesures de maîtrise des risques proposées"
+      },
+      {
+        "value": "0",
+        "label": "réserve de l'administration sur le dossier"
+      }
     ]
   },
   "en": {
@@ -36,9 +45,19 @@
       "Bow-tie barrier analysis and prioritised additional measures."
     ],
     "results": [
-      { "value": "9", "label": "major scenarios analysed and mapped" },
-      { "value": "14", "label": "risk control measures proposed" },
-      { "value": "0", "label": "reservations from the authorities on the file" }
+      {
+        "value": "9",
+        "label": "major scenarios analysed and mapped"
+      },
+      {
+        "value": "14",
+        "label": "risk control measures proposed"
+      },
+      {
+        "value": "0",
+        "label": "reservations from the authorities on the file"
+      }
     ]
-  }
+  },
+  "image": "/images/header-case-studies.jpg"
 }

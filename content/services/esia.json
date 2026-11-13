@@ -17,12 +17,28 @@
       "Plan de gestion environnementale et sociale (PGES) et suivi"
     ],
     "approach": [
-      { "title": "Cadrage", "text": "Catégorisation du projet, termes de référence et plan d'engagement des parties prenantes." },
-      { "title": "État initial", "text": "Campagnes de terrain, données socio-économiques et cartographie." },
-      { "title": "Impacts et mesures", "text": "Évaluation des impacts et hiérarchie éviter, réduire, compenser." },
-      { "title": "PGES", "text": "Mesures, responsabilités, budget et indicateurs de suivi." }
+      {
+        "title": "Cadrage",
+        "text": "Catégorisation du projet, termes de référence et plan d'engagement des parties prenantes."
+      },
+      {
+        "title": "État initial",
+        "text": "Campagnes de terrain, données socio-économiques et cartographie."
+      },
+      {
+        "title": "Impacts et mesures",
+        "text": "Évaluation des impacts et hiérarchie éviter, réduire, compenser."
+      },
+      {
+        "title": "PGES",
+        "text": "Mesures, responsabilités, budget et indicateurs de suivi."
+      }
     ],
-    "standards": ["Loi-cadre n° 96/12 relative à la gestion de l'environnement", "Décret n° 2013/0171/PM sur les EIES", "Normes de performance de la SFI (IFC)"]
+    "standards": [
+      "Loi-cadre n° 96/12 relative à la gestion de l'environnement",
+      "Décret n° 2013/0171/PM sur les EIES",
+      "Normes de performance de la SFI (IFC)"
+    ]
   },
   "en": {
     "slug": "environmental-social-impact-assessment",
@@ -38,11 +54,28 @@
       "Environmental and social management plan (ESMP) and monitoring"
     ],
     "approach": [
-      { "title": "Scoping", "text": "Project categorisation, terms of reference and stakeholder engagement plan." },
-      { "title": "Baseline", "text": "Field surveys, socio-economic data and mapping." },
-      { "title": "Impacts and measures", "text": "Impact assessment following the avoid, reduce, offset hierarchy." },
-      { "title": "ESMP", "text": "Measures, responsibilities, budget and monitoring indicators." }
+      {
+        "title": "Scoping",
+        "text": "Project categorisation, terms of reference and stakeholder engagement plan."
+      },
+      {
+        "title": "Baseline",
+        "text": "Field surveys, socio-economic data and mapping."
+      },
+      {
+        "title": "Impacts and measures",
+        "text": "Impact assessment following the avoid, reduce, offset hierarchy."
+      },
+      {
+        "title": "ESMP",
+        "text": "Measures, responsibilities, budget and monitoring indicators."
+      }
     ],
-    "standards": ["Cameroon Framework Law No. 96/12 on environmental management", "Decree No. 2013/0171/PM on ESIA", "IFC Performance Standards"]
-  }
+    "standards": [
+      "Cameroon Framework Law No. 96/12 on environmental management",
+      "Decree No. 2013/0171/PM on ESIA",
+      "IFC Performance Standards"
+    ]
+  },
+  "image": "/images/service-esia.jpg"
 }

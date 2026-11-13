@@ -17,12 +17,28 @@
       "Revue de sécurité avant démarrage"
     ],
     "approach": [
-      { "title": "Avant-projet", "text": "Contraintes du site, réglementation applicable et options d'implantation." },
-      { "title": "Conception", "text": "Revues HSE aux jalons et intégration des recommandations." },
-      { "title": "Autorisations", "text": "Constitution des dossiers et échanges avec l'administration." },
-      { "title": "Mise en service", "text": "Revue de sécurité avant démarrage et transfert aux équipes d'exploitation." }
+      {
+        "title": "Avant-projet",
+        "text": "Contraintes du site, réglementation applicable et options d'implantation."
+      },
+      {
+        "title": "Conception",
+        "text": "Revues HSE aux jalons et intégration des recommandations."
+      },
+      {
+        "title": "Autorisations",
+        "text": "Constitution des dossiers et échanges avec l'administration."
+      },
+      {
+        "title": "Mise en service",
+        "text": "Revue de sécurité avant démarrage et transfert aux équipes d'exploitation."
+      }
     ],
-    "standards": ["IEC 61882 (HAZOP)", "Bonnes pratiques de conception sûre", "Réglementation des établissements classés"]
+    "standards": [
+      "IEC 61882 (HAZOP)",
+      "Bonnes pratiques de conception sûre",
+      "Réglementation des établissements classés"
+    ]
   },
   "en": {
     "slug": "project-studies",
@@ -38,11 +54,28 @@
       "Pre-start-up safety review"
     ],
     "approach": [
-      { "title": "Pre-project", "text": "Site constraints, applicable regulations and layout options." },
-      { "title": "Design", "text": "HSE reviews at milestones and integration of recommendations." },
-      { "title": "Permitting", "text": "Preparation of files and liaison with the authorities." },
-      { "title": "Commissioning", "text": "Pre-start-up safety review and handover to operations." }
+      {
+        "title": "Pre-project",
+        "text": "Site constraints, applicable regulations and layout options."
+      },
+      {
+        "title": "Design",
+        "text": "HSE reviews at milestones and integration of recommendations."
+      },
+      {
+        "title": "Permitting",
+        "text": "Preparation of files and liaison with the authorities."
+      },
+      {
+        "title": "Commissioning",
+        "text": "Pre-start-up safety review and handover to operations."
+      }
     ],
-    "standards": ["IEC 61882 (HAZOP)", "Inherently safer design practices", "Classified facilities regulations"]
-  }
+    "standards": [
+      "IEC 61882 (HAZOP)",
+      "Inherently safer design practices",
+      "Classified facilities regulations"
+    ]
+  },
+  "image": "/images/service-project-studies.jpg"
 }

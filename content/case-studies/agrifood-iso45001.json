@@ -18,9 +18,18 @@
       "Construction d'un système documentaire allégé et audit à blanc ISO 45001."
     ],
     "results": [
-      { "value": "-45 %", "label": "d'accidents avec arrêt en 12 mois" },
-      { "value": "15", "label": "relais sécurité formés" },
-      { "value": "32", "label": "unités de travail évaluées" }
+      {
+        "value": "-45 %",
+        "label": "d'accidents avec arrêt en 12 mois"
+      },
+      {
+        "value": "15",
+        "label": "relais sécurité formés"
+      },
+      {
+        "value": "32",
+        "label": "unités de travail évaluées"
+      }
     ]
   },
   "en": {
@@ -36,9 +45,19 @@
       "Lean documentation system and ISO 45001 mock audit."
     ],
     "results": [
-      { "value": "-45%", "label": "lost-time accidents within 12 months" },
-      { "value": "15", "label": "safety champions trained" },
-      { "value": "32", "label": "work units assessed" }
+      {
+        "value": "-45%",
+        "label": "lost-time accidents within 12 months"
+      },
+      {
+        "value": "15",
+        "label": "safety champions trained"
+      },
+      {
+        "value": "32",
+        "label": "work units assessed"
+      }
     ]
-  }
+  },
+  "image": "/images/case-agrifood.jpg"
 }

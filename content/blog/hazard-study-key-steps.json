@@ -9,19 +9,62 @@
     "title": "Étude de dangers : les 5 étapes clés pour un dossier utile et conforme",
     "excerpt": "Trop souvent vécue comme une formalité administrative, l'étude de dangers est pourtant le meilleur outil de pilotage des risques majeurs d'un site.",
     "body": [
-      { "type": "p", "text": "Pour un établissement classé, l'étude de dangers est une obligation réglementaire. Mais bien menée, elle devient surtout un outil de décision : elle dit où se trouvent les risques majeurs et quelles barrières les tiennent sous contrôle." },
-      { "type": "h2", "text": "1. Décrire le site et son environnement" },
-      { "type": "p", "text": "Tout commence par une description précise des installations, des produits stockés et mis en œuvre, et de ce qui entoure le site : habitations, routes, cours d'eau, autres industries." },
-      { "type": "h2", "text": "2. Identifier les potentiels de dangers" },
-      { "type": "p", "text": "Inflammabilité, toxicité, réactivité, conditions de pression et de température : chaque produit et chaque procédé est passé au crible, sans oublier les agressions externes (foudre, inondation, malveillance)." },
-      { "type": "h2", "text": "3. Analyser et coter les risques" },
-      { "type": "p", "text": "L'analyse préliminaire des risques recense les scénarios possibles. Chacun est coté en gravité et en probabilité dans une matrice de criticité, qui permet de retenir les scénarios d'accident majeur." },
-      { "type": "h2", "text": "4. Modéliser les effets" },
-      { "type": "p", "text": "Pour les scénarios majeurs, on calcule les distances d'effets thermiques, de surpression ou toxiques. Ces cartes montrent concrètement qui et quoi serait touché." },
-      { "type": "h2", "text": "5. Démontrer la maîtrise des risques" },
-      { "type": "p", "text": "L'analyse en nœud papillon met en regard chaque scénario et ses barrières de prévention et de protection. Les mesures complémentaires sont hiérarchisées pour un plan d'actions réaliste." },
-      { "type": "ul", "items": ["Impliquer les équipes d'exploitation dès le début", "Fonder les hypothèses sur des données vérifiables", "Mettre à jour l'étude à chaque modification notable du site"] },
-      { "type": "p", "text": "Une étude de dangers utile est une étude que les équipes connaissent et utilisent. C'est l'objectif que nous poursuivons à chaque mission." }
+      {
+        "type": "p",
+        "text": "Pour un établissement classé, l'étude de dangers est une obligation réglementaire. Mais bien menée, elle devient surtout un outil de décision : elle dit où se trouvent les risques majeurs et quelles barrières les tiennent sous contrôle."
+      },
+      {
+        "type": "h2",
+        "text": "1. Décrire le site et son environnement"
+      },
+      {
+        "type": "p",
+        "text": "Tout commence par une description précise des installations, des produits stockés et mis en œuvre, et de ce qui entoure le site : habitations, routes, cours d'eau, autres industries."
+      },
+      {
+        "type": "h2",
+        "text": "2. Identifier les potentiels de dangers"
+      },
+      {
+        "type": "p",
+        "text": "Inflammabilité, toxicité, réactivité, conditions de pression et de température : chaque produit et chaque procédé est passé au crible, sans oublier les agressions externes (foudre, inondation, malveillance)."
+      },
+      {
+        "type": "h2",
+        "text": "3. Analyser et coter les risques"
+      },
+      {
+        "type": "p",
+        "text": "L'analyse préliminaire des risques recense les scénarios possibles. Chacun est coté en gravité et en probabilité dans une matrice de criticité, qui permet de retenir les scénarios d'accident majeur."
+      },
+      {
+        "type": "h2",
+        "text": "4. Modéliser les effets"
+      },
+      {
+        "type": "p",
+        "text": "Pour les scénarios majeurs, on calcule les distances d'effets thermiques, de surpression ou toxiques. Ces cartes montrent concrètement qui et quoi serait touché."
+      },
+      {
+        "type": "h2",
+        "text": "5. Démontrer la maîtrise des risques"
+      },
+      {
+        "type": "p",
+        "text": "L'analyse en nœud papillon met en regard chaque scénario et ses barrières de prévention et de protection. Les mesures complémentaires sont hiérarchisées pour un plan d'actions réaliste."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Impliquer les équipes d'exploitation dès le début",
+          "Fonder les hypothèses sur des données vérifiables",
+          "Mettre à jour l'étude à chaque modification notable du site"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Une étude de dangers utile est une étude que les équipes connaissent et utilisent. C'est l'objectif que nous poursuivons à chaque mission."
+      }
     ]
   },
   "en": {
@@ -29,19 +72,63 @@
     "title": "Hazard study: 5 key steps to a useful and compliant file",
     "excerpt": "Too often seen as an administrative formality, the hazard study is in fact the best tool for managing a site's major risks.",
     "body": [
-      { "type": "p", "text": "For a classified facility, the hazard study is a regulatory obligation. But when done well, it becomes above all a decision-making tool: it shows where the major risks lie and which barriers keep them under control." },
-      { "type": "h2", "text": "1. Describe the site and its surroundings" },
-      { "type": "p", "text": "Everything starts with an accurate description of the facilities, the substances stored and used, and what surrounds the site: housing, roads, watercourses, other industries." },
-      { "type": "h2", "text": "2. Identify hazard potentials" },
-      { "type": "p", "text": "Flammability, toxicity, reactivity, pressure and temperature conditions: every substance and process is scrutinised, including external threats (lightning, flooding, malicious acts)." },
-      { "type": "h2", "text": "3. Analyse and rate the risks" },
-      { "type": "p", "text": "The preliminary risk analysis lists possible scenarios. Each one is rated for severity and likelihood in a criticality matrix, which identifies the major accident scenarios." },
-      { "type": "h2", "text": "4. Model the effects" },
-      { "type": "p", "text": "For major scenarios, thermal, overpressure or toxic effect distances are calculated. These maps show concretely who and what would be affected." },
-      { "type": "h2", "text": "5. Demonstrate risk control" },
-      { "type": "p", "text": "Bow-tie analysis sets each scenario against its prevention and protection barriers. Additional measures are prioritised into a realistic action plan." },
-      { "type": "ul", "items": ["Involve operations teams from the start", "Base assumptions on verifiable data", "Update the study whenever the site changes significantly"] },
-      { "type": "p", "text": "A useful hazard study is one that teams know and use. That is the goal we pursue on every assignment." }
+      {
+        "type": "p",
+        "text": "For a classified facility, the hazard study is a regulatory obligation. But when done well, it becomes above all a decision-making tool: it shows where the major risks lie and which barriers keep them under control."
+      },
+      {
+        "type": "h2",
+        "text": "1. Describe the site and its surroundings"
+      },
+      {
+        "type": "p",
+        "text": "Everything starts with an accurate description of the facilities, the substances stored and used, and what surrounds the site: housing, roads, watercourses, other industries."
+      },
+      {
+        "type": "h2",
+        "text": "2. Identify hazard potentials"
+      },
+      {
+        "type": "p",
+        "text": "Flammability, toxicity, reactivity, pressure and temperature conditions: every substance and process is scrutinised, including external threats (lightning, flooding, malicious acts)."
+      },
+      {
+        "type": "h2",
+        "text": "3. Analyse and rate the risks"
+      },
+      {
+        "type": "p",
+        "text": "The preliminary risk analysis lists possible scenarios. Each one is rated for severity and likelihood in a criticality matrix, which identifies the major accident scenarios."
+      },
+      {
+        "type": "h2",
+        "text": "4. Model the effects"
+      },
+      {
+        "type": "p",
+        "text": "For major scenarios, thermal, overpressure or toxic effect distances are calculated. These maps show concretely who and what would be affected."
+      },
+      {
+        "type": "h2",
+        "text": "5. Demonstrate risk control"
+      },
+      {
+        "type": "p",
+        "text": "Bow-tie analysis sets each scenario against its prevention and protection barriers. Additional measures are prioritised into a realistic action plan."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Involve operations teams from the start",
+          "Base assumptions on verifiable data",
+          "Update the study whenever the site changes significantly"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "A useful hazard study is one that teams know and use. That is the goal we pursue on every assignment."
+      }
     ]
-  }
+  },
+  "image": "/images/home-plant.jpg"
 }

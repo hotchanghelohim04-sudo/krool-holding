@@ -17,12 +17,27 @@
       "Indicateurs et rapports environnementaux"
     ],
     "approach": [
-      { "title": "Analyse environnementale", "text": "Aspects significatifs, obligations de conformité et données disponibles." },
-      { "title": "Objectifs", "text": "Cibles de réduction réalistes et plan d'actions chiffré." },
-      { "title": "Outils", "text": "Procédures, registres, suivi des déchets et des consommations." },
-      { "title": "Pilotage", "text": "Indicateurs, revues de direction et amélioration continue." }
+      {
+        "title": "Analyse environnementale",
+        "text": "Aspects significatifs, obligations de conformité et données disponibles."
+      },
+      {
+        "title": "Objectifs",
+        "text": "Cibles de réduction réalistes et plan d'actions chiffré."
+      },
+      {
+        "title": "Outils",
+        "text": "Procédures, registres, suivi des déchets et des consommations."
+      },
+      {
+        "title": "Pilotage",
+        "text": "Indicateurs, revues de direction et amélioration continue."
+      }
     ],
-    "standards": ["ISO 14001", "Loi-cadre n° 96/12 relative à la gestion de l'environnement"]
+    "standards": [
+      "ISO 14001",
+      "Loi-cadre n° 96/12 relative à la gestion de l'environnement"
+    ]
   },
   "en": {
     "slug": "environmental-management",
@@ -38,11 +53,27 @@
       "Environmental indicators and reports"
     ],
     "approach": [
-      { "title": "Environmental review", "text": "Significant aspects, compliance obligations and available data." },
-      { "title": "Objectives", "text": "Realistic reduction targets and a costed action plan." },
-      { "title": "Tools", "text": "Procedures, registers, waste and consumption tracking." },
-      { "title": "Management", "text": "Indicators, management reviews and continual improvement." }
+      {
+        "title": "Environmental review",
+        "text": "Significant aspects, compliance obligations and available data."
+      },
+      {
+        "title": "Objectives",
+        "text": "Realistic reduction targets and a costed action plan."
+      },
+      {
+        "title": "Tools",
+        "text": "Procedures, registers, waste and consumption tracking."
+      },
+      {
+        "title": "Management",
+        "text": "Indicators, management reviews and continual improvement."
+      }
     ],
-    "standards": ["ISO 14001", "Cameroon Framework Law No. 96/12 on environmental management"]
-  }
+    "standards": [
+      "ISO 14001",
+      "Cameroon Framework Law No. 96/12 on environmental management"
+    ]
+  },
+  "image": "/images/service-environment.jpg"
 }

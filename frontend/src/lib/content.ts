@@ -35,7 +35,7 @@ export interface ServiceContent {
   standards: string[];
 }
 
-export type Service = { key: string; icon: IconName; order: number } & Localized<ServiceContent>;
+export type Service = { key: string; icon: IconName; order: number; image: string } & Localized<ServiceContent>;
 
 export interface CaseStudyContent {
   slug: string;
@@ -53,6 +53,7 @@ export type CaseStudy = {
   sector: string;
   service: string;
   year: number;
+  image: string;
 } & Localized<CaseStudyContent>;
 
 export interface ArticleContent {
@@ -67,6 +68,7 @@ export type Article = {
   date: string;
   readingMinutes: number;
   service: string;
+  image: string;
 } & Localized<ArticleContent>;
 
 export type LegalPage = { key: string; updated: string } & Localized<{
@@ -86,6 +88,24 @@ export interface SiteContent {
   method: Localized<{ title: string; text: string }>[];
   testimonials: Localized<{ quote: string; author: string; company: string }>[];
   references: ({ sector: string } & Localized<string>)[];
+  social: { network: SocialNetwork; url: string }[];
+  credentials: ({ key: string; name: string; logo: string | null } & Localized<string>)[];
+}
+
+export type SocialNetwork = "linkedin" | "facebook" | "instagram" | "youtube" | "x" | "tiktok" | "whatsapp";
+
+export interface ImagesContent {
+  hero: string;
+  headers: Record<
+    "services" | "caseStudies" | "about" | "academy" | "references" | "news" | "quote" | "appointment" | "contact" | "faq",
+    string
+  >;
+  home: Record<"firm" | "sectors" | "academy" | "cta", string>;
+  about: Record<"team", string>;
+}
+
+export interface PartnersContent {
+  partners: { key: string; name: string; logo: string | null }[];
 }
 
 export type AboutContent = Localized<{
@@ -148,6 +168,14 @@ export async function getFaq() {
 
 export async function getAcademy() {
   return readJson<AcademyContent>("academy.json");
+}
+
+export async function getImages() {
+  return readJson<ImagesContent>("images.json");
+}
+
+export async function getPartners() {
+  return readJson<PartnersContent>("partners.json");
 }
 
 export async function getServices() {

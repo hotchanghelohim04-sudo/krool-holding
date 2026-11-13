@@ -17,12 +17,27 @@
       "Parcours certifiants en ligne avec Krool Academy"
     ],
     "approach": [
-      { "title": "Analyse des besoins", "text": "Publics, niveaux, contraintes de production et objectifs mesurables." },
-      { "title": "Conception", "text": "Contenus adaptés à vos installations, à vos procédures et à votre vocabulaire." },
-      { "title": "Animation", "text": "Pédagogie active : cas réels, ateliers, quiz et mises en situation." },
-      { "title": "Évaluation", "text": "Contrôle des acquis, attestations et recommandations de suivi." }
+      {
+        "title": "Analyse des besoins",
+        "text": "Publics, niveaux, contraintes de production et objectifs mesurables."
+      },
+      {
+        "title": "Conception",
+        "text": "Contenus adaptés à vos installations, à vos procédures et à votre vocabulaire."
+      },
+      {
+        "title": "Animation",
+        "text": "Pédagogie active : cas réels, ateliers, quiz et mises en situation."
+      },
+      {
+        "title": "Évaluation",
+        "text": "Contrôle des acquis, attestations et recommandations de suivi."
+      }
     ],
-    "standards": ["ISO 45001 (compétences)", "Référentiels internes de l'entreprise"]
+    "standards": [
+      "ISO 45001 (compétences)",
+      "Référentiels internes de l'entreprise"
+    ]
   },
   "en": {
     "slug": "industrial-risk-training",
@@ -38,11 +53,27 @@
       "Certified online learning paths with Krool Academy"
     ],
     "approach": [
-      { "title": "Needs analysis", "text": "Audiences, levels, production constraints and measurable objectives." },
-      { "title": "Design", "text": "Content adapted to your facilities, procedures and vocabulary." },
-      { "title": "Delivery", "text": "Active learning: real cases, workshops, quizzes and role-plays." },
-      { "title": "Evaluation", "text": "Knowledge assessment, certificates and follow-up recommendations." }
+      {
+        "title": "Needs analysis",
+        "text": "Audiences, levels, production constraints and measurable objectives."
+      },
+      {
+        "title": "Design",
+        "text": "Content adapted to your facilities, procedures and vocabulary."
+      },
+      {
+        "title": "Delivery",
+        "text": "Active learning: real cases, workshops, quizzes and role-plays."
+      },
+      {
+        "title": "Evaluation",
+        "text": "Knowledge assessment, certificates and follow-up recommendations."
+      }
     ],
-    "standards": ["ISO 45001 (competence)", "Company internal standards"]
-  }
+    "standards": [
+      "ISO 45001 (competence)",
+      "Company internal standards"
+    ]
+  },
+  "image": "/images/service-risk-training.jpg"
 }

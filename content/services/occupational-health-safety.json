@@ -17,12 +17,28 @@
       "Programmes de visites comportementales de sécurité"
     ],
     "approach": [
-      { "title": "État des lieux", "text": "Analyse des accidents passés, des postes à risque et des pratiques existantes." },
-      { "title": "Évaluation", "text": "Cotation des risques par unité de travail et identification des priorités." },
-      { "title": "Plan de prévention", "text": "Mesures collectives d'abord, puis organisationnelles et individuelles." },
-      { "title": "Ancrage", "text": "Indicateurs, rituels sécurité et formation de relais SST internes." }
+      {
+        "title": "État des lieux",
+        "text": "Analyse des accidents passés, des postes à risque et des pratiques existantes."
+      },
+      {
+        "title": "Évaluation",
+        "text": "Cotation des risques par unité de travail et identification des priorités."
+      },
+      {
+        "title": "Plan de prévention",
+        "text": "Mesures collectives d'abord, puis organisationnelles et individuelles."
+      },
+      {
+        "title": "Ancrage",
+        "text": "Indicateurs, rituels sécurité et formation de relais SST internes."
+      }
     ],
-    "standards": ["Code du travail camerounais (loi n° 92/007)", "ISO 45001", "Conventions de l'OIT"]
+    "standards": [
+      "Code du travail camerounais (loi n° 92/007)",
+      "ISO 45001",
+      "Conventions de l'OIT"
+    ]
   },
   "en": {
     "slug": "occupational-health-safety",
@@ -38,11 +54,28 @@
       "Behaviour-based safety observation programmes"
     ],
     "approach": [
-      { "title": "Baseline", "text": "Review of past accidents, high-risk jobs and current practices." },
-      { "title": "Assessment", "text": "Risk rating by work unit and identification of priorities." },
-      { "title": "Prevention plan", "text": "Collective measures first, then organisational and individual ones." },
-      { "title": "Embedding", "text": "Indicators, safety routines and training of in-house OHS champions." }
+      {
+        "title": "Baseline",
+        "text": "Review of past accidents, high-risk jobs and current practices."
+      },
+      {
+        "title": "Assessment",
+        "text": "Risk rating by work unit and identification of priorities."
+      },
+      {
+        "title": "Prevention plan",
+        "text": "Collective measures first, then organisational and individual ones."
+      },
+      {
+        "title": "Embedding",
+        "text": "Indicators, safety routines and training of in-house OHS champions."
+      }
     ],
-    "standards": ["Cameroon Labour Code (Law No. 92/007)", "ISO 45001", "ILO conventions"]
-  }
+    "standards": [
+      "Cameroon Labour Code (Law No. 92/007)",
+      "ISO 45001",
+      "ILO conventions"
+    ]
+  },
+  "image": "/images/service-ohs.jpg"
 }
