@@ -7,7 +7,7 @@ Chaque token devient une classe utilitaire : `--color-gold-500` → `text-gold-5
 
 | Token | Valeur | Origine dans le logo | Usage |
 | --- | --- | --- | --- |
-| `ink-950` | `#0D0D0F` | Fond du favicon | Fond des sections sombres |
+| `ink-950` | `#000000` | Vrai noir (comme bakerrisk.com) | Hero, en-tête, pied de page, bandes noires |
 | `ink-900` | `#16161A` | — | Cartes sur fond sombre |
 | `ink-800` | `#222228` | — | Bordures sur fond sombre |
 | `gold-300` | `#F8CA62` | Gamme du logo v2 | Texte doré clair sur sombre |
@@ -38,6 +38,23 @@ Vérification : audit d'accessibilité Lighthouse à 100 sur les pages principal
 | `backend/assets/brand/` | Tampons (noir, bleu) pour les certificats PDF — **jamais servis publiquement** |
 | `docs/brand/` | Exports PNG haute définition et SVG modifiable (Figma/Canva) pour l'impression et les réseaux |
 | `frontend/src/components/brand/krool-logo.tsx` | **Logo v2 en SVG intégré** (en-tête : emblème + KROOL/HOLDING ; pied de page : logo complet). Référence : `docs/brand/logo-v2-reference.png` |
+
+## Thèmes clair et sombre
+
+Bouton soleil/lune dans l'en-tête (dans le menu sur mobile). Thème initial : choix mémorisé
+du visiteur, sinon préférence du système ; posé avant l'affichage (`components/theme/theme-script.tsx`).
+
+| Token sémantique | Clair | Sombre | Usage |
+| --- | --- | --- | --- |
+| `surface` | `#FFFFFF` | `#000000` | Fond des sections thémables |
+| `surface-alt` | `#F2F2F2` | `#0D0D0F` | Bandes alternées (section `tone="alt"`) |
+| `surface-raised` | `#FFFFFF` | `#141416` | Cartes, champs de formulaire |
+| `fg` / `fg-muted` | `#0A0903` / `#5C5C5C` | `#F5F5F5` / `#A1A7B0` | Texte / texte secondaire |
+| `accent` | `#8A5F00` (gold-700) | `#F6B628` (gold-400) | Texte doré |
+| `danger-fg` / `success-fg` / `warning-fg` | sombres | clairs | Messages d'état |
+
+Règle : sections thémables → tokens sémantiques (`bg-surface`, `text-fg`…) ; sections toujours
+sombres → tokens `ink-*` / `text-paper`. Texte sur fond or : toujours `text-black`.
 
 ## Typographies
 

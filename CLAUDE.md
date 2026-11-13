@@ -152,7 +152,7 @@ Début : vidéos non listées (YouTube ou Vimeo) ; migration possible vers un h�
 - **Étape 7** — Traduction automatique multilingue, durcissement sécurité, tests de charge, déploiement production.
 
 ## 13. Points ouverts (à confirmer par Lembe) et avancement
-**Ouverts** : budget et délai visés · hébergeur et domaine à acheter · visibilité du dépôt GitHub (actuellement public) · passerelle de paiement définitive · hébergement vidéo définitif · nom de la plateforme (provisoire : « Krool Academy ») · bio, photos et certifications de l'équipe · références réelles · liste définitive des modules de lancement · politique de prix (XAF) (propose)·
+**Ouverts** : clés Google reCAPTCHA · accord écrit des partenaires + logos officiels · URL des réseaux sociaux · budget et délai visés · hébergeur et domaine à acheter · visibilité du dépôt GitHub (actuellement public) · passerelle de paiement définitive · hébergement vidéo définitif · nom de la plateforme (provisoire : « Krool Academy ») · bio, photos et certifications de l'équipe · références réelles · liste définitive des modules de lancement · politique de prix (XAF) (propose)·
 
 **Avancement** :
 - **2026-11-13 — Étape 0 terminée (en local).** Monorepo, Next.js 16.4 (App Router, `cacheComponents`, `src/proxy.ts`) + Tailwind v4 (tokens dans `@theme`, `frontend/src/app/globals.css`, doc `docs/design-tokens.md`) + next-intl 4 (FR/EN via `next/root-params`, hreflang, architecture langues auto documentée dans `docs/architecture/i18n.md`). Django 5.2 + DRF + modèle `accounts.User` personnalisé + Argon2 + Celery/Redis + `/api/health/` + 5 tests. Docker Compose (local + profil `prod` avec Caddy), `.env.example`, CI GitHub Actions (lint, types, build, tests, pip-audit, npm audit, gitleaks), Dependabot.
@@ -166,4 +166,10 @@ Début : vidéos non listées (YouTube ou Vimeo) ; migration possible vers un h�
   - *Front* : 14 pages, URLs traduites (`routing.ts` → `pathnames`), slugs traduits avec redirection 308 vers la bonne langue, composants adaptés de Magic UI (NumberTicker, Marquee, BentoGrid ; BlurFade remplacé par une révélation CSS sans JS), schémas SVG (nœud papillon, matrice de criticité), formulaires accessibles, relais `/api` → Django dans `next.config.ts`.
   - *SEO* : métadonnées par page (`lib/metadata.ts`), hreflang, sitemap, robots, JSON-LD (Organization, Service, Article, FAQPage), image Open Graph générée.
   - *Lighthouse (mobile, build de prod, machine locale)* : accessibilité 100, bonnes pratiques 100 ; performance 93-98 sur les pages intérieures mais **~85 sur l'accueil** (TBT ≈ 550 ms, surtout React/Next) ; ordinateur 100. SEO 92 en local uniquement (canonique sur un autre port) → à remesurer avec PageSpeed Insights une fois en ligne.
+- **2026-11-13 — Logo v2 et or aligné** : logo v2 en SVG intégré (`components/brand/krool-logo.tsx`), or du site `#F2A906` (gamme recalculée), favicon / icônes / image de partage v2.
+- **2026-11-14 — Réglages de fin d'étape 1 (inspiration bakerrisk.com)** :
+  - Photos libres de droits Pexels (25, `frontend/public/images/`, crédits `docs/brand/photo-credits.md`, emplacements `content/images.json` + champ `image` des fiches) : hero plein écran sous voile noir, en-têtes de pages, vignettes.
+  - Thèmes clair/sombre (tokens sémantiques, vrai noir `#000`), bandeau partenaires défilant (`content/partners.json`, noms en attendant les logos officiels **avec accord écrit**), réseaux sociaux (Phosphor Icons, URL à renseigner), bandeau « Qualifications et référentiels » (sans marque ISO/NEBOSH tant qu'aucun fichier officiel ni certificat).
+  - reCAPTCHA v3 (`apps/leads/captcha.py`, `lib/recaptcha.ts`) : inactif tant que les clés sont vides ; 50 tests backend.
+  - Lighthouse : ordinateur 95-99 / a11y 100 ; **mobile simulé 71-76** (LCP ≈ 3,9 s dû aux photos plein écran) → à remesurer en ligne (PageSpeed Insights).
 - **Prochaine étape** : Étape 2 — back-office (auth admin + 2FA, gestion des contenus et des demandes).
