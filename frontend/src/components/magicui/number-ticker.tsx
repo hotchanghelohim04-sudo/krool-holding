@@ -24,7 +24,8 @@ export function NumberTicker({
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, { damping: 60, stiffness: 100 });
   const isInView = useInView(ref, { once: true, margin: "0px" });
-  const format = (n: number) => new Intl.NumberFormat(locale).format(Math.round(n));
+  // Le ressort peut passer légèrement sous 0 au départ : sans borne, on afficherait « -0 ».
+  const format = (n: number) => new Intl.NumberFormat(locale).format(Math.max(0, Math.round(n)));
 
   useEffect(() => {
     if (isInView && !reduceMotion) {
