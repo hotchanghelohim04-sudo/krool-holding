@@ -1,0 +1,44 @@
+{
+  "$todo": "TODO-CONTENU : étude de cas FICTIVE, affichée comme exemple. À remplacer par une mission réelle (avec accord du client).",
+  "key": "quarry-esia",
+  "isExample": true,
+  "sector": "mining",
+  "service": "esia",
+  "year": 2026,
+  "fr": {
+    "slug": "eies-carriere-granulats",
+    "title": "EIES d'une carrière de granulats et plan de gestion",
+    "client": "Exploitant de carrière (exemple)",
+    "summary": "Étude d'impact environnemental et social détaillée pour l'ouverture d'une carrière à proximité de trois villages.",
+    "context": "Le projet devait obtenir son certificat de conformité environnementale tout en répondant aux exigences d'un bailleur international. Les communautés riveraines s'inquiétaient des poussières, du bruit et de l'accès à l'eau.",
+    "approach": [
+      "Cadrage avec l'administration et plan d'engagement des parties prenantes.",
+      "Campagnes de mesures : qualité de l'air, bruit, eaux de surface, inventaire de la biodiversité.",
+      "Trois consultations publiques et un mécanisme de gestion des plaintes.",
+      "PGES chiffré avec indicateurs de suivi et responsabilités claires."
+    ],
+    "results": [
+      { "value": "3", "label": "consultations publiques menées" },
+      { "value": "27", "label": "mesures intégrées au PGES" },
+      { "value": "1", "label": "certificat de conformité obtenu" }
+    ]
+  },
+  "en": {
+    "slug": "aggregates-quarry-esia",
+    "title": "ESIA and management plan for an aggregates quarry",
+    "client": "Quarry operator (example)",
+    "summary": "Detailed environmental and social impact assessment for opening a quarry near three villages.",
+    "context": "The project needed its environmental compliance certificate while meeting the requirements of an international lender. Neighbouring communities were concerned about dust, noise and access to water.",
+    "approach": [
+      "Scoping with the authorities and stakeholder engagement plan.",
+      "Measurement campaigns: air quality, noise, surface water, biodiversity inventory.",
+      "Three public consultations and a grievance mechanism.",
+      "Costed ESMP with monitoring indicators and clear responsibilities."
+    ],
+    "results": [
+      { "value": "3", "label": "public consultations held" },
+      { "value": "27", "label": "measures included in the ESMP" },
+      { "value": "1", "label": "compliance certificate obtained" }
+    ]
+  }
+}

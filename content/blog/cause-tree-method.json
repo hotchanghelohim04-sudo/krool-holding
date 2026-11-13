@@ -1,0 +1,37 @@
+{
+  "$todo": "TODO-CONTENU : article provisoire, à relire et compléter par Lembe.",
+  "key": "cause-tree-method",
+  "date": "2026-09-15",
+  "readingMinutes": 4,
+  "service": "occupational-health-safety",
+  "fr": {
+    "slug": "arbre-des-causes-analyser-un-accident",
+    "title": "L'arbre des causes : analyser un accident sans chercher de coupable",
+    "excerpt": "Après un accident, la tentation est grande de conclure à « l'erreur humaine ». L'arbre des causes permet d'aller beaucoup plus loin.",
+    "body": [
+      { "type": "p", "text": "Un accident du travail n'a presque jamais une cause unique. Il résulte d'une combinaison de faits : une machine, une organisation, une consigne, un environnement. L'arbre des causes est une méthode simple pour reconstituer cette combinaison." },
+      { "type": "h2", "text": "Recueillir des faits, pas des opinions" },
+      { "type": "p", "text": "L'analyse commence sur le terrain, le plus tôt possible, avec la victime si elle le peut, les témoins et l'encadrement. On note uniquement des faits précis et vérifiables." },
+      { "type": "h2", "text": "Construire l'arbre" },
+      { "type": "p", "text": "En partant de la blessure, on se pose trois questions pour chaque fait : qu'a-t-il fallu pour qu'il se produise ? Est-ce nécessaire ? Est-ce suffisant ? Les réponses forment un enchaînement logique qui remonte aux causes profondes." },
+      { "type": "h2", "text": "Agir sur les causes profondes" },
+      { "type": "p", "text": "Les mesures les plus efficaces portent sur les faits situés loin de la blessure : conception du poste, organisation, formation. Elles évitent non seulement la répétition de cet accident, mais aussi d'autres accidents de la même famille." },
+      { "type": "ul", "items": ["Analyser aussi les presque-accidents", "Associer les opérateurs à l'analyse", "Suivre la mise en œuvre des mesures décidées"] }
+    ]
+  },
+  "en": {
+    "slug": "cause-tree-analysis-accident-investigation",
+    "title": "Cause-tree analysis: investigating an accident without looking for someone to blame",
+    "excerpt": "After an accident, it is tempting to conclude 'human error'. Cause-tree analysis lets you go much further.",
+    "body": [
+      { "type": "p", "text": "A workplace accident almost never has a single cause. It results from a combination of facts: a machine, an organisation, an instruction, an environment. Cause-tree analysis is a simple method for reconstructing that combination." },
+      { "type": "h2", "text": "Collect facts, not opinions" },
+      { "type": "p", "text": "The analysis starts in the field, as early as possible, with the injured person if they are able, the witnesses and supervisors. Only precise, verifiable facts are recorded." },
+      { "type": "h2", "text": "Build the tree" },
+      { "type": "p", "text": "Starting from the injury, three questions are asked for each fact: what was needed for it to happen? Is it necessary? Is it sufficient? The answers form a logical chain leading back to the root causes." },
+      { "type": "h2", "text": "Act on root causes" },
+      { "type": "p", "text": "The most effective measures address the facts furthest from the injury: workstation design, organisation, training. They prevent not only a repeat of this accident but also other accidents of the same kind." },
+      { "type": "ul", "items": ["Analyse near misses too", "Involve operators in the analysis", "Track the implementation of the agreed measures"] }
+    ]
+  }
+}

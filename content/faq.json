@@ -1,0 +1,23 @@
+{
+  "$todo": "TODO-CONTENU : FAQ provisoire, à compléter par Lembe (délais, tarifs, zones d'intervention réels).",
+  "fr": [
+    { "q": "Dans quelles zones intervenez-vous ?", "a": "Principalement au Cameroun et dans les pays de la CEMAC (Gabon, Congo, Tchad, République centrafricaine, Guinée équatoriale). Nous intervenons aussi à l'international, sur site ou à distance selon la mission." },
+    { "q": "Combien coûte une étude de dangers ou une EIES ?", "a": "Le coût dépend de la taille du site, des produits et procédés en jeu et du niveau de détail exigé par l'administration. Après un premier échange et, si besoin, une visite, nous vous remettons une proposition détaillée et chiffrée." },
+    { "q": "Quels sont vos délais de réponse ?", "a": "Nous répondons à toute demande de devis sous 48 heures ouvrées. Le délai de réalisation d'une mission est précisé dans notre proposition et tient compte de vos échéances réglementaires." },
+    { "q": "Vos études sont-elles reconnues par l'administration camerounaise ?", "a": "Nos études sont réalisées conformément à la réglementation camerounaise en vigueur et aux standards internationaux. Le cabinet engage les démarches d'agrément nécessaires pour les prestations qui l'exigent." },
+    { "q": "Pouvez-vous former nos équipes sur notre site ?", "a": "Oui. Nos formations peuvent être dispensées dans vos locaux, adaptées à vos installations et à vos procédures, ou suivies en ligne sur Krool Academy à partir de son lancement." },
+    { "q": "Quand Krool Academy sera-t-elle disponible ?", "a": "La plateforme est en cours de construction. Inscrivez-vous sur la page Académie pour être prévenu de son ouverture et des premiers parcours." },
+    { "q": "Comment traitez-vous les informations confidentielles de nos sites ?", "a": "Toutes les informations transmises sont traitées de manière strictement confidentielle. Un accord de confidentialité peut être signé avant le démarrage de la mission." },
+    { "q": "Travaillez-vous avec des bailleurs de fonds internationaux ?", "a": "Oui, nos EIES et due diligences s'appuient sur les standards attendus par les bailleurs, notamment les normes de performance de la SFI et les Principes de l'Équateur." }
+  ],
+  "en": [
+    { "q": "Where do you operate?", "a": "Mainly in Cameroon and the CEMAC countries (Gabon, Congo, Chad, Central African Republic, Equatorial Guinea). We also work internationally, on site or remotely depending on the assignment." },
+    { "q": "How much does a hazard study or an ESIA cost?", "a": "The cost depends on the size of the site, the substances and processes involved and the level of detail required by the authorities. After an initial discussion and, if needed, a site visit, we send you a detailed, costed proposal." },
+    { "q": "How quickly do you respond?", "a": "We answer every quote request within 48 business hours. The duration of an assignment is specified in our proposal and takes your regulatory deadlines into account." },
+    { "q": "Are your studies recognised by the Cameroonian authorities?", "a": "Our studies are carried out in accordance with current Cameroonian regulations and international standards. The firm is pursuing the approvals required for the services that need them." },
+    { "q": "Can you train our teams on our site?", "a": "Yes. Our training can be delivered at your premises, tailored to your facilities and procedures, or followed online on Krool Academy once it launches." },
+    { "q": "When will Krool Academy be available?", "a": "The platform is under construction. Sign up on the Academy page to be notified when it opens and when the first learning paths are available." },
+    { "q": "How do you handle confidential information about our sites?", "a": "All information shared with us is treated as strictly confidential. A non-disclosure agreement can be signed before the assignment starts." },
+    { "q": "Do you work with international lenders?", "a": "Yes, our ESIAs and due diligence work follow the standards expected by lenders, in particular the IFC Performance Standards and the Equator Principles." }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "$todo": "TODO-CONTENU : texte provisoire rédigé pour la maquette, à relire et compléter par Lembe.",
+  "key": "risk-training",
+  "icon": "GraduationCap",
+  "order": 6,
+  "fr": {
+    "slug": "formation-risques-industriels",
+    "title": "Formation aux risques industriels",
+    "short": "Des équipes qui savent reconnaître et maîtriser le danger.",
+    "summary": "Formations sur site ou en ligne avec Krool Academy : culture sécurité, analyse de risques, SST, environnement et qualité, adaptées à vos métiers.",
+    "intro": "Les meilleures procédures ne valent que si les équipes les comprennent et les appliquent. Nos formations partent de vos situations réelles : études de cas, exercices pratiques et mises en situation. Elles sont proposées en présentiel sur votre site ou en ligne via Krool Academy.",
+    "deliverables": [
+      "Sensibilisation à la culture sécurité pour tous les publics",
+      "Formations méthodes : HAZOP, nœud papillon, arbre des causes",
+      "Formations SST pour encadrants et relais sécurité",
+      "Formation des équipes d'intervention et exercices",
+      "Parcours certifiants en ligne avec Krool Academy"
+    ],
+    "approach": [
+      { "title": "Analyse des besoins", "text": "Publics, niveaux, contraintes de production et objectifs mesurables." },
+      { "title": "Conception", "text": "Contenus adaptés à vos installations, à vos procédures et à votre vocabulaire." },
+      { "title": "Animation", "text": "Pédagogie active : cas réels, ateliers, quiz et mises en situation." },
+      { "title": "Évaluation", "text": "Contrôle des acquis, attestations et recommandations de suivi." }
+    ],
+    "standards": ["ISO 45001 (compétences)", "Référentiels internes de l'entreprise"]
+  },
+  "en": {
+    "slug": "industrial-risk-training",
+    "title": "Industrial risk training",
+    "short": "Teams that recognise and control hazards.",
+    "summary": "On-site or online training with Krool Academy: safety culture, risk analysis, OHS, environment and quality, tailored to your trades.",
+    "intro": "The best procedures are only worth something if teams understand and apply them. Our training starts from your real situations: case studies, practical exercises and role-plays. It is delivered on your site or online through Krool Academy.",
+    "deliverables": [
+      "Safety culture awareness for all audiences",
+      "Method training: HAZOP, bow-tie, cause-tree analysis",
+      "OHS training for supervisors and safety champions",
+      "Emergency response team training and drills",
+      "Certified online learning paths with Krool Academy"
+    ],
+    "approach": [
+      { "title": "Needs analysis", "text": "Audiences, levels, production constraints and measurable objectives." },
+      { "title": "Design", "text": "Content adapted to your facilities, procedures and vocabulary." },
+      { "title": "Delivery", "text": "Active learning: real cases, workshops, quizzes and role-plays." },
+      { "title": "Evaluation", "text": "Knowledge assessment, certificates and follow-up recommendations." }
+    ],
+    "standards": ["ISO 45001 (competence)", "Company internal standards"]
+  }
+}

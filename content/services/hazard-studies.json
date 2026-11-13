@@ -1,0 +1,48 @@
+{
+  "$todo": "TODO-CONTENU : texte provisoire rédigé pour la maquette, à relire et compléter par Lembe.",
+  "key": "hazard-studies",
+  "icon": "TriangleAlert",
+  "order": 4,
+  "fr": {
+    "slug": "etudes-de-dangers",
+    "title": "Études de dangers",
+    "short": "Identifier, coter et maîtriser les scénarios d'accident majeur.",
+    "summary": "Études de dangers réglementaires pour les établissements classés : identification des dangers, analyse de criticité, modélisation des effets et mesures de maîtrise des risques.",
+    "intro": "L'étude de dangers est la pièce maîtresse du dossier d'un établissement classé. Elle démontre que l'exploitant connaît ses risques et les maîtrise. Nous la réalisons avec vos équipes, en nous appuyant sur des méthodes reconnues et des modélisations d'effets, pour un document à la fois conforme et utile à l'exploitation.",
+    "deliverables": [
+      "Identification des potentiels de dangers (produits, procédés, environnement)",
+      "Analyse préliminaire des risques et matrice de criticité",
+      "Modélisation des effets thermiques, de surpression et toxiques",
+      "Analyse des barrières en nœud papillon",
+      "Dossier d'étude de dangers prêt pour l'administration"
+    ],
+    "approach": [
+      { "title": "Description du site", "text": "Installations, produits, procédés et environnement (populations, enjeux)." },
+      { "title": "Identification des dangers", "text": "Analyse préliminaire des risques et retour d'expérience d'accidents similaires." },
+      { "title": "Criticité", "text": "Cotation gravité × probabilité et sélection des scénarios majeurs." },
+      { "title": "Maîtrise des risques", "text": "Barrières existantes, mesures complémentaires et cartographie des effets." }
+    ],
+    "standards": ["Loi n° 98/015 relative aux établissements classés", "Méthode du nœud papillon", "IEC 61882 (HAZOP)"]
+  },
+  "en": {
+    "slug": "hazard-studies",
+    "title": "Hazard studies",
+    "short": "Identify, rate and control major accident scenarios.",
+    "summary": "Regulatory hazard studies for classified facilities: hazard identification, criticality analysis, consequence modelling and risk control measures.",
+    "intro": "The hazard study is the cornerstone of a classified facility's permit file. It demonstrates that the operator knows and controls its risks. We carry it out with your teams, using recognised methods and consequence modelling, for a document that is both compliant and useful to operations.",
+    "deliverables": [
+      "Identification of hazard potentials (substances, processes, surroundings)",
+      "Preliminary risk analysis and criticality matrix",
+      "Modelling of thermal, overpressure and toxic effects",
+      "Bow-tie barrier analysis",
+      "Hazard study report ready for submission to the authorities"
+    ],
+    "approach": [
+      { "title": "Site description", "text": "Facilities, substances, processes and surroundings (population, sensitive receptors)." },
+      { "title": "Hazard identification", "text": "Preliminary risk analysis and lessons from similar accidents." },
+      { "title": "Criticality", "text": "Severity × likelihood rating and selection of major scenarios." },
+      { "title": "Risk control", "text": "Existing barriers, additional measures and effect-zone mapping." }
+    ],
+    "standards": ["Cameroon Law No. 98/015 on classified facilities", "Bow-tie method", "IEC 61882 (HAZOP)"]
+  }
+}

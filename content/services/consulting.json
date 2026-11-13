@@ -1,0 +1,48 @@
+{
+  "$todo": "TODO-CONTENU : texte provisoire rédigé pour la maquette, à relire et compléter par Lembe.",
+  "key": "consulting",
+  "icon": "Briefcase",
+  "order": 3,
+  "fr": {
+    "slug": "conseil",
+    "title": "Conseil HSE et stratégie",
+    "short": "Un regard expert pour vos décisions sécurité, environnement et qualité.",
+    "summary": "Assistance à maîtrise d'ouvrage, due diligence HSE et structuration de vos organisations pour décider en connaissance des risques.",
+    "intro": "Directions générales, investisseurs et maîtres d'ouvrage nous sollicitent pour éclairer des décisions à fort enjeu : acquisition d'un site, lancement d'un projet, restructuration d'une fonction HSE. Nous apportons une analyse indépendante, chiffrée et directement exploitable.",
+    "deliverables": [
+      "Due diligence HSE avant acquisition ou financement",
+      "Assistance à maîtrise d'ouvrage sur les volets HSE",
+      "Diagnostic et organisation de la fonction HSE",
+      "Veille et cartographie réglementaires",
+      "Préparation aux inspections des autorités"
+    ],
+    "approach": [
+      { "title": "Cadrage", "text": "Compréhension de la décision à éclairer, du calendrier et des parties prenantes." },
+      { "title": "Investigation", "text": "Revue documentaire, visites et entretiens ciblés." },
+      { "title": "Synthèse", "text": "Risques, coûts et options présentés de façon claire pour la direction." },
+      { "title": "Suivi", "text": "Appui à la mise en œuvre et points d'étape réguliers." }
+    ],
+    "standards": ["Normes de performance de la SFI (IFC)", "Principes de l'Équateur", "ISO 31000"]
+  },
+  "en": {
+    "slug": "consulting",
+    "title": "HSE consulting and strategy",
+    "short": "Expert insight for your safety, environmental and quality decisions.",
+    "summary": "Owner's engineering, HSE due diligence and organisational design so that you decide with full knowledge of the risks.",
+    "intro": "Executives, investors and project owners call on us to inform high-stakes decisions: acquiring a site, launching a project, restructuring an HSE function. We provide an independent, quantified and immediately actionable analysis.",
+    "deliverables": [
+      "HSE due diligence before acquisition or financing",
+      "Owner's engineering support on HSE matters",
+      "Assessment and organisation of the HSE function",
+      "Regulatory watch and compliance mapping",
+      "Preparation for regulatory inspections"
+    ],
+    "approach": [
+      { "title": "Scoping", "text": "Understanding the decision at stake, the timeline and the stakeholders." },
+      { "title": "Investigation", "text": "Document review, site visits and targeted interviews." },
+      { "title": "Synthesis", "text": "Risks, costs and options presented clearly for management." },
+      { "title": "Follow-up", "text": "Implementation support and regular progress reviews." }
+    ],
+    "standards": ["IFC Performance Standards", "Equator Principles", "ISO 31000"]
+  }
+}

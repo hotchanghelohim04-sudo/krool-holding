@@ -1,0 +1,48 @@
+{
+  "$todo": "TODO-CONTENU : texte provisoire rédigé pour la maquette, à relire et compléter par Lembe.",
+  "key": "industrial-quality",
+  "icon": "BadgeCheck",
+  "order": 8,
+  "fr": {
+    "slug": "qualite-industrielle",
+    "title": "Qualité industrielle",
+    "short": "Des processus maîtrisés et une amélioration continue mesurable.",
+    "summary": "Systèmes de management ISO 9001, systèmes intégrés QHSE, résolution de problèmes et amélioration continue pour fiabiliser vos opérations.",
+    "intro": "Qualité, sécurité et environnement reposent sur les mêmes fondations : des processus clairs, des responsabilités définies et une boucle d'amélioration continue. Nous construisons avec vous des systèmes simples, vivants et intégrés, plutôt que des piles de documents.",
+    "deliverables": [
+      "Diagnostic qualité et cartographie des processus",
+      "Mise en place ou audit ISO 9001 et systèmes intégrés QHSE",
+      "Audits internes et audits fournisseurs",
+      "Résolution de problèmes (8D, 5 pourquoi, Ishikawa)",
+      "Préparation à la certification"
+    ],
+    "approach": [
+      { "title": "Diagnostic", "text": "Processus, exigences clients et performance actuelle." },
+      { "title": "Conception", "text": "Système documentaire allégé et indicateurs utiles." },
+      { "title": "Déploiement", "text": "Formation des pilotes de processus et audits à blanc." },
+      { "title": "Amélioration", "text": "Revues, actions correctives et cycle PDCA." }
+    ],
+    "standards": ["ISO 9001", "ISO 19011 (audit)", "Système intégré QHSE"]
+  },
+  "en": {
+    "slug": "industrial-quality",
+    "title": "Industrial quality",
+    "short": "Controlled processes and measurable continual improvement.",
+    "summary": "ISO 9001 management systems, integrated QHSE systems, problem solving and continual improvement to make your operations more reliable.",
+    "intro": "Quality, safety and environment rest on the same foundations: clear processes, defined responsibilities and a continual improvement loop. We build simple, living and integrated systems with you, rather than piles of documents.",
+    "deliverables": [
+      "Quality assessment and process mapping",
+      "ISO 9001 and integrated QHSE system implementation or audit",
+      "Internal and supplier audits",
+      "Problem solving (8D, 5 Whys, Ishikawa)",
+      "Certification readiness"
+    ],
+    "approach": [
+      { "title": "Assessment", "text": "Processes, customer requirements and current performance." },
+      { "title": "Design", "text": "Lean documentation system and useful indicators." },
+      { "title": "Deployment", "text": "Training of process owners and mock audits." },
+      { "title": "Improvement", "text": "Reviews, corrective actions and the PDCA cycle." }
+    ],
+    "standards": ["ISO 9001", "ISO 19011 (auditing)", "Integrated QHSE system"]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "$todo": "TODO-CONTENU : texte provisoire rédigé pour la maquette, à relire et compléter par Lembe.",
+  "key": "industrial-safety",
+  "icon": "ShieldCheck",
+  "order": 1,
+  "fr": {
+    "slug": "securite-industrielle",
+    "title": "Sécurité industrielle",
+    "short": "Prévenir les accidents majeurs et protéger vos installations.",
+    "summary": "Nous aidons les exploitants à identifier, réduire et maîtriser les risques d'incendie, d'explosion et de rejet toxique, de la conception à l'exploitation.",
+    "intro": "Un accident industriel majeur peut coûter des vies, un site et une réputation. Notre approche combine analyse de terrain, méthodes reconnues (HAZOP, nœud papillon, LOPA) et accompagnement opérationnel pour que vos barrières de sécurité soient réellement efficaces, pas seulement documentées.",
+    "deliverables": [
+      "Diagnostic sécurité de site et plan d'actions priorisé",
+      "Analyses de risques de procédé (HAZOP, HAZID, What-If)",
+      "Revue des barrières de sécurité et des systèmes instrumentés",
+      "Plans d'opération interne (POI) et exercices d'urgence",
+      "Audits de conformité réglementaire des établissements classés"
+    ],
+    "approach": [
+      { "title": "Visite et collecte", "text": "Inspection du site, entretiens avec les équipes, revue des procédures et du retour d'expérience." },
+      { "title": "Analyse", "text": "Identification des scénarios d'accident, évaluation de leur gravité et de leur probabilité." },
+      { "title": "Recommandations", "text": "Mesures techniques et organisationnelles hiérarchisées selon leur efficacité et leur coût." },
+      { "title": "Accompagnement", "text": "Suivi de la mise en œuvre, formation des équipes et indicateurs de performance sécurité." }
+    ],
+    "standards": ["Loi n° 98/015 relative aux établissements classés", "IEC 61511", "IEC 61882 (HAZOP)", "ISO 45001"]
+  },
+  "en": {
+    "slug": "industrial-safety",
+    "title": "Industrial safety",
+    "short": "Prevent major accidents and protect your facilities.",
+    "summary": "We help operators identify, reduce and control fire, explosion and toxic release risks, from design through operations.",
+    "intro": "A major industrial accident can cost lives, a site and a reputation. Our approach combines field analysis, recognised methods (HAZOP, bow-tie, LOPA) and hands-on support so that your safety barriers are genuinely effective, not just documented.",
+    "deliverables": [
+      "Site safety assessment and prioritised action plan",
+      "Process hazard analyses (HAZOP, HAZID, What-If)",
+      "Review of safety barriers and safety instrumented systems",
+      "Internal emergency plans and emergency drills",
+      "Regulatory compliance audits of classified facilities"
+    ],
+    "approach": [
+      { "title": "Site visit and data collection", "text": "Site inspection, interviews with teams, review of procedures and lessons learned." },
+      { "title": "Analysis", "text": "Identification of accident scenarios and assessment of their severity and likelihood." },
+      { "title": "Recommendations", "text": "Technical and organisational measures ranked by effectiveness and cost." },
+      { "title": "Support", "text": "Implementation follow-up, team training and safety performance indicators." }
+    ],
+    "standards": ["Cameroon Law No. 98/015 on classified facilities", "IEC 61511", "IEC 61882 (HAZOP)", "ISO 45001"]
+  }
+}

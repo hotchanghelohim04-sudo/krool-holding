@@ -1,0 +1,37 @@
+{
+  "$todo": "TODO-CONTENU : article provisoire, à relire et compléter par Lembe.",
+  "key": "esia-stakeholder-engagement",
+  "date": "2026-08-25",
+  "readingMinutes": 4,
+  "service": "esia",
+  "fr": {
+    "slug": "eies-reussir-la-consultation-des-parties-prenantes",
+    "title": "EIES : réussir la consultation des parties prenantes",
+    "excerpt": "La consultation publique n'est pas une étape à cocher : c'est souvent elle qui détermine l'acceptabilité d'un projet.",
+    "body": [
+      { "type": "p", "text": "Dans une étude d'impact environnemental et social, la consultation des parties prenantes est à la fois une obligation réglementaire et une condition de réussite du projet. Les bailleurs internationaux y accordent une attention particulière." },
+      { "type": "h2", "text": "Identifier toutes les parties prenantes" },
+      { "type": "p", "text": "Autorités administratives et traditionnelles, communautés riveraines, groupes vulnérables, organisations de la société civile : une cartographie complète évite les oublis qui se paient cher plus tard." },
+      { "type": "h2", "text": "Informer avant de consulter" },
+      { "type": "p", "text": "Une consultation utile suppose une information claire, dans les langues locales si nécessaire, et suffisamment tôt pour que les avis puissent réellement influencer le projet." },
+      { "type": "h2", "text": "Garder une trace et répondre" },
+      { "type": "p", "text": "Chaque préoccupation exprimée doit être consignée et recevoir une réponse. Un mécanisme de gestion des plaintes, simple et accessible, prolonge ce dialogue pendant toute la vie du projet." },
+      { "type": "ul", "items": ["Commencer l'engagement dès le cadrage", "Adapter les formats aux publics", "Restituer les résultats aux communautés"] }
+    ]
+  },
+  "en": {
+    "slug": "esia-successful-stakeholder-engagement",
+    "title": "ESIA: getting stakeholder engagement right",
+    "excerpt": "Public consultation is not a box to tick: it often determines whether a project is accepted.",
+    "body": [
+      { "type": "p", "text": "In an environmental and social impact assessment, stakeholder engagement is both a regulatory requirement and a condition for project success. International lenders pay particular attention to it." },
+      { "type": "h2", "text": "Identify all stakeholders" },
+      { "type": "p", "text": "Administrative and traditional authorities, neighbouring communities, vulnerable groups, civil society organisations: a complete map avoids omissions that prove costly later." },
+      { "type": "h2", "text": "Inform before consulting" },
+      { "type": "p", "text": "Meaningful consultation requires clear information, in local languages where needed, early enough for opinions to genuinely influence the project." },
+      { "type": "h2", "text": "Keep records and respond" },
+      { "type": "p", "text": "Every concern raised must be recorded and answered. A simple, accessible grievance mechanism extends this dialogue throughout the life of the project." },
+      { "type": "ul", "items": ["Start engagement at the scoping stage", "Adapt formats to each audience", "Report the results back to communities"] }
+    ]
+  }
+}

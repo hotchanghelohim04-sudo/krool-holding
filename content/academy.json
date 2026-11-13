@@ -1,0 +1,62 @@
+{
+  "$todo": "TODO-CONTENU : présentation et catalogue provisoires de Krool Academy (5 modules de lancement, CLAUDE.md §9). Durées et niveaux indicatifs.",
+  "features": [
+    {
+      "icon": "BookOpen",
+      "fr": { "title": "Cours concrets", "text": "Leçons courtes, vidéos et études de cas tirées de situations industrielles réelles." },
+      "en": { "title": "Practical courses", "text": "Short lessons, videos and case studies drawn from real industrial situations." }
+    },
+    {
+      "icon": "Gauge",
+      "fr": { "title": "Mini-labs interactifs", "text": "Matrice de risques, arbre des causes, inspection virtuelle : pratiquez dans votre navigateur." },
+      "en": { "title": "Interactive mini-labs", "text": "Risk matrix, cause tree, virtual inspection: practise right in your browser." }
+    },
+    {
+      "icon": "Award",
+      "fr": { "title": "Certificats vérifiables", "text": "Un certificat avec identifiant unique et QR code, vérifiable publiquement en ligne." },
+      "en": { "title": "Verifiable certificates", "text": "A certificate with a unique ID and QR code, publicly verifiable online." }
+    },
+    {
+      "icon": "Users",
+      "fr": { "title": "Offre entreprises", "text": "Inscrivez vos équipes, suivez leur progression et exportez leurs résultats." },
+      "en": { "title": "Business plans", "text": "Enrol your teams, track their progress and export their results." }
+    }
+  ],
+  "courses": [
+    {
+      "key": "industrial-risk-fundamentals",
+      "level": "beginner",
+      "hours": 6,
+      "fr": { "title": "Fondamentaux des risques industriels", "summary": "Danger, risque, accident majeur : les notions clés et les grands accidents qui ont façonné la prévention." },
+      "en": { "title": "Industrial risk fundamentals", "summary": "Hazard, risk, major accident: the key concepts and the major accidents that shaped prevention." }
+    },
+    {
+      "key": "hazard-studies",
+      "level": "intermediate",
+      "hours": 10,
+      "fr": { "title": "Études de dangers", "summary": "Identifier les dangers, coter la criticité et définir des mesures de maîtrise des risques." },
+      "en": { "title": "Hazard studies", "summary": "Identify hazards, rate criticality and define risk control measures." }
+    },
+    {
+      "key": "occupational-health-safety",
+      "level": "beginner",
+      "hours": 8,
+      "fr": { "title": "Santé et sécurité au travail", "summary": "Évaluer les risques professionnels, analyser un accident et animer la prévention au quotidien." },
+      "en": { "title": "Occupational health and safety", "summary": "Assess occupational risks, investigate an accident and drive prevention every day." }
+    },
+    {
+      "key": "environment-esia",
+      "level": "intermediate",
+      "hours": 8,
+      "fr": { "title": "Gestion de l'environnement et EIES", "summary": "Comprendre le processus d'EIES, l'état initial, l'analyse des impacts et le PGES." },
+      "en": { "title": "Environmental management and ESIA", "summary": "Understand the ESIA process, the baseline, impact analysis and the ESMP." }
+    },
+    {
+      "key": "quality-improvement",
+      "level": "advanced",
+      "hours": 7,
+      "fr": { "title": "Qualité industrielle et amélioration continue", "summary": "Processus, indicateurs, résolution de problèmes et cycle PDCA appliqués à l'industrie." },
+      "en": { "title": "Industrial quality and continual improvement", "summary": "Processes, indicators, problem solving and the PDCA cycle applied to industry." }
+    }
+  ]
+}

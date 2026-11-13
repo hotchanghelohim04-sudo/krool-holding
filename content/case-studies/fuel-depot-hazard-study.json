@@ -1,0 +1,44 @@
+{
+  "$todo": "TODO-CONTENU : étude de cas FICTIVE, affichée comme exemple. À remplacer par une mission réelle (avec accord du client).",
+  "key": "fuel-depot-hazard-study",
+  "isExample": true,
+  "sector": "oil-gas",
+  "service": "hazard-studies",
+  "year": 2026,
+  "fr": {
+    "slug": "etude-de-dangers-depot-hydrocarbures",
+    "title": "Étude de dangers d'un dépôt d'hydrocarbures en zone portuaire",
+    "client": "Exploitant d'un dépôt de carburants (exemple)",
+    "summary": "Mise en conformité d'un dépôt de 12 bacs de stockage avant renouvellement de son autorisation d'exploitation.",
+    "context": "Le dépôt, situé à proximité d'une zone habitée, devait présenter une étude de dangers actualisée à l'administration. Le dernier document datait de plus de dix ans et ne reflétait plus les installations.",
+    "approach": [
+      "Inventaire des produits et des installations, visite complète du site avec les équipes d'exploitation.",
+      "Analyse préliminaire des risques et sélection de 9 scénarios d'accident majeur (feu de bac, boil-over, UVCE).",
+      "Modélisation des distances d'effets thermiques et de surpression et superposition avec l'urbanisation.",
+      "Analyse en nœud papillon des barrières et proposition de mesures complémentaires hiérarchisées."
+    ],
+    "results": [
+      { "value": "9", "label": "scénarios majeurs analysés et cartographiés" },
+      { "value": "14", "label": "mesures de maîtrise des risques proposées" },
+      { "value": "0", "label": "réserve de l'administration sur le dossier" }
+    ]
+  },
+  "en": {
+    "slug": "fuel-depot-hazard-study",
+    "title": "Hazard study for a fuel depot in a port area",
+    "client": "Fuel storage operator (example)",
+    "summary": "Bringing a 12-tank depot into compliance before the renewal of its operating permit.",
+    "context": "The depot, located near a residential area, had to submit an updated hazard study to the authorities. The previous document was more than ten years old and no longer reflected the facilities.",
+    "approach": [
+      "Inventory of substances and facilities, full site visit with the operations teams.",
+      "Preliminary risk analysis and selection of 9 major accident scenarios (tank fire, boil-over, UVCE).",
+      "Modelling of thermal and overpressure effect distances, overlaid with surrounding land use.",
+      "Bow-tie barrier analysis and prioritised additional measures."
+    ],
+    "results": [
+      { "value": "9", "label": "major scenarios analysed and mapped" },
+      { "value": "14", "label": "risk control measures proposed" },
+      { "value": "0", "label": "reservations from the authorities on the file" }
+    ]
+  }
+}

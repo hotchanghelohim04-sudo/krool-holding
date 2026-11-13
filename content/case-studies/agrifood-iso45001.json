@@ -1,0 +1,44 @@
+{
+  "$todo": "TODO-CONTENU : étude de cas FICTIVE, affichée comme exemple. À remplacer par une mission réelle (avec accord du client).",
+  "key": "agrifood-iso45001",
+  "isExample": true,
+  "sector": "agrifood",
+  "service": "occupational-health-safety",
+  "year": 2026,
+  "fr": {
+    "slug": "systeme-iso-45001-usine-agroalimentaire",
+    "title": "Système de management ISO 45001 dans une usine agroalimentaire",
+    "client": "Usine de transformation agroalimentaire (exemple)",
+    "summary": "Réduction des accidents avec arrêt et structuration de la prévention dans une usine de 400 salariés.",
+    "context": "L'usine enregistrait un taux d'accidents élevé, principalement lié à la manutention et aux machines. La direction souhaitait une démarche structurée, reconnue par ses clients export.",
+    "approach": [
+      "Évaluation des risques sur 32 unités de travail avec les chefs d'équipe.",
+      "Formation de 15 relais sécurité et mise en place de visites comportementales hebdomadaires.",
+      "Analyse systématique des accidents par l'arbre des causes.",
+      "Construction d'un système documentaire allégé et audit à blanc ISO 45001."
+    ],
+    "results": [
+      { "value": "-45 %", "label": "d'accidents avec arrêt en 12 mois" },
+      { "value": "15", "label": "relais sécurité formés" },
+      { "value": "32", "label": "unités de travail évaluées" }
+    ]
+  },
+  "en": {
+    "slug": "iso-45001-agrifood-plant",
+    "title": "ISO 45001 management system in an agri-food plant",
+    "client": "Agri-food processing plant (example)",
+    "summary": "Reducing lost-time accidents and structuring prevention in a 400-employee plant.",
+    "context": "The plant had a high accident rate, mainly related to manual handling and machinery. Management wanted a structured approach recognised by its export customers.",
+    "approach": [
+      "Risk assessment across 32 work units with team leaders.",
+      "Training of 15 safety champions and weekly behaviour-based safety observations.",
+      "Systematic accident investigation using cause-tree analysis.",
+      "Lean documentation system and ISO 45001 mock audit."
+    ],
+    "results": [
+      { "value": "-45%", "label": "lost-time accidents within 12 months" },
+      { "value": "15", "label": "safety champions trained" },
+      { "value": "32", "label": "work units assessed" }
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "$todo": "TODO-CONTENU : texte provisoire rédigé pour la maquette, à relire et compléter par Lembe.",
+  "key": "project-studies",
+  "icon": "Ruler",
+  "order": 9,
+  "fr": {
+    "slug": "etudes-de-projet",
+    "title": "Études de projet",
+    "short": "Intégrer la sécurité et l'environnement dès la conception.",
+    "summary": "Études de faisabilité, revues de conception HSE et accompagnement des projets industriels, de l'avant-projet à la mise en service.",
+    "intro": "Corriger un défaut de sécurité sur plan coûte cent fois moins cher qu'après la construction. Nous intervenons aux étapes clés de vos projets pour intégrer les exigences HSE et réglementaires au bon moment, sans retarder le calendrier.",
+    "deliverables": [
+      "Études de faisabilité et analyse des contraintes HSE",
+      "Revues de conception sécurité (HAZID, HAZOP sur plans)",
+      "Implantation et distances de sécurité",
+      "Dossiers d'autorisation et d'exploitation",
+      "Revue de sécurité avant démarrage"
+    ],
+    "approach": [
+      { "title": "Avant-projet", "text": "Contraintes du site, réglementation applicable et options d'implantation." },
+      { "title": "Conception", "text": "Revues HSE aux jalons et intégration des recommandations." },
+      { "title": "Autorisations", "text": "Constitution des dossiers et échanges avec l'administration." },
+      { "title": "Mise en service", "text": "Revue de sécurité avant démarrage et transfert aux équipes d'exploitation." }
+    ],
+    "standards": ["IEC 61882 (HAZOP)", "Bonnes pratiques de conception sûre", "Réglementation des établissements classés"]
+  },
+  "en": {
+    "slug": "project-studies",
+    "title": "Project studies",
+    "short": "Build safety and environment in from the design stage.",
+    "summary": "Feasibility studies, HSE design reviews and support for industrial projects, from pre-project to commissioning.",
+    "intro": "Fixing a safety flaw on paper costs a hundred times less than after construction. We step in at the key stages of your projects to integrate HSE and regulatory requirements at the right time, without delaying the schedule.",
+    "deliverables": [
+      "Feasibility studies and HSE constraint analysis",
+      "Safety design reviews (HAZID, HAZOP on drawings)",
+      "Plant layout and safety distances",
+      "Permitting and operating licence files",
+      "Pre-start-up safety review"
+    ],
+    "approach": [
+      { "title": "Pre-project", "text": "Site constraints, applicable regulations and layout options." },
+      { "title": "Design", "text": "HSE reviews at milestones and integration of recommendations." },
+      { "title": "Permitting", "text": "Preparation of files and liaison with the authorities." },
+      { "title": "Commissioning", "text": "Pre-start-up safety review and handover to operations." }
+    ],
+    "standards": ["IEC 61882 (HAZOP)", "Inherently safer design practices", "Classified facilities regulations"]
+  }
+}

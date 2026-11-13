@@ -1,0 +1,35 @@
+{
+  "$todo": "TODO-CONTENU : CGU/CGV provisoires. Les CGV de l'Académie (paiement, abonnements, remboursements) seront complétées à l'étape 6. À FAIRE VALIDER PAR UN JURISTE.",
+  "key": "terms",
+  "updated": "2026-11-13",
+  "fr": {
+    "title": "Conditions générales d'utilisation et de vente",
+    "body": [
+      { "type": "h2", "text": "Objet" },
+      { "type": "p", "text": "Les présentes conditions encadrent l'utilisation du site de Krool Holding et, à terme, la vente des formations proposées sur Krool Academy." },
+      { "type": "h2", "text": "Utilisation du site" },
+      { "type": "p", "text": "Le site est accessible gratuitement. L'utilisateur s'engage à fournir des informations exactes dans les formulaires et à ne pas porter atteinte au bon fonctionnement du site (envois automatisés, tentatives d'intrusion, contenus illicites)." },
+      { "type": "h2", "text": "Prestations de conseil" },
+      { "type": "p", "text": "Les demandes de devis envoyées via le site n'engagent ni le visiteur ni Krool Holding. Chaque mission fait l'objet d'une proposition commerciale et d'un contrat spécifiques, qui prévalent sur les présentes conditions." },
+      { "type": "h2", "text": "Formations en ligne (Krool Academy)" },
+      { "type": "p", "text": "Les conditions de vente des formations (prix en francs CFA, modalités de paiement par Mobile Money ou carte bancaire, abonnements, droit de rétractation et remboursement) seront publiées à l'ouverture de la plateforme. [À compléter à l'étape 6]" },
+      { "type": "h2", "text": "Droit applicable" },
+      { "type": "p", "text": "Les présentes conditions sont régies par le droit camerounais et, le cas échéant, par les actes uniformes de l'OHADA. En cas de litige, une solution amiable sera recherchée avant toute action devant les juridictions compétentes de Douala." }
+    ]
+  },
+  "en": {
+    "title": "Terms of use and sale",
+    "body": [
+      { "type": "h2", "text": "Purpose" },
+      { "type": "p", "text": "These terms govern the use of the Krool Holding website and, in due course, the sale of the training courses offered on Krool Academy." },
+      { "type": "h2", "text": "Use of the website" },
+      { "type": "p", "text": "The website is free to access. Users agree to provide accurate information in forms and not to interfere with the proper functioning of the website (automated submissions, intrusion attempts, unlawful content)." },
+      { "type": "h2", "text": "Consulting services" },
+      { "type": "p", "text": "Quote requests sent through the website are not binding on either the visitor or Krool Holding. Each assignment is subject to a specific proposal and contract, which take precedence over these terms." },
+      { "type": "h2", "text": "Online training (Krool Academy)" },
+      { "type": "p", "text": "The terms of sale for courses (prices in CFA francs, payment by Mobile Money or bank card, subscriptions, withdrawal and refund rights) will be published when the platform opens. [To be completed in step 6]" },
+      { "type": "h2", "text": "Governing law" },
+      { "type": "p", "text": "These terms are governed by Cameroonian law and, where applicable, the OHADA Uniform Acts. In the event of a dispute, an amicable solution will be sought before any action before the competent courts of Douala." }
+    ]
+  }
+}

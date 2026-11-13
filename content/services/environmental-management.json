@@ -1,0 +1,48 @@
+{
+  "$todo": "TODO-CONTENU : texte provisoire rédigé pour la maquette, à relire et compléter par Lembe.",
+  "key": "environmental-management",
+  "icon": "Leaf",
+  "order": 7,
+  "fr": {
+    "slug": "gestion-environnement",
+    "title": "Gestion de l'environnement",
+    "short": "Réduire votre empreinte et maîtriser vos obligations.",
+    "summary": "Systèmes de management ISO 14001, gestion des déchets et des rejets, audits environnementaux et reporting pour des opérations conformes et responsables.",
+    "intro": "Rejets, déchets, consommation d'eau et d'énergie : la performance environnementale est désormais examinée par les autorités, les clients et les financeurs. Nous vous aidons à mesurer, réduire et piloter vos impacts avec des outils proportionnés à votre activité.",
+    "deliverables": [
+      "Audit environnemental et analyse des écarts réglementaires",
+      "Mise en place d'un système de management ISO 14001",
+      "Plans de gestion des déchets et des effluents",
+      "Programmes de surveillance des rejets et de l'air",
+      "Indicateurs et rapports environnementaux"
+    ],
+    "approach": [
+      { "title": "Analyse environnementale", "text": "Aspects significatifs, obligations de conformité et données disponibles." },
+      { "title": "Objectifs", "text": "Cibles de réduction réalistes et plan d'actions chiffré." },
+      { "title": "Outils", "text": "Procédures, registres, suivi des déchets et des consommations." },
+      { "title": "Pilotage", "text": "Indicateurs, revues de direction et amélioration continue." }
+    ],
+    "standards": ["ISO 14001", "Loi-cadre n° 96/12 relative à la gestion de l'environnement"]
+  },
+  "en": {
+    "slug": "environmental-management",
+    "title": "Environmental management",
+    "short": "Reduce your footprint and meet your obligations.",
+    "summary": "ISO 14001 management systems, waste and discharge management, environmental audits and reporting for compliant and responsible operations.",
+    "intro": "Discharges, waste, water and energy use: environmental performance is now scrutinised by authorities, customers and financiers. We help you measure, reduce and manage your impacts with tools proportionate to your activity.",
+    "deliverables": [
+      "Environmental audit and regulatory gap analysis",
+      "ISO 14001 management system implementation",
+      "Waste and effluent management plans",
+      "Discharge and air quality monitoring programmes",
+      "Environmental indicators and reports"
+    ],
+    "approach": [
+      { "title": "Environmental review", "text": "Significant aspects, compliance obligations and available data." },
+      { "title": "Objectives", "text": "Realistic reduction targets and a costed action plan." },
+      { "title": "Tools", "text": "Procedures, registers, waste and consumption tracking." },
+      { "title": "Management", "text": "Indicators, management reviews and continual improvement." }
+    ],
+    "standards": ["ISO 14001", "Cameroon Framework Law No. 96/12 on environmental management"]
+  }
+}

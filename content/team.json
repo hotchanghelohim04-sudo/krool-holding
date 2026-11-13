@@ -1,0 +1,33 @@
+{
+  "$todo": "TODO-CONTENU : équipe provisoire et fictive. Remplacer par les vrais noms, bios, photos et certifications (point ouvert §13).",
+  "members": [
+    {
+      "key": "lead-consultant",
+      "initials": "DG",
+      "certifications": ["ISO 45001 Lead Auditor", "NEBOSH IGC"],
+      "fr": { "name": "Direction générale", "role": "Direction — Consultant senior", "bio": "Pilote les missions d'études de dangers et de conseil stratégique ainsi que le développement de Krool Academy. Profil provisoire." },
+      "en": { "name": "Executive management", "role": "Management — Senior Consultant", "bio": "Leads hazard study and strategic consulting assignments and the development of Krool Academy. Placeholder profile." }
+    },
+    {
+      "key": "process-safety",
+      "initials": "AM",
+      "certifications": ["Animatrice HAZOP", "IEC 61511"],
+      "fr": { "name": "Consultante sécurité des procédés", "role": "Sécurité industrielle", "bio": "Spécialiste des analyses de risques de procédé et des systèmes instrumentés de sécurité. Profil provisoire." },
+      "en": { "name": "Process safety consultant", "role": "Industrial safety", "bio": "Specialist in process hazard analysis and safety instrumented systems. Placeholder profile." }
+    },
+    {
+      "key": "environment",
+      "initials": "JN",
+      "certifications": ["ISO 14001 Lead Auditor"],
+      "fr": { "name": "Consultant environnement", "role": "EIES et gestion de l'environnement", "bio": "Conduit les études d'impact, les consultations publiques et les plans de gestion environnementale et sociale. Profil provisoire." },
+      "en": { "name": "Environmental consultant", "role": "ESIA and environmental management", "bio": "Leads impact assessments, public consultations and environmental and social management plans. Placeholder profile." }
+    },
+    {
+      "key": "training",
+      "initials": "SE",
+      "certifications": ["Formatrice certifiée", "ISO 9001"],
+      "fr": { "name": "Responsable pédagogique", "role": "Formation et qualité", "bio": "Conçoit les parcours de formation et accompagne les démarches qualité et systèmes intégrés QHSE. Profil provisoire." },
+      "en": { "name": "Learning lead", "role": "Training and quality", "bio": "Designs learning paths and supports quality and integrated QHSE system projects. Placeholder profile." }
+    }
+  ]
+}

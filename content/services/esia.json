@@ -1,0 +1,48 @@
+{
+  "$todo": "TODO-CONTENU : texte provisoire rédigé pour la maquette, à relire et compléter par Lembe (vérifier les références réglementaires).",
+  "key": "esia",
+  "icon": "ScanSearch",
+  "order": 5,
+  "fr": {
+    "slug": "etudes-impact-environnemental-social",
+    "title": "Études d'impact environnemental et social",
+    "short": "Des projets acceptables, conformes et finançables.",
+    "summary": "Notices et études d'impact environnemental et social (EIES), plans de gestion environnementale et sociale et consultations publiques, selon la réglementation camerounaise et les standards des bailleurs.",
+    "intro": "Un projet industriel, minier ou d'infrastructure ne se réalise qu'avec l'accord de l'administration, des bailleurs et des communautés. Nous conduisons des EIES rigoureuses et pragmatiques, qui anticipent les impacts, associent les parties prenantes et débouchent sur un plan de gestion réellement applicable.",
+    "deliverables": [
+      "Termes de référence et cadrage de l'étude",
+      "État initial de l'environnement physique, biologique et humain",
+      "Analyse des impacts et des alternatives",
+      "Consultations et audiences publiques",
+      "Plan de gestion environnementale et sociale (PGES) et suivi"
+    ],
+    "approach": [
+      { "title": "Cadrage", "text": "Catégorisation du projet, termes de référence et plan d'engagement des parties prenantes." },
+      { "title": "État initial", "text": "Campagnes de terrain, données socio-économiques et cartographie." },
+      { "title": "Impacts et mesures", "text": "Évaluation des impacts et hiérarchie éviter, réduire, compenser." },
+      { "title": "PGES", "text": "Mesures, responsabilités, budget et indicateurs de suivi." }
+    ],
+    "standards": ["Loi-cadre n° 96/12 relative à la gestion de l'environnement", "Décret n° 2013/0171/PM sur les EIES", "Normes de performance de la SFI (IFC)"]
+  },
+  "en": {
+    "slug": "environmental-social-impact-assessment",
+    "title": "Environmental and social impact assessment",
+    "short": "Projects that are acceptable, compliant and bankable.",
+    "summary": "Environmental and social impact assessments (ESIA), environmental and social management plans and public consultations, in line with Cameroonian regulations and lender standards.",
+    "intro": "An industrial, mining or infrastructure project only goes ahead with the approval of authorities, lenders and communities. We conduct rigorous and pragmatic ESIAs that anticipate impacts, involve stakeholders and lead to a management plan that can actually be implemented.",
+    "deliverables": [
+      "Terms of reference and study scoping",
+      "Baseline of the physical, biological and human environment",
+      "Impact and alternatives analysis",
+      "Public consultations and hearings",
+      "Environmental and social management plan (ESMP) and monitoring"
+    ],
+    "approach": [
+      { "title": "Scoping", "text": "Project categorisation, terms of reference and stakeholder engagement plan." },
+      { "title": "Baseline", "text": "Field surveys, socio-economic data and mapping." },
+      { "title": "Impacts and measures", "text": "Impact assessment following the avoid, reduce, offset hierarchy." },
+      { "title": "ESMP", "text": "Measures, responsibilities, budget and monitoring indicators." }
+    ],
+    "standards": ["Cameroon Framework Law No. 96/12 on environmental management", "Decree No. 2013/0171/PM on ESIA", "IFC Performance Standards"]
+  }
+}

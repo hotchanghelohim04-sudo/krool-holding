@@ -1,0 +1,37 @@
+{
+  "$todo": "TODO-CONTENU : mentions légales provisoires. À compléter après immatriculation (RCCM, NIU, capital, siège, directeur de publication, hébergeur) et à faire valider par un juriste.",
+  "key": "legal-notice",
+  "updated": "2026-11-13",
+  "fr": {
+    "title": "Mentions légales",
+    "body": [
+      { "type": "h2", "text": "Éditeur du site" },
+      { "type": "p", "text": "Krool Holding — société en cours d'immatriculation au Registre du commerce et du crédit mobilier (RCCM) du Cameroun. Siège social : [adresse à compléter], Douala, Cameroun. Numéro d'identifiant unique (NIU) : [à compléter]. Capital social : [à compléter]." },
+      { "type": "p", "text": "Contact : contact@krool-holding.com — Téléphone : [à compléter]." },
+      { "type": "h2", "text": "Directeur de la publication" },
+      { "type": "p", "text": "[Nom et fonction à compléter]." },
+      { "type": "h2", "text": "Hébergement" },
+      { "type": "p", "text": "[Nom, adresse et coordonnées de l'hébergeur à compléter lors de la mise en ligne]." },
+      { "type": "h2", "text": "Propriété intellectuelle" },
+      { "type": "p", "text": "L'ensemble des contenus de ce site (textes, logos, schémas, contenus de formation) est la propriété de Krool Holding, sauf mention contraire. Toute reproduction sans autorisation écrite préalable est interdite." },
+      { "type": "h2", "text": "Responsabilité" },
+      { "type": "p", "text": "Les informations publiées sur ce site sont fournies à titre général. Elles ne remplacent pas une analyse adaptée à la situation particulière de chaque site industriel." }
+    ]
+  },
+  "en": {
+    "title": "Legal notice",
+    "body": [
+      { "type": "h2", "text": "Publisher" },
+      { "type": "p", "text": "Krool Holding — company currently being registered with the Cameroon Trade and Personal Property Credit Register (RCCM). Registered office: [address to be completed], Douala, Cameroon. Taxpayer identification number (NIU): [to be completed]. Share capital: [to be completed]." },
+      { "type": "p", "text": "Contact: contact@krool-holding.com — Phone: [to be completed]." },
+      { "type": "h2", "text": "Publication director" },
+      { "type": "p", "text": "[Name and position to be completed]." },
+      { "type": "h2", "text": "Hosting" },
+      { "type": "p", "text": "[Hosting provider name, address and contact details to be completed at launch]." },
+      { "type": "h2", "text": "Intellectual property" },
+      { "type": "p", "text": "All content on this website (text, logos, diagrams, training content) is the property of Krool Holding unless otherwise stated. Any reproduction without prior written permission is prohibited." },
+      { "type": "h2", "text": "Liability" },
+      { "type": "p", "text": "The information published on this website is provided for general purposes. It does not replace an analysis tailored to the specific situation of each industrial site." }
+    ]
+  }
+}

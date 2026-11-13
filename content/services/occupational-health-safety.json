@@ -1,0 +1,48 @@
+{
+  "$todo": "TODO-CONTENU : texte provisoire rédigé pour la maquette, à relire et compléter par Lembe.",
+  "key": "occupational-health-safety",
+  "icon": "HardHat",
+  "order": 2,
+  "fr": {
+    "slug": "sante-securite-au-travail",
+    "title": "Santé et sécurité au travail",
+    "short": "Des postes de travail sûrs et une culture de prévention durable.",
+    "summary": "Évaluation des risques professionnels, systèmes de management SST et accompagnement terrain pour réduire durablement les accidents et maladies professionnelles.",
+    "intro": "La performance SST ne se décrète pas : elle se construit au quotidien, avec l'encadrement et les opérateurs. Nous évaluons vos risques poste par poste, structurons votre système de management et formons vos équipes à des pratiques simples et appliquées.",
+    "deliverables": [
+      "Évaluation des risques professionnels et document unique",
+      "Mise en place ou audit d'un système de management ISO 45001",
+      "Analyse d'accidents par la méthode de l'arbre des causes",
+      "Plans de prévention pour entreprises extérieures et permis de travail",
+      "Programmes de visites comportementales de sécurité"
+    ],
+    "approach": [
+      { "title": "État des lieux", "text": "Analyse des accidents passés, des postes à risque et des pratiques existantes." },
+      { "title": "Évaluation", "text": "Cotation des risques par unité de travail et identification des priorités." },
+      { "title": "Plan de prévention", "text": "Mesures collectives d'abord, puis organisationnelles et individuelles." },
+      { "title": "Ancrage", "text": "Indicateurs, rituels sécurité et formation de relais SST internes." }
+    ],
+    "standards": ["Code du travail camerounais (loi n° 92/007)", "ISO 45001", "Conventions de l'OIT"]
+  },
+  "en": {
+    "slug": "occupational-health-safety",
+    "title": "Occupational health and safety",
+    "short": "Safe workplaces and a lasting prevention culture.",
+    "summary": "Occupational risk assessment, OHS management systems and on-site support to durably reduce accidents and occupational illnesses.",
+    "intro": "OHS performance cannot be decreed: it is built every day, with supervisors and operators. We assess your risks job by job, structure your management system and train your teams in simple, practical habits.",
+    "deliverables": [
+      "Occupational risk assessment and risk register",
+      "ISO 45001 management system implementation or audit",
+      "Accident investigation using the cause-tree method",
+      "Contractor prevention plans and permit-to-work systems",
+      "Behaviour-based safety observation programmes"
+    ],
+    "approach": [
+      { "title": "Baseline", "text": "Review of past accidents, high-risk jobs and current practices." },
+      { "title": "Assessment", "text": "Risk rating by work unit and identification of priorities." },
+      { "title": "Prevention plan", "text": "Collective measures first, then organisational and individual ones." },
+      { "title": "Embedding", "text": "Indicators, safety routines and training of in-house OHS champions." }
+    ],
+    "standards": ["Cameroon Labour Code (Law No. 92/007)", "ISO 45001", "ILO conventions"]
+  }
+}

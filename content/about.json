@@ -1,0 +1,33 @@
+{
+  "$todo": "TODO-CONTENU : présentation provisoire du cabinet, à réécrire par Lembe (histoire, valeurs, chiffres réels).",
+  "fr": {
+    "lead": "Krool Holding est un cabinet camerounais de sécurité industrielle et de conseil HSE. Nous accompagnons les industries, les institutions et les porteurs de projets au Cameroun, dans la zone CEMAC et à l'international.",
+    "mission": "Notre mission : rendre les sites industriels plus sûrs, plus respectueux de l'environnement et plus performants, en alliant rigueur des méthodes internationales et connaissance fine du terrain africain.",
+    "story": [
+      "Le cabinet est né d'un constat : de nombreuses entreprises de la région disposent de documents HSE conformes sur le papier, mais peinent à les traduire en pratiques réelles sur le terrain.",
+      "Nous avons donc fait le choix d'un conseil opérationnel : des études rigoureuses, des recommandations hiérarchisées et un accompagnement jusqu'à la mise en œuvre, avec les équipes qui vivent les risques au quotidien.",
+      "Avec Krool Academy, nous prolongeons cette démarche par la formation en ligne, pour diffuser à grande échelle une culture de la prévention."
+    ],
+    "values": [
+      { "title": "Rigueur", "text": "Des méthodes reconnues, des hypothèses explicites et des conclusions vérifiables." },
+      { "title": "Indépendance", "text": "Un avis franc, même lorsqu'il dérange : c'est ce qui protège réellement nos clients." },
+      { "title": "Terrain", "text": "Les risques se comprennent sur site, au contact des opérateurs." },
+      { "title": "Transmission", "text": "Nous formons vos équipes pour qu'elles deviennent autonomes." }
+    ]
+  },
+  "en": {
+    "lead": "Krool Holding is a Cameroonian industrial safety and HSE consulting firm. We support industries, institutions and project developers in Cameroon, across the CEMAC region and internationally.",
+    "mission": "Our mission: make industrial sites safer, more environmentally responsible and better performing, by combining the rigour of international methods with in-depth knowledge of African field conditions.",
+    "story": [
+      "The firm was born from an observation: many companies in the region have HSE documents that are compliant on paper but struggle to turn them into real practices in the field.",
+      "We therefore chose operational consulting: rigorous studies, prioritised recommendations and support through implementation, with the teams who live with the risks every day.",
+      "With Krool Academy, we extend this approach through online training, to spread a prevention culture at scale."
+    ],
+    "values": [
+      { "title": "Rigour", "text": "Recognised methods, explicit assumptions and verifiable conclusions." },
+      { "title": "Independence", "text": "A candid opinion, even when it is uncomfortable: that is what truly protects our clients." },
+      { "title": "Field focus", "text": "Risks are understood on site, alongside the operators." },
+      { "title": "Knowledge transfer", "text": "We train your teams so that they become autonomous." }
+    ]
+  }
+}
