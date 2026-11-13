@@ -83,6 +83,11 @@ services:
       - "127.0.0.1:3000:3000"
     depends_on:
       - backend
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1:3000/fr"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
     restart: unless-stopped
 
   caddy:
