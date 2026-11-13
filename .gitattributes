@@ -1,0 +1,8 @@
+# Fins de ligne LF partout (conteneurs Linux, CI)
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.ico binary
+*.webp binary
+*.avif binary
+*.woff2 binary
