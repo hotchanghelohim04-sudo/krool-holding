@@ -29,6 +29,9 @@
   --color-gold-600: #a8842f; /* or du logo sur fond clair */
   --color-gold-700: #7a5f1f; /* or pour texte sur fond clair */
 
+  /* --- Or du logo v2 (emblème et wordmark uniquement : plus vif que l'or de l'interface) --- */
+  --color-logo-gold: #f2a906;
+
   /* --- Couleur du tampon officiel (certificats, documents) --- */
   --color-seal: #1d3fa0;
 

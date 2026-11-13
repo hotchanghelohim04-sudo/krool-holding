@@ -5,7 +5,6 @@
     "description": "Cabinet de sécurité industrielle, santé et sécurité au travail, études de dangers, EIES, qualité et formation aux risques industriels. Cameroun, CEMAC et international."
   },
   "Header": {
-    "brandName": "Krool Holding",
     "homeLink": "Krool Holding, retour à l'accueil",
     "skipToContent": "Aller au contenu principal"
   },
@@ -334,5 +333,11 @@
       "medium": "À réduire",
       "high": "Inacceptable"
     }
+  },
+  "Brand": {
+    "label": "Krool Holding",
+    "name": "KROOL",
+    "suffix": "HOLDING",
+    "signature": "INDUSTRIAL SAFETY & ADVISORY"
   }
 }

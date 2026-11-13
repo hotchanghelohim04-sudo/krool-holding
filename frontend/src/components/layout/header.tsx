@@ -1,7 +1,7 @@
 import { ChevronDown } from "lucide-react";
 import { getLocale, getTranslations } from "next-intl/server";
-import Image from "next/image";
 
+import { KroolMark } from "@/components/brand/krool-logo";
 import { ButtonLink } from "@/components/ui/button";
 import { Icon } from "@/components/ui/icon";
 import type { NativeLocale } from "@/i18n/config";
@@ -20,6 +20,7 @@ export async function Header() {
   const locale = (await getLocale()) as NativeLocale;
   const t = await getTranslations("Header");
   const tNav = await getTranslations("Nav");
+  const tBrand = await getTranslations("Brand");
   const services: ServiceNavItem[] = (await getServices()).map((s) => ({
     key: s.key,
     slug: s[locale].slug,
@@ -29,7 +30,7 @@ export async function Header() {
   }));
 
   return (
-    <header className="sticky top-0 z-40 border-b border-ink-800 bg-ink-950/95 text-paper backdrop-blur supports-[backdrop-filter]:bg-ink-950/85">
+    <header className="sticky top-0 z-40 border-b border-ink-800 bg-ink-950 text-paper">
       <a
         href="#contenu"
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-paper focus:px-3 focus:py-2 focus:text-ink-950"
@@ -38,18 +39,11 @@ export async function Header() {
       </a>
       <div className="container-site flex h-16 items-center justify-between gap-4">
         <Link href="/" aria-label={t("homeLink")} className="group flex shrink-0 items-center gap-3">
-          {/* Emblème du logo « concept 8 » (losange + K) ; décoratif, le lien porte le libellé. */}
-          <Image
-            src="/brand/logo-mark.svg"
-            alt=""
-            width={36}
-            height={36}
-            unoptimized
-            priority
-            className="size-9 transition-transform duration-300 ease-out-soft group-hover:scale-105"
-          />
-          <span className="font-serif text-sm tracking-[0.12em] whitespace-nowrap text-gold-500 uppercase sm:text-lg sm:tracking-[0.18em]">
-            {t("brandName")}
+          {/* Déclinaison horizontale du logo v2 : emblème + KROOL / HOLDING (le lien porte le libellé). */}
+          <KroolMark className="size-11 transition-transform duration-300 ease-out-soft group-hover:scale-105" />
+          <span aria-hidden className="flex flex-col leading-none whitespace-nowrap">
+            <span className="text-base font-medium tracking-[0.34em] text-logo-gold sm:text-lg">{tBrand("name")}</span>
+            <span className="mt-1.5 text-[0.625rem] tracking-[0.5em] text-paper">{tBrand("suffix")}</span>
           </span>
         </Link>
 

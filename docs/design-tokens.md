@@ -16,6 +16,7 @@ Chaque token devient une classe utilitaire : `--color-gold-500` → `text-gold-5
 | `gold-600` | `#A8842F` | Logo version fond clair | Grands titres / décor sur clair |
 | `gold-700` | `#7A5F1F` | Signature version fond clair | Texte doré **sur fond clair** |
 | `seal` | `#1D3FA0` | Tampon bleu | Certificats, documents officiels |
+| `logo-gold` | `#F2A906` | Logo v2 (13/11/2026) | **Logo uniquement** (emblème, KROOL, signature) |
 | `paper` | `#F7F5F0` | — | Fond des sections claires |
 | `slate-300` | `#A1A7B0` | — | Texte secondaire sur sombre |
 | `slate-600` | `#55606E` | — | Texte secondaire sur clair |
@@ -34,6 +35,7 @@ gold-600/blanc cassé 3.21 (grand texte seulement).
 | `frontend/src/app/` | `favicon.ico`, `icon.svg`, `apple-icon.png` (conventions Next.js) |
 | `backend/assets/brand/` | Tampons (noir, bleu) pour les certificats PDF — **jamais servis publiquement** |
 | `docs/brand/` | Exports PNG haute définition et SVG modifiable (Figma/Canva) pour l'impression et les réseaux |
+| `frontend/src/components/brand/krool-logo.tsx` | **Logo v2 en SVG intégré** (en-tête : emblème + KROOL/HOLDING ; pied de page : logo complet). Référence : `docs/brand/logo-v2-reference.png` |
 
 ## Typographies
 

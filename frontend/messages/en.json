@@ -5,7 +5,6 @@
     "description": "Consulting firm in industrial safety, occupational health and safety, hazard studies, ESIA, quality and industrial risk training. Cameroon, CEMAC and international."
   },
   "Header": {
-    "brandName": "Krool Holding",
     "homeLink": "Krool Holding, back to home",
     "skipToContent": "Skip to main content"
   },
@@ -334,5 +333,11 @@
       "medium": "To be reduced",
       "high": "Unacceptable"
     }
+  },
+  "Brand": {
+    "label": "Krool Holding",
+    "name": "KROOL",
+    "suffix": "HOLDING",
+    "signature": "INDUSTRIAL SAFETY & ADVISORY"
   }
 }

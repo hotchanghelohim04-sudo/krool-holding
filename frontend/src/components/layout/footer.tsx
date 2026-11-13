@@ -1,8 +1,8 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { getLocale, getTranslations } from "next-intl/server";
 import { cacheLife } from "next/cache";
-import Image from "next/image";
 
+import { KroolLogo } from "@/components/brand/krool-logo";
 import { NewsletterForm } from "@/components/forms/newsletter-form";
 import type { NativeLocale } from "@/i18n/config";
 import { Link } from "@/i18n/navigation";
@@ -22,6 +22,7 @@ export async function Footer() {
   const t = await getTranslations("Footer");
   const tNav = await getTranslations("Nav");
   const tNews = await getTranslations("Newsletter");
+  const tBrand = await getTranslations("Brand");
   const [services, site, year] = await Promise.all([getServices(), getSite(), currentYear()]);
 
   const firmLinks = [
@@ -48,7 +49,17 @@ export async function Footer() {
 
       <div className="container-site grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-12">
         <div className="lg:col-span-4">
-          <Image src="/brand/logo-compact-on-dark.svg" alt="" width={112} height={108} unoptimized className="h-24 w-auto" />
+          <KroolLogo
+            tone="dark"
+            kStroke={1}
+            className="w-52"
+            labels={{
+              label: tBrand("label"),
+              name: tBrand("name"),
+              suffix: tBrand("suffix"),
+              signature: tBrand("signature"),
+            }}
+          />
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-slate-300">{t("tagline")}</p>
         </div>
 
