@@ -1,0 +1,27 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+backend/staticfiles/
+backend/media/
+*.sqlite3
+
+# Node / Next (complété par frontend/.gitignore)
+node_modules/
+
+# Divers
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+
+# Fichiers source du logo : versionnés une fois rangés dans frontend/public/brand/
+logo-source/
