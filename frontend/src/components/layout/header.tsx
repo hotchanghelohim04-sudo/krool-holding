@@ -38,12 +38,14 @@ export async function Header() {
         {t("skipToContent")}
       </a>
       <div className="container-site flex h-16 items-center justify-between gap-4">
-        <Link href="/" aria-label={t("homeLink")} className="group flex shrink-0 items-center gap-3">
-          {/* Déclinaison horizontale du logo v2 : emblème + KROOL / HOLDING (le lien porte le libellé). */}
+        <Link href="/" className="group flex shrink-0 items-center gap-3">
+          {/* Déclinaison horizontale du logo v2 : emblème + KROOL / HOLDING. Le texte visible
+              ouvre le nom accessible du lien (commande vocale « cliquer Krool Holding »). */}
           <KroolMark className="size-11 transition-transform duration-300 ease-out-soft group-hover:scale-105" />
-          <span aria-hidden className="flex flex-col leading-none whitespace-nowrap">
-            <span className="text-base font-medium tracking-[0.34em] text-logo-gold sm:text-lg">{tBrand("name")}</span>
+          <span className="flex flex-col leading-none whitespace-nowrap">
+            <span className="text-base font-medium tracking-[0.34em] text-logo-gold sm:text-lg">{tBrand("name")}</span>{" "}
             <span className="mt-1.5 text-[0.625rem] tracking-[0.5em] text-paper">{tBrand("suffix")}</span>
+            <span className="sr-only">, {t("homeLink")}</span>
           </span>
         </Link>
 

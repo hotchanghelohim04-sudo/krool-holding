@@ -36,20 +36,20 @@ export default async function ContactPage() {
                   { icon: Phone, label: t("phone"), value: contact.phone, href: `tel:${contact.phone.replace(/\s/g, "")}` },
                   { icon: Clock, label: t("hours"), value: contact.hours[locale] },
                 ].map(({ icon: Icon, label, value, href }) => (
-                  <div key={label} className="flex gap-3">
-                    <Icon aria-hidden className="mt-0.5 size-4 shrink-0 text-gold-500" strokeWidth={1.5} />
-                    <div>
-                      <dt className="text-slate-300">{label}</dt>
-                      <dd className="mt-0.5 text-paper">
-                        {href ? (
-                          <a href={href} className="hover:text-gold-300">
-                            {value}
-                          </a>
-                        ) : (
-                          value
-                        )}
-                      </dd>
-                    </div>
+                  <div key={label}>
+                    <dt className="flex items-center gap-3 text-slate-300">
+                      <Icon aria-hidden className="size-4 shrink-0 text-gold-500" strokeWidth={1.5} />
+                      {label}
+                    </dt>
+                    <dd className="mt-0.5 pl-7 text-paper">
+                      {href ? (
+                        <a href={href} className="hover:text-gold-300">
+                          {value}
+                        </a>
+                      ) : (
+                        value
+                      )}
+                    </dd>
                   </div>
                 ))}
               </dl>

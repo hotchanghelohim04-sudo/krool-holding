@@ -44,7 +44,11 @@ export function Field({
       <label htmlFor={id} className={cn("mb-1.5 block text-sm font-medium", tone === "dark" ? "text-paper" : "text-ink-950")}>
         {label}
         {required && <span aria-hidden className="ml-0.5 text-gold-600">*</span>}
-        {optional && <span className="ml-1.5 font-normal text-slate-500">({t("optional")})</span>}
+        {optional && (
+          <span className={cn("ml-1.5 font-normal", tone === "dark" ? "text-slate-300" : "text-slate-600")}>
+            ({t("optional")})
+          </span>
+        )}
       </label>
       {children}
       {hint && !error && (
