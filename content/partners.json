@@ -1,19 +1,19 @@
 {
-  "$todo": "TODO-CONTENU : partenaires indiqués par Lembe. AVANT LA MISE EN LIGNE : obtenir l'accord écrit de chaque entreprise pour citer son nom et afficher son logo, et déposer les logos officiels fournis par elles dans frontend/public/partners/ (champ « logo »). Sans logo, le nom s'affiche en toutes lettres.",
+  "$todo": "TODO-CONTENU : partenaires indiqués par Lembe. Logos récupérés le 14/11/2026 sur les sites officiels des entreprises (sources : docs/brand/partner-logos.md) — fichiers dans frontend/public/partners/. AVANT LA MISE EN LIGNE : obtenir l’accord écrit de chaque entreprise pour citer son nom et afficher son logo, et remplacer les fichiers par les logos officiels qu’elles fourniront. Sans logo (PHP, Socadel), le nom s’affiche en toutes lettres.",
   "partners": [
     {
       "key": "cimencam",
       "name": "Cimencam",
-      "logo": null
+      "logo": "/partners/cimencam.png"
     },
     {
       "key": "chococam",
       "name": "Chococam",
-      "logo": null
+      "logo": "/partners/chococam.png"
     },
     {
       "key": "php",
-      "name": "PHP",
+      "name": "PHP – Plantations du Haut-Penja",
       "logo": null
     },
     {
@@ -24,47 +24,47 @@
     {
       "key": "ihs",
       "name": "IHS",
-      "logo": null
+      "logo": "/partners/ihs.png"
     },
     {
       "key": "sonara",
       "name": "Sonara",
-      "logo": null
+      "logo": "/partners/sonara.png"
     },
     {
       "key": "wiserve",
       "name": "Wiserve",
-      "logo": null
+      "logo": "/partners/wiserve.png"
     },
     {
       "key": "preventum-sst",
       "name": "Preventum SST",
-      "logo": null
+      "logo": "/partners/preventum-sst.png"
     },
     {
       "key": "ucb",
       "name": "UCB",
-      "logo": null
+      "logo": "/partners/ucb.png"
     },
     {
       "key": "brasseries-cameroun",
-      "name": "Brasseries du Cameroun",
-      "logo": null
+      "name": "Boissons du Cameroun (ex-Brasseries du Cameroun)",
+      "logo": "/partners/brasseries-cameroun.png"
     },
     {
       "key": "adc",
       "name": "Aéroports du Cameroun (ADC)",
-      "logo": null
+      "logo": "/partners/adc.png"
     },
     {
       "key": "apave-cameroun",
       "name": "Apave Cameroun",
-      "logo": null
+      "logo": "/partners/apave-cameroun.png"
     },
     {
       "key": "acc",
       "name": "Atlantic Cocoa Corporation",
-      "logo": null
+      "logo": "/partners/acc.png"
     }
   ]
 }

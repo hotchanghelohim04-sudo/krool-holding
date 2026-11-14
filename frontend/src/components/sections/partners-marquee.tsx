@@ -23,14 +23,26 @@ export async function PartnersMarquee() {
       />
       <Marquee className="mt-12 [--duration:60s] [--gap:1.25rem]">
         {partners.map((partner) => (
+          // Tuile blanche dans les deux thèmes : les logos officiels sont conçus pour un fond clair.
           <span
             key={partner.key}
-            className="flex h-20 min-w-48 items-center justify-center rounded-md border border-fg/10 bg-surface-raised px-6 grayscale transition-[filter] duration-300 hover:grayscale-0"
+            className="flex h-24 w-52 shrink-0 items-center justify-center rounded-md border border-black/5 bg-white px-6 shadow-card transition-transform duration-300 hover:-translate-y-0.5 dark:border-white/10"
           >
             {partner.logo ? (
-              <Image src={partner.logo} alt={partner.name} width={160} height={56} className="h-12 w-auto object-contain" />
+              // Chargement immédiat mais en basse priorité : en chargement différé, les logos
+              // masqués par le défilement horizontal apparaîtraient vides en entrant à l'écran.
+              <Image
+                src={partner.logo}
+                alt={partner.name}
+                width={240}
+                height={128}
+                sizes="160px"
+                loading="eager"
+                fetchPriority="low"
+                className="h-14 w-auto max-w-40 object-contain"
+              />
             ) : (
-              <span className="text-center font-sans text-base font-semibold tracking-wide whitespace-nowrap text-fg/80 uppercase">
+              <span className="text-center font-sans text-sm leading-snug font-semibold tracking-wide text-balance text-neutral-800 uppercase">
                 {partner.name}
               </span>
             )}
